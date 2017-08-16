@@ -1,10 +1,10 @@
-<manifest alg="2" build="2017.0.1.363" opt="false" iceEnabled="true" iceMarkupVersion="2" iceEnabledOptions="link,responsive,cachebuster" exportTarget="other" domain="alexbeausire.com" resolutions="1x,2x" timestamp="1501674794433">
+<manifest alg="2" build="2017.0.1.363" opt="false" iceEnabled="true" iceMarkupVersion="2" iceEnabledOptions="link,responsive,cachebuster" exportTarget="other" domain="alexbeausire.com" resolutions="1x,2x" timestamp="1502902264843">
   <folder name="css">
     <file name="site_global.css" crc="443350757"/>
-    <file name="index.css" crc="471503916" ref="index"/>
-    <file name="master_a-master.css" crc="103102348" ref="index:aboutcontact:studio-cam"/>
+    <file name="master_a-master.css" crc="103102348" ref="aboutcontact:studio-cam:index"/>
     <file name="aboutcontact.css" crc="321414221" ref="aboutcontact"/>
-    <file name="studio-cam.css" crc="4132984285" ref="studio-cam"/>
+    <file name="studio-cam.css" crc="3845107041" ref="studio-cam"/>
+    <file name="index.css" crc="471503916" ref="index"/>
   </folder>
   <folder name="scripts">
     <file name="jquery-1.8.3.min.js" crc="209076791" ref="index:aboutcontact:studio-cam"/>
@@ -13,44 +13,44 @@
     <file name="museconfig.js" crc="172512987" ref="index:aboutcontact:studio-cam"/>
     <file name="jquery.musemenu.js" crc="3765830709" ref="index:aboutcontact:studio-cam"/>
     <file name="jquery.watch.js" crc="437028206" ref="index:aboutcontact:studio-cam"/>
+    <file name="jquery.scrolleffects.js" crc="3801019579" ref="index:aboutcontact:studio-cam"/>
     <file name="html5shiv.js" crc="4241844378" ref="index:aboutcontact:studio-cam"/>
     <file name="require.js" crc="4159430777" ref="index:aboutcontact:studio-cam"/>
-    <file name="jquery.scrolleffects.js" crc="3801019579" ref="index:aboutcontact:studio-cam"/>
   </folder>
   <folder name="images">
+    <file name="portfolio-photo.png" crc="4017327085" seo="true" ref="index:aboutcontact:studio-cam"/>
+    <file name="portfolio-photo_2x.png" crc="51849880" seo="true" ref="index:aboutcontact:studio-cam"/>
+    <file name="alex beausire.gif" crc="39614180" seo="true" ref="index:aboutcontact:studio-cam"/>
+    <file name="earth-round-white_background.gif" crc="413797906" seo="true" ref="index"/>
+    <file name="wwecenabelt.gif" crc="4213978877" seo="true" ref="index"/>
+    <file name="manekineko.gif" crc="82523099" seo="true" ref="index"/>
     <file name="carnival party poster (for online rgb).jpg" crc="4104560171" seo="true" ref="index"/>
     <file name="carnival party poster (for online rgb)_2x.jpg" crc="230029510" seo="true" ref="index"/>
     <file name="o-flynn or somewhere2.jpg" crc="3823544473" seo="true" ref="index"/>
     <file name="o-flynn or somewhere2_2x.jpg" crc="182201038" seo="true" ref="index"/>
+    <file name="grenfell fundaraiser.jpg" crc="354170586" seo="true" ref="index"/>
+    <file name="grenfell fundaraiser_2x.jpg" crc="507412196" seo="true" ref="index"/>
     <file name="our house goes home a3.jpg" crc="143018040" seo="true" ref="index"/>
     <file name="our house goes home a3_2x.jpg" crc="4246354192" seo="true" ref="index"/>
     <file name="midland poster.jpg" crc="4236488405" seo="true" ref="index"/>
     <file name="midland poster_2x.jpg" crc="3840044123" seo="true" ref="index"/>
-    <file name="alex beausire.gif" crc="39614180" seo="true" ref="index:aboutcontact:studio-cam"/>
-    <file name="portfolio-photo.png" crc="4017327085" seo="true" ref="index:aboutcontact:studio-cam"/>
-    <file name="portfolio-photo_2x.png" crc="51849880" seo="true" ref="index:aboutcontact:studio-cam"/>
-    <file name="cinnaman poster a3.jpg" crc="183674411" seo="true" ref="index"/>
-    <file name="cinnaman poster a3_2x.jpg" crc="4162542887" seo="true" ref="index"/>
-    <file name="2_orig.jpg" crc="4202168977" seo="true" ref="index"/>
-    <file name="grenfell fundaraiser.jpg" crc="354170586" seo="true" ref="index"/>
-    <file name="grenfell fundaraiser_2x.jpg" crc="507412196" seo="true" ref="index"/>
     <file name="gif22.gif" crc="79707868" seo="true" ref="index"/>
-    <file name="midland-gif-frame.gif" crc="229636850" seo="true" ref="index"/>
-    <file name="cinnaman-gif.gif" crc="321769073" seo="true" ref="index"/>
-    <file name="giphy.gif" crc="3891525799" seo="true" ref="studio-cam"/>
-    <file name="earth-round-white_background.gif" crc="413797906" seo="true" ref="index"/>
-    <file name="wwecenabelt.gif" crc="4213978877" seo="true" ref="index"/>
-    <file name="manekineko.gif" crc="82523099" seo="true" ref="index"/>
     <file name="redbritney.gif" crc="290311508" seo="true" ref="index"/>
     <file name="link1.gif" crc="87639600" seo="true" ref="index"/>
     <file name="link1_2x.gif" crc="87639600" seo="true" ref="index"/>
     <file name="hamama.gif" crc="4124635541" seo="true" ref="index"/>
     <file name="dollarspindownd.gif" crc="79646418" seo="true" ref="index"/>
     <file name="dollarspindownd_2x.gif" crc="79646418" seo="true" ref="index"/>
+    <file name="midland-gif-frame.gif" crc="229636850" seo="true" ref="index"/>
+    <file name="cinnaman poster a3.jpg" crc="183674411" seo="true" ref="index"/>
+    <file name="cinnaman poster a3_2x.jpg" crc="4162542887" seo="true" ref="index"/>
+    <file name="cinnaman-gif.gif" crc="321769073" seo="true" ref="index"/>
+    <file name="2_orig.jpg" crc="4202168977" seo="true" ref="index"/>
     <file name="logo_motorola.gif" crc="291629771" seo="true" ref="index"/>
     <file name="k1_azul.gif" crc="3888193817" seo="true" ref="aboutcontact"/>
+    <file name="img_6326.gif" crc="3965961172" seo="true" ref="studio-cam"/>
   </folder>
-  <file name="index.html" crc="4251495721" seo="true" mt="1501674718900" redirect="true"/>
-  <file name="aboutcontact.html" crc="469768278" seo="true" mt="1501672271486" redirect="true"/>
-  <file name="studio-cam.html" crc="4107339325" seo="true" mt="1501672271486" redirect="true"/>
+  <file name="index.html" crc="357383703" seo="true" mt="1501674718900" redirect="true"/>
+  <file name="aboutcontact.html" crc="259413465" seo="true" mt="1502902254505" redirect="true"/>
+  <file name="studio-cam.html" crc="4189237572" seo="true" mt="1502901066907" redirect="true"/>
 </manifest>

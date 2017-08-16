@@ -130,7 +130,7 @@ Muse.Utils.detectScreenResolution();/* HiDPI screens */
 Muse.Utils.prepHyperlinks(true);/* body */
 Muse.Utils.fullPage('#page');/* 100% height page */
 Muse.Utils.initWidget('.MenuBar', ['#bp_infinity'], function(elem) { return $(elem).museMenu(); });/* unifiedNavBar */
-$('#u7677').registerOpacityScrollEffect([{"in":[-Infinity,32],"opacity":100,"fade":32.05},{"opacity":100,"in":[32,32]},{"in":[32,Infinity],"opacity":0,"fade":47}]);/* scroll effect */
+$('#u7677').registerOpacityScrollEffect([{"in":[-Infinity,32],"fade":32.05,"opacity":100},{"in":[32,32],"opacity":100},{"in":[32,Infinity],"fade":47,"opacity":0}]);/* scroll effect */
 Muse.Utils.showWidgetsWhenReady();/* body */
 Muse.Utils.transformMarkupToFixBrowserProblems();/* body */
 }catch(b){if(b&&"function"==typeof b.notify?b.notify():Muse.Assert.fail("Error calling selector function: "+b),false)throw b;}})})};
