@@ -1,4 +1,4 @@
-<manifest alg="2" build="2017.0.3.363" opt="false" iceEnabled="true" iceMarkupVersion="2" iceEnabledOptions="link,responsive,cachebuster,textStyling" exportTarget="other" domain="alexbeausi.re" resolutions="1x,2x" timestamp="1508702324203">
+<manifest alg="2" build="2017.0.3.363" opt="false" iceEnabled="true" iceMarkupVersion="2" iceEnabledOptions="link,responsive,cachebuster,textStyling" exportTarget="other" domain="alexbeausi.re" resolutions="1x,2x" timestamp="1508702694328">
   <folder name="css">
     <file name="site_global.css" crc="443350757"/>
     <file name="master_a-master.css" crc="103102348" ref="aboutcontact:studio-cam:index"/>
@@ -150,7 +150,7 @@
       <caption webpage="studio-cam" alt=""/>
     </file>
   </folder>
-  <file name="index.html" crc="215606603" seo="true" mt="1508702023563" redirect="true"/>
+  <file name="index.html" crc="83127768" seo="true" mt="1508702684586" redirect="true"/>
   <file name="aboutcontact.html" crc="4232817482" seo="true" mt="1508699928067" redirect="true"/>
   <file name="studio-cam.html" crc="3820399660" seo="true" mt="1508699928067" redirect="true"/>
 </manifest>
