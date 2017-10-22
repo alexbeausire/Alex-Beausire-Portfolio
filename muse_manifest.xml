@@ -1,4 +1,4 @@
-<manifest alg="2" build="2017.0.1.363" opt="false" iceEnabled="true" iceMarkupVersion="2" iceEnabledOptions="link,responsive,cachebuster" exportTarget="other" domain="alexbeausi.re" resolutions="1x,2x" timestamp="1508700273947">
+<manifest alg="2" build="2017.0.3.363" opt="false" iceEnabled="true" iceMarkupVersion="2" iceEnabledOptions="link,responsive,cachebuster,textStyling" exportTarget="other" domain="alexbeausi.re" resolutions="1x,2x" timestamp="1508701885411">
   <folder name="css">
     <file name="site_global.css" crc="443350757"/>
     <file name="master_a-master.css" crc="103102348" ref="aboutcontact:studio-cam:index"/>
@@ -8,60 +8,149 @@
   </folder>
   <folder name="scripts">
     <file name="jquery-1.8.3.min.js" crc="209076791" ref="index:aboutcontact:studio-cam"/>
-    <file name="museutils.js" crc="4148063285" ref="index:aboutcontact:studio-cam"/>
+    <file name="museutils.js" crc="46400467" ref="index:aboutcontact:studio-cam"/>
     <file name="whatinput.js" crc="86476730" ref="index:aboutcontact:studio-cam"/>
-    <file name="museconfig.js" crc="172512987" ref="index:aboutcontact:studio-cam"/>
-    <file name="jquery.musemenu.js" crc="3765830709" ref="index:aboutcontact:studio-cam"/>
-    <file name="jquery.watch.js" crc="437028206" ref="index:aboutcontact:studio-cam"/>
-    <file name="jquery.scrolleffects.js" crc="3801019579" ref="index:aboutcontact:studio-cam"/>
+    <file name="museconfig.js" crc="436936948" ref="index:aboutcontact:studio-cam"/>
+    <file name="jquery.musemenu.js" crc="3936200140" ref="index:aboutcontact:studio-cam"/>
+    <file name="jquery.watch.js" crc="4178585335" ref="index:aboutcontact:studio-cam"/>
+    <file name="jquery.scrolleffects.js" crc="410690402" ref="index:aboutcontact:studio-cam"/>
     <file name="html5shiv.js" crc="4241844378" ref="index:aboutcontact:studio-cam"/>
-    <file name="require.js" crc="4159430777" ref="index:aboutcontact:studio-cam"/>
+    <file name="require.js" crc="85721165" ref="index:aboutcontact:studio-cam"/>
   </folder>
   <folder name="images">
     <file name="favicon.ico" crc="4212706539" ref="index"/>
-    <file name="portfolio-photo.png" crc="4017327085" seo="true" ref="index:aboutcontact:studio-cam"/>
-    <file name="portfolio-photo_2x.png" crc="51849880" seo="true" ref="index:aboutcontact:studio-cam"/>
-    <file name="alex beausire.gif" crc="39614180" seo="true" ref="index:aboutcontact:studio-cam"/>
-    <file name="stw.png" crc="311283448" seo="true" ref="index"/>
-    <file name="stw_2x.png" crc="3813644080" seo="true" ref="index"/>
-    <file name="banoffe-pies-poster.png" crc="79389108" seo="true" ref="index"/>
-    <file name="banoffe-pies-poster_2x.png" crc="4256588783" seo="true" ref="index"/>
-    <file name="manekineko.gif" crc="82523099" seo="true" ref="index"/>
-    <file name="boogie-nights-poster.jpg" crc="15585008" seo="true" ref="index"/>
-    <file name="boogie-nights-poster_2x.jpg" crc="456177518" seo="true" ref="index"/>
-    <file name="earth-round-white_background.gif" crc="413797906" seo="true" ref="index"/>
-    <file name="fio52.jpg" crc="3861860632" seo="true" ref="index"/>
-    <file name="fio52_2x.jpg" crc="359804462" seo="true" ref="index"/>
-    <file name="wwecenabelt.gif" crc="4213978877" seo="true" ref="index"/>
-    <file name="carnival party poster (for online rgb).jpg" crc="4104560171" seo="true" ref="index"/>
-    <file name="carnival party poster (for online rgb)_2x.jpg" crc="230029510" seo="true" ref="index"/>
-    <file name="link1.gif" crc="87639600" seo="true" ref="index"/>
-    <file name="link1_2x.gif" crc="87639600" seo="true" ref="index"/>
-    <file name="redbritney.gif" crc="290311508" seo="true" ref="index"/>
-    <file name="4quarters-again.jpg" crc="4044686669" seo="true" ref="index"/>
-    <file name="4quarters-again_2x.jpg" crc="236891925" seo="true" ref="index"/>
-    <file name="grenfell fundaraiser.jpg" crc="354170586" seo="true" ref="index"/>
-    <file name="grenfell fundaraiser_2x.jpg" crc="507412196" seo="true" ref="index"/>
-    <file name="hamama.gif" crc="4124635541" seo="true" ref="index"/>
-    <file name="our house goes home a3.jpg" crc="143018040" seo="true" ref="index"/>
-    <file name="our house goes home a3_2x.jpg" crc="4246354192" seo="true" ref="index"/>
-    <file name="dollarspindownd.gif" crc="79646418" seo="true" ref="index"/>
-    <file name="dollarspindownd_2x.gif" crc="79646418" seo="true" ref="index"/>
-    <file name="o-flynn or somewhere2.jpg" crc="3823544473" seo="true" ref="index"/>
-    <file name="o-flynn or somewhere2_2x.jpg" crc="182201038" seo="true" ref="index"/>
-    <file name="midland poster.jpg" crc="4236488405" seo="true" ref="index"/>
-    <file name="midland poster_2x.jpg" crc="3840044123" seo="true" ref="index"/>
-    <file name="gif22.gif" crc="79707868" seo="true" ref="index"/>
-    <file name="logo_motorola.gif" crc="291629771" seo="true" ref="index"/>
-    <file name="midland-gif-frame.gif" crc="229636850" seo="true" ref="index"/>
-    <file name="cinnaman poster a3.jpg" crc="183674411" seo="true" ref="index"/>
-    <file name="cinnaman poster a3_2x.jpg" crc="4162542887" seo="true" ref="index"/>
-    <file name="cinnaman-gif.gif" crc="321769073" seo="true" ref="index"/>
-    <file name="2_orig.jpg" crc="4202168977" seo="true" ref="index"/>
-    <file name="k1_azul.gif" crc="3888193817" seo="true" ref="aboutcontact"/>
-    <file name="img_6326.gif" crc="3965961172" seo="true" ref="studio-cam"/>
+    <file name="portfolio-photo.png" crc="4017327085" seo="true" ref="index:aboutcontact:studio-cam">
+      <caption webpage="index" alt=""/>
+      <caption webpage="studio-cam" alt=""/>
+      <caption webpage="aboutcontact" alt=""/>
+    </file>
+    <file name="portfolio-photo_2x.png" crc="51849880" seo="true" ref="index:aboutcontact:studio-cam">
+      <caption webpage="index" alt=""/>
+      <caption webpage="studio-cam" alt=""/>
+      <caption webpage="aboutcontact" alt=""/>
+    </file>
+    <file name="alex beausire.gif" crc="39614180" seo="true" ref="index:aboutcontact:studio-cam">
+      <caption webpage="index" alt=""/>
+      <caption webpage="studio-cam" alt=""/>
+      <caption webpage="aboutcontact" alt=""/>
+    </file>
+    <file name="stw.png" crc="311283448" seo="true" ref="index">
+      <caption webpage="index" alt=""/>
+    </file>
+    <file name="stw_2x.png" crc="3813644080" seo="true" ref="index">
+      <caption webpage="index" alt=""/>
+    </file>
+    <file name="banoffe-pies-poster.png" crc="79389108" seo="true" ref="index">
+      <caption webpage="index" alt=""/>
+    </file>
+    <file name="banoffe-pies-poster_2x.png" crc="4256588783" seo="true" ref="index">
+      <caption webpage="index" alt=""/>
+    </file>
+    <file name="manekineko.gif" crc="82523099" seo="true" ref="index">
+      <caption webpage="index" alt=""/>
+      <caption webpage="index" alt=""/>
+    </file>
+    <file name="boogie-nights-poster.jpg" crc="15585008" seo="true" ref="index">
+      <caption webpage="index" alt=""/>
+    </file>
+    <file name="boogie-nights-poster_2x.jpg" crc="456177518" seo="true" ref="index">
+      <caption webpage="index" alt=""/>
+    </file>
+    <file name="earth-round-white_background.gif" crc="413797906" seo="true" ref="index">
+      <caption webpage="index" alt=""/>
+    </file>
+    <file name="fio52.jpg" crc="3861860632" seo="true" ref="index">
+      <caption webpage="index" alt=""/>
+    </file>
+    <file name="fio52_2x.jpg" crc="359804462" seo="true" ref="index">
+      <caption webpage="index" alt=""/>
+    </file>
+    <file name="wwecenabelt.gif" crc="4213978877" seo="true" ref="index">
+      <caption webpage="index" alt=""/>
+    </file>
+    <file name="carnival party poster (for online rgb).jpg" crc="4104560171" seo="true" ref="index">
+      <caption webpage="index" alt=""/>
+    </file>
+    <file name="carnival party poster (for online rgb)_2x.jpg" crc="230029510" seo="true" ref="index">
+      <caption webpage="index" alt=""/>
+    </file>
+    <file name="link1.gif" crc="87639600" seo="true" ref="index">
+      <caption webpage="index" alt=""/>
+    </file>
+    <file name="link1_2x.gif" crc="87639600" seo="true" ref="index">
+      <caption webpage="index" alt=""/>
+    </file>
+    <file name="redbritney.gif" crc="290311508" seo="true" ref="index">
+      <caption webpage="index" alt=""/>
+    </file>
+    <file name="4quarters-again.jpg" crc="4044686669" seo="true" ref="index">
+      <caption webpage="index" alt=""/>
+    </file>
+    <file name="4quarters-again_2x.jpg" crc="236891925" seo="true" ref="index">
+      <caption webpage="index" alt=""/>
+    </file>
+    <file name="grenfell fundaraiser.jpg" crc="354170586" seo="true" ref="index">
+      <caption webpage="index" alt=""/>
+    </file>
+    <file name="grenfell fundaraiser_2x.jpg" crc="507412196" seo="true" ref="index">
+      <caption webpage="index" alt=""/>
+    </file>
+    <file name="hamama.gif" crc="4124635541" seo="true" ref="index">
+      <caption webpage="index" alt=""/>
+    </file>
+    <file name="our house goes home a3.jpg" crc="143018040" seo="true" ref="index">
+      <caption webpage="index" alt=""/>
+    </file>
+    <file name="our house goes home a3_2x.jpg" crc="4246354192" seo="true" ref="index">
+      <caption webpage="index" alt=""/>
+    </file>
+    <file name="dollarspindownd.gif" crc="79646418" seo="true" ref="index">
+      <caption webpage="index" alt=""/>
+    </file>
+    <file name="dollarspindownd_2x.gif" crc="79646418" seo="true" ref="index">
+      <caption webpage="index" alt=""/>
+    </file>
+    <file name="o-flynn or somewhere2.jpg" crc="3823544473" seo="true" ref="index">
+      <caption webpage="index" alt=""/>
+    </file>
+    <file name="o-flynn or somewhere2_2x.jpg" crc="182201038" seo="true" ref="index">
+      <caption webpage="index" alt=""/>
+    </file>
+    <file name="midland poster.jpg" crc="4236488405" seo="true" ref="index">
+      <caption webpage="index" alt=""/>
+    </file>
+    <file name="midland poster_2x.jpg" crc="3840044123" seo="true" ref="index">
+      <caption webpage="index" alt=""/>
+    </file>
+    <file name="gif22.gif" crc="79707868" seo="true" ref="index">
+      <caption webpage="index" alt=""/>
+    </file>
+    <file name="logo_motorola.gif" crc="291629771" seo="true" ref="index">
+      <caption webpage="index" alt=""/>
+    </file>
+    <file name="midland-gif-frame.gif" crc="229636850" seo="true" ref="index">
+      <caption webpage="index" alt=""/>
+    </file>
+    <file name="cinnaman poster a3.jpg" crc="183674411" seo="true" ref="index">
+      <caption webpage="index" alt=""/>
+    </file>
+    <file name="cinnaman poster a3_2x.jpg" crc="4162542887" seo="true" ref="index">
+      <caption webpage="index" alt=""/>
+    </file>
+    <file name="cinnaman-gif.gif" crc="321769073" seo="true" ref="index">
+      <caption webpage="index" alt=""/>
+    </file>
+    <file name="2_orig.jpg" crc="4202168977" seo="true" ref="index">
+      <caption webpage="index" alt=""/>
+    </file>
+    <file name="k1_azul.gif" crc="3888193817" seo="true" ref="aboutcontact">
+      <caption webpage="aboutcontact" alt=""/>
+    </file>
+    <file name="img_6326.gif" crc="3965961172" seo="true" ref="studio-cam">
+      <caption webpage="studio-cam" alt=""/>
+    </file>
   </folder>
-  <file name="index.html" crc="532081591" seo="true" mt="1508700231367" redirect="true"/>
-  <file name="aboutcontact.html" crc="3868122469" seo="true" mt="1508699928067" redirect="true"/>
-  <file name="studio-cam.html" crc="263250184" seo="true" mt="1508699928067" redirect="true"/>
+  <file name="index.html" crc="4002594558" seo="true" mt="1508701870892" redirect="true"/>
+  <file name="aboutcontact.html" crc="4232817482" seo="true" mt="1508699928067" redirect="true"/>
+  <file name="studio-cam.html" crc="3820399660" seo="true" mt="1508699928067" redirect="true"/>
 </manifest>
