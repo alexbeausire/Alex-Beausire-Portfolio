@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>http://alexbeausi.re/index.html</loc>
-    <lastmod>2017-10-22</lastmod>
+    <lastmod>2017-11-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
     <image:image>
@@ -15,16 +15,25 @@
       <image:loc>http://alexbeausi.re/images/alex%20beausire.gif</image:loc>
     </image:image>
     <image:image>
+      <image:loc>http://alexbeausi.re/images/jon-rust-poster.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>http://alexbeausi.re/images/jon-rust-poster_2x.jpg</image:loc>
+    </image:image>
+    <image:image>
       <image:loc>http://alexbeausi.re/images/stw.png</image:loc>
     </image:image>
     <image:image>
       <image:loc>http://alexbeausi.re/images/stw_2x.png</image:loc>
     </image:image>
     <image:image>
-      <image:loc>http://alexbeausi.re/images/banoffe-pies-poster.png</image:loc>
+      <image:loc>http://alexbeausi.re/images/banoffe-pies-poster.jpg</image:loc>
     </image:image>
     <image:image>
-      <image:loc>http://alexbeausi.re/images/banoffe-pies-poster_2x.png</image:loc>
+      <image:loc>http://alexbeausi.re/images/fio52.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>http://alexbeausi.re/images/fio52_2x.jpg</image:loc>
     </image:image>
     <image:image>
       <image:loc>http://alexbeausi.re/images/manekineko.gif</image:loc>
@@ -36,31 +45,16 @@
       <image:loc>http://alexbeausi.re/images/boogie-nights-poster_2x.jpg</image:loc>
     </image:image>
     <image:image>
-      <image:loc>http://alexbeausi.re/images/earth-round-white_background.gif</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>http://alexbeausi.re/images/fio52.jpg</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>http://alexbeausi.re/images/fio52_2x.jpg</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>http://alexbeausi.re/images/wwecenabelt.gif</image:loc>
-    </image:image>
-    <image:image>
       <image:loc>http://alexbeausi.re/images/carnival%20party%20poster%20(for%20online%20rgb).jpg</image:loc>
     </image:image>
     <image:image>
       <image:loc>http://alexbeausi.re/images/carnival%20party%20poster%20(for%20online%20rgb)_2x.jpg</image:loc>
     </image:image>
     <image:image>
-      <image:loc>http://alexbeausi.re/images/link1.gif</image:loc>
+      <image:loc>http://alexbeausi.re/images/earth-round-white_background.gif</image:loc>
     </image:image>
     <image:image>
-      <image:loc>http://alexbeausi.re/images/link1_2x.gif</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>http://alexbeausi.re/images/redbritney.gif</image:loc>
+      <image:loc>http://alexbeausi.re/images/wwecenabelt.gif</image:loc>
     </image:image>
     <image:image>
       <image:loc>http://alexbeausi.re/images/4quarters-again.jpg</image:loc>
@@ -69,19 +63,22 @@
       <image:loc>http://alexbeausi.re/images/4quarters-again_2x.jpg</image:loc>
     </image:image>
     <image:image>
-      <image:loc>http://alexbeausi.re/images/grenfell%20fundaraiser.jpg</image:loc>
+      <image:loc>http://alexbeausi.re/images/our%20house%20goes%20home%20a3.jpg</image:loc>
     </image:image>
     <image:image>
-      <image:loc>http://alexbeausi.re/images/grenfell%20fundaraiser_2x.jpg</image:loc>
+      <image:loc>http://alexbeausi.re/images/our%20house%20goes%20home%20a3_2x.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>http://alexbeausi.re/images/link1.gif</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>http://alexbeausi.re/images/link1_2x.gif</image:loc>
     </image:image>
     <image:image>
       <image:loc>http://alexbeausi.re/images/hamama.gif</image:loc>
     </image:image>
     <image:image>
-      <image:loc>http://alexbeausi.re/images/our%20house%20goes%20home%20a3.jpg</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>http://alexbeausi.re/images/our%20house%20goes%20home%20a3_2x.jpg</image:loc>
+      <image:loc>http://alexbeausi.re/images/redbritney.gif</image:loc>
     </image:image>
     <image:image>
       <image:loc>http://alexbeausi.re/images/dollarspindownd.gif</image:loc>
