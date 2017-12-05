@@ -1,38 +1,52 @@
-<manifest alg="2" build="2018.0.0.379" opt="true" iceEnabled="true" iceMarkupVersion="2" iceEnabledOptions="link,responsive,cachebuster,textStyling" exportTarget="other" domain="alexbeausi.re" resolutions="1x,2x" timestamp="1509620288165">
+<manifest alg="2" build="2018.0.0.379" opt="true" iceEnabled="true" iceMarkupVersion="2" iceEnabledOptions="link,responsive,cachebuster,textStyling" exportTarget="other" domain="alexbeausi.re" resolutions="1x,2x" timestamp="1512516134535">
   <folder name="css">
     <file name="site_global.css" crc="444006867"/>
-    <file name="master_a-master.css" crc="4057703216" ref="index:aboutcontact:studio-cam"/>
-    <file name="index.css" crc="209263314" ref="index"/>
-    <file name="aboutcontact.css" crc="54055320" ref="aboutcontact"/>
-    <file name="studio-cam.css" crc="459187474" ref="studio-cam"/>
+    <file name="master_a-master.css" crc="3791780384" ref="index:aboutcontact:studio-cam:coming-soon"/>
+    <file name="index.css" crc="3805057238" ref="index"/>
+    <file name="aboutcontact.css" crc="4248445259" ref="aboutcontact"/>
+    <file name="studio-cam.css" crc="210361478" ref="studio-cam"/>
+    <file name="master_a-master-copy.css" crc="4146800381" ref="about:serious-home"/>
+    <file name="coming-soon.css" crc="3828369904" ref="coming-soon"/>
+    <file name="about.css" crc="4260611454" ref="about"/>
+    <file name="serious-home.css" crc="3824673178" ref="serious-home"/>
   </folder>
   <folder name="scripts">
-    <file name="jquery-1.8.3.min.js" crc="209076791" ref="index:aboutcontact:studio-cam"/>
-    <file name="museutils.js" crc="3803043152" ref="index:aboutcontact:studio-cam"/>
-    <file name="whatinput.js" crc="86476730" ref="index:aboutcontact:studio-cam"/>
-    <file name="museconfig.js" crc="4153641093" ref="index:aboutcontact:studio-cam"/>
-    <file name="jquery.musemenu.js" crc="3784699396" ref="index:aboutcontact:studio-cam"/>
-    <file name="jquery.watch.js" crc="99325471" ref="index:aboutcontact:studio-cam"/>
-    <file name="jquery.scrolleffects.js" crc="530399994" ref="index:aboutcontact:studio-cam"/>
-    <file name="html5shiv.js" crc="4241844378" ref="index:aboutcontact:studio-cam"/>
-    <file name="require.js" crc="4157109226" ref="index:aboutcontact:studio-cam"/>
+    <file name="jquery-1.8.3.min.js" crc="209076791" ref="index:aboutcontact:studio-cam:serious-home:about:coming-soon"/>
+    <file name="museutils.js" crc="3803043152" ref="index:aboutcontact:studio-cam:serious-home:about:coming-soon"/>
+    <file name="whatinput.js" crc="86476730" ref="index:aboutcontact:studio-cam:serious-home:about:coming-soon"/>
+    <file name="museconfig.js" crc="4153641093" ref="index:aboutcontact:studio-cam:serious-home:about:coming-soon"/>
+    <file name="jquery.musemenu.js" crc="3784699396" ref="index:aboutcontact:studio-cam:coming-soon"/>
+    <file name="jquery.watch.js" crc="99325471" ref="index:aboutcontact:studio-cam:serious-home:about:coming-soon"/>
+    <file name="jquery.scrolleffects.js" crc="530399994" ref="index:aboutcontact:studio-cam:serious-home"/>
+    <file name="html5shiv.js" crc="4241844378" ref="index:aboutcontact:studio-cam:serious-home:about:coming-soon"/>
+    <file name="require.js" crc="4157109226" ref="index:aboutcontact:studio-cam:serious-home:about:coming-soon"/>
+    <file name="webpro.js" crc="242022427" ref="serious-home"/>
+    <file name="musewpslideshow.js" crc="457073769" ref="serious-home"/>
+    <file name="jquery.museoverlay.js" crc="483674903" ref="serious-home"/>
+    <file name="touchswipe.js" crc="4066113679" ref="serious-home"/>
   </folder>
   <folder name="images">
     <file name="favicon.ico" crc="4212706539" ref="index"/>
-    <file name="portfolio-photo.png" crc="4017327085" seo="true" ref="index:aboutcontact:studio-cam">
+    <file name="portfolio-photo.png" crc="4017327085" seo="true" ref="index:aboutcontact:studio-cam:serious-home:about">
       <caption webpage="index" alt=""/>
+      <caption webpage="serious-home" alt=""/>
       <caption webpage="studio-cam" alt=""/>
       <caption webpage="aboutcontact" alt=""/>
+      <caption webpage="about" alt=""/>
     </file>
-    <file name="portfolio-photo_2x.png" crc="51849880" seo="true" ref="index:aboutcontact:studio-cam">
+    <file name="portfolio-photo_2x.png" crc="51849880" seo="true" ref="index:aboutcontact:studio-cam:serious-home:about:coming-soon">
       <caption webpage="index" alt=""/>
+      <caption webpage="serious-home" alt=""/>
       <caption webpage="studio-cam" alt=""/>
       <caption webpage="aboutcontact" alt=""/>
+      <caption webpage="about" alt=""/>
+      <caption webpage="coming-soon" alt=""/>
     </file>
-    <file name="alex beausire.gif" crc="39614180" seo="true" ref="index:aboutcontact:studio-cam">
+    <file name="alex beausire.gif" crc="39614180" seo="true" ref="index:aboutcontact:studio-cam:coming-soon">
       <caption webpage="index" alt=""/>
       <caption webpage="studio-cam" alt=""/>
       <caption webpage="aboutcontact" alt=""/>
+      <caption webpage="coming-soon" alt=""/>
     </file>
     <file name="jon-rust-poster.jpg" crc="511042082" seo="true" ref="index">
       <caption webpage="index" alt=""/>
@@ -65,10 +79,10 @@
     <file name="boogie-nights-poster_2x.jpg" crc="4280707669" seo="true" ref="index">
       <caption webpage="index" alt=""/>
     </file>
-    <file name="carnival party poster (for online rgb).jpg" crc="24251414" seo="true" ref="index">
+    <file name="carnival party poster (for online rgb).jpg" crc="119961466" seo="true" ref="index">
       <caption webpage="index" alt=""/>
     </file>
-    <file name="carnival party poster (for online rgb)_2x.jpg" crc="230029510" seo="true" ref="index">
+    <file name="carnival party poster (for online rgb)_2x.jpg" crc="266065186" seo="true" ref="index">
       <caption webpage="index" alt=""/>
     </file>
     <file name="earth-round-white_background.gif" crc="413797906" seo="true" ref="index">
@@ -146,8 +160,95 @@
     <file name="img_6326.gif" crc="3965961172" seo="true" ref="studio-cam">
       <caption webpage="studio-cam" alt=""/>
     </file>
+    <file name="residents-banner.png" crc="4278513917" seo="true" ref="index">
+      <caption webpage="index" alt=""/>
+    </file>
+    <file name="residents-banner_2x.png" crc="464247150" seo="true" ref="index">
+      <caption webpage="index" alt=""/>
+    </file>
+    <file name="dj-sports---ck-a3.jpg" crc="4207252935" seo="true" ref="index">
+      <caption webpage="index" alt=""/>
+    </file>
+    <file name="dj-sports---ck-a3_2x.jpg" crc="408602657" seo="true" ref="index">
+      <caption webpage="index" alt=""/>
+    </file>
+    <file name="blank.gif" crc="4208392903" ref="serious-home:about"/>
+    <file name="u9974_states.png" crc="67724452" ref="serious-home:about"/>
+    <file name="u9974_states_2x.png" crc="4234172610" ref="serious-home:about"/>
+    <file name="u9974_states-r.png" crc="67724452" ref="serious-home:about"/>
+    <file name="u9974_states-r_2x.png" crc="4234172610" ref="serious-home:about"/>
+    <file name="u9974_states-a.png" crc="67724452" ref="serious-home:about"/>
+    <file name="u9974_states-a_2x.png" crc="4234172610" ref="serious-home:about"/>
+    <file name="u9977_states.png" crc="4259338744" ref="serious-home:about"/>
+    <file name="u9977_states_2x.png" crc="4151248854" ref="serious-home:about"/>
+    <file name="u9977_states-r.png" crc="4259338744" ref="serious-home:about"/>
+    <file name="u9977_states-r_2x.png" crc="4151248854" ref="serious-home:about"/>
+    <file name="u9977_states-a.png" crc="4259338744" ref="serious-home:about"/>
+    <file name="u9977_states-a_2x.png" crc="4151248854" ref="serious-home:about"/>
+    <file name="u9062.png" crc="190198789" ref="serious-home:about"/>
+    <file name="u9062_2x.png" crc="4057147470" ref="serious-home:about"/>
+    <file name="u9062-r.png" crc="3979781072" ref="serious-home:about"/>
+    <file name="u9062-r_2x.png" crc="4267913901" ref="serious-home:about"/>
+    <file name="u9183-4.png" crc="109957763" ref="serious-home:about"/>
+    <file name="u9183-4_2x.png" crc="26658658" ref="serious-home:about"/>
+    <file name="u9186-4.png" crc="4281828733" ref="serious-home:about"/>
+    <file name="u9186-4_2x.png" crc="3990497459" ref="serious-home:about"/>
+    <file name="ab-logo.svg" crc="66144619" seo="true" ref="serious-home:about">
+      <caption webpage="serious-home" alt=""/>
+      <caption webpage="about" alt=""/>
+    </file>
+    <file name="ab-logo_poster_.png" crc="505558828" ref="serious-home"/>
+    <file name="u10819-4.png" crc="3916544394" ref="serious-home:about"/>
+    <file name="u10819-4_2x.png" crc="3867900873" ref="serious-home:about"/>
+    <file name="20170530-thris-tian-with-dj-lag-1620x1080.png" crc="3875137061" seo="true" ref="serious-home">
+      <caption webpage="serious-home" alt=""/>
+    </file>
+    <file name="nmw-black-clear-bg-crop-u10690.jpg" crc="4091245579" seo="true" ref="serious-home">
+      <caption webpage="serious-home" alt=""/>
+    </file>
+    <file name="loading.gif" crc="3815509949" ref="serious-home"/>
+    <file name="u10695-4.png" crc="343140705" ref="serious-home"/>
+    <file name="u10695-4_2x.png" crc="3999513831" ref="serious-home"/>
+    <file name="u10673-4.png" crc="451019417" ref="serious-home"/>
+    <file name="u10673-4_2x.png" crc="3899603855" ref="serious-home"/>
+    <file name="20170530-thris-tian-with-dj-lag-1620x1080-crop-u10241.png" crc="447573172" seo="true" ref="serious-home">
+      <caption webpage="serious-home" alt=""/>
+    </file>
+    <file name="nmw-black-clear-bg633x633.jpg" crc="518695841" seo="true" ref="serious-home">
+      <caption webpage="serious-home" alt=""/>
+      <caption webpage="serious-home" alt=""/>
+    </file>
+    <file name="23376377_1693493050725290_2723432662954101471_n.jpg" crc="3761426911" seo="true" ref="serious-home">
+      <caption webpage="serious-home" alt=""/>
+      <caption webpage="serious-home" alt=""/>
+    </file>
+    <file name="u10614-4.png" crc="4242994733" ref="serious-home"/>
+    <file name="u10614-4_2x.png" crc="3974770575" ref="serious-home"/>
+    <file name="u10617-4.png" crc="3917694445" ref="serious-home"/>
+    <file name="u10617-4_2x.png" crc="278233661" ref="serious-home"/>
+    <file name="20170530-thris-tian-with-dj-lag-1620x1080-crop-u11067.png" crc="447573172" seo="true" ref="serious-home">
+      <caption webpage="serious-home" alt=""/>
+    </file>
+    <file name="u11072-4.png" crc="4242994733" ref="serious-home"/>
+    <file name="u11072-4_2x.png" crc="3974770575" ref="serious-home"/>
+    <file name="u11045-4.png" crc="3917694445" ref="serious-home"/>
+    <file name="u11045-4_2x.png" crc="278233661" ref="serious-home"/>
+    <file name="u10165-7.png" crc="146744853" ref="about"/>
+    <file name="u10165-7_2x.png" crc="3765131275" ref="about"/>
+    <file name="portfolio-photo155x117.png" crc="3950876698" seo="true" ref="coming-soon">
+      <caption webpage="coming-soon" alt=""/>
+    </file>
+    <file name="5a2727b1f1239c5a860bd75b-crop-u11809.png" crc="4268227333" seo="true" ref="coming-soon">
+      <caption webpage="coming-soon" alt=""/>
+    </file>
+    <file name="5a2727b1f1239c5a860bd75b-crop-u11809_2x.png" crc="4061377823" seo="true" ref="coming-soon">
+      <caption webpage="coming-soon" alt=""/>
+    </file>
   </folder>
-  <file name="index.html" crc="3830824297" seo="true" mt="1509561390439" redirect="true"/>
-  <file name="aboutcontact.html" crc="408744798" seo="true" mt="1508699928067" redirect="true"/>
-  <file name="studio-cam.html" crc="3771096016" seo="true" mt="1508699928067" redirect="true"/>
+  <file name="index.html" crc="333679527" seo="true" mt="1512515832691" redirect="true"/>
+  <file name="aboutcontact.html" crc="4164208582" seo="true" mt="1512515832691" redirect="true"/>
+  <file name="studio-cam.html" crc="3989719546" seo="true" mt="1512515832691" redirect="true"/>
+  <file name="serious-home.html" crc="230168371" seo="true" mt="1512514718156" redirect="true"/>
+  <file name="about.html" crc="3998109624" seo="true" mt="1512514718163" redirect="true"/>
+  <file name="coming-soon.html" crc="4142455715" seo="true" mt="1512515832691" redirect="true"/>
 </manifest>

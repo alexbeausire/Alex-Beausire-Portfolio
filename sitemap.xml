@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>http://alexbeausi.re/index.html</loc>
-    <lastmod>2017-11-01</lastmod>
+    <lastmod>2017-12-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
     <image:image>
@@ -119,10 +119,22 @@
     <image:image>
       <image:loc>http://alexbeausi.re/images/2_orig.jpg</image:loc>
     </image:image>
+    <image:image>
+      <image:loc>http://alexbeausi.re/images/residents-banner.png</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>http://alexbeausi.re/images/residents-banner_2x.png</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>http://alexbeausi.re/images/dj-sports---ck-a3.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>http://alexbeausi.re/images/dj-sports---ck-a3_2x.jpg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>http://alexbeausi.re/aboutcontact.html</loc>
-    <lastmod>2017-10-22</lastmod>
+    <lastmod>2017-12-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
     <image:image>
@@ -140,7 +152,7 @@
   </url>
   <url>
     <loc>http://alexbeausi.re/studio-cam.html</loc>
-    <lastmod>2017-10-22</lastmod>
+    <lastmod>2017-12-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
     <image:image>
@@ -154,6 +166,75 @@
     </image:image>
     <image:image>
       <image:loc>http://alexbeausi.re/images/img_6326.gif</image:loc>
+    </image:image>
+  </url>
+  <url>
+    <loc>http://alexbeausi.re/serious-home.html</loc>
+    <lastmod>2017-12-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+    <image:image>
+      <image:loc>http://alexbeausi.re/images/portfolio-photo.png</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>http://alexbeausi.re/images/portfolio-photo_2x.png</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>http://alexbeausi.re/images/ab-logo.svg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>http://alexbeausi.re/images/20170530-thris-tian-with-dj-lag-1620x1080.png</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>http://alexbeausi.re/images/nmw-black-clear-bg-crop-u10690.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>http://alexbeausi.re/images/20170530-thris-tian-with-dj-lag-1620x1080-crop-u10241.png</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>http://alexbeausi.re/images/nmw-black-clear-bg633x633.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>http://alexbeausi.re/images/23376377_1693493050725290_2723432662954101471_n.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>http://alexbeausi.re/images/20170530-thris-tian-with-dj-lag-1620x1080-crop-u11067.png</image:loc>
+    </image:image>
+  </url>
+  <url>
+    <loc>http://alexbeausi.re/about.html</loc>
+    <lastmod>2017-12-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+    <image:image>
+      <image:loc>http://alexbeausi.re/images/portfolio-photo.png</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>http://alexbeausi.re/images/portfolio-photo_2x.png</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>http://alexbeausi.re/images/ab-logo.svg</image:loc>
+    </image:image>
+  </url>
+  <url>
+    <loc>http://alexbeausi.re/coming-soon.html</loc>
+    <lastmod>2017-12-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+    <image:image>
+      <image:loc>http://alexbeausi.re/images/portfolio-photo_2x.png</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>http://alexbeausi.re/images/alex%20beausire.gif</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>http://alexbeausi.re/images/portfolio-photo155x117.png</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>http://alexbeausi.re/images/5a2727b1f1239c5a860bd75b-crop-u11809.png</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>http://alexbeausi.re/images/5a2727b1f1239c5a860bd75b-crop-u11809_2x.png</image:loc>
     </image:image>
   </url>
 </urlset>
