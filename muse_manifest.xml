@@ -1,51 +1,51 @@
-<manifest alg="2" build="2018.0.0.379" opt="true" iceEnabled="true" iceMarkupVersion="2" iceEnabledOptions="link,responsive,cachebuster,textStyling" exportTarget="other" domain="alexbeausi.re" resolutions="1x,2x" timestamp="1512516134535">
+<manifest alg="2" build="2018.0.0.379" opt="true" iceEnabled="true" iceMarkupVersion="2" iceEnabledOptions="link,responsive,cachebuster,textStyling" exportTarget="other" domain="alexbeausi.re" resolutions="1x,2x" timestamp="1513213104246">
   <folder name="css">
     <file name="site_global.css" crc="444006867"/>
     <file name="master_a-master.css" crc="3791780384" ref="index:aboutcontact:studio-cam:coming-soon"/>
     <file name="index.css" crc="3805057238" ref="index"/>
     <file name="aboutcontact.css" crc="4248445259" ref="aboutcontact"/>
     <file name="studio-cam.css" crc="210361478" ref="studio-cam"/>
-    <file name="master_a-master-copy.css" crc="4146800381" ref="about:serious-home"/>
+    <file name="master_a-master-copy.css" crc="185592318" ref="about:serious-home:knowledge-arena:yubl:wwfm-flyer:wwfm-live-sessions"/>
     <file name="coming-soon.css" crc="3828369904" ref="coming-soon"/>
-    <file name="about.css" crc="4260611454" ref="about"/>
-    <file name="serious-home.css" crc="3824673178" ref="serious-home"/>
+    <file name="about.css" crc="3796759190" ref="about"/>
+    <file name="serious-home.css" crc="435477845" ref="serious-home"/>
+    <file name="knowledge-arena.css" crc="4171313607" ref="knowledge-arena"/>
+    <file name="yubl.css" crc="4171313607" ref="yubl"/>
+    <file name="wwfm-flyer.css" crc="191521076" ref="wwfm-flyer"/>
+    <file name="wwfm-live-sessions.css" crc="394198396" ref="wwfm-live-sessions"/>
   </folder>
   <folder name="scripts">
-    <file name="jquery-1.8.3.min.js" crc="209076791" ref="index:aboutcontact:studio-cam:serious-home:about:coming-soon"/>
-    <file name="museutils.js" crc="3803043152" ref="index:aboutcontact:studio-cam:serious-home:about:coming-soon"/>
-    <file name="whatinput.js" crc="86476730" ref="index:aboutcontact:studio-cam:serious-home:about:coming-soon"/>
-    <file name="museconfig.js" crc="4153641093" ref="index:aboutcontact:studio-cam:serious-home:about:coming-soon"/>
+    <file name="jquery-1.8.3.min.js" crc="209076791" ref="index:aboutcontact:studio-cam:serious-home:about:coming-soon:knowledge-arena:wwfm-flyer:wwfm-live-sessions:yubl"/>
+    <file name="museutils.js" crc="3803043152" ref="index:aboutcontact:studio-cam:serious-home:about:coming-soon:knowledge-arena:wwfm-flyer:wwfm-live-sessions:yubl"/>
+    <file name="whatinput.js" crc="86476730" ref="index:aboutcontact:studio-cam:serious-home:about:coming-soon:knowledge-arena:wwfm-flyer:wwfm-live-sessions:yubl"/>
+    <file name="museconfig.js" crc="4153641093" ref="index:aboutcontact:studio-cam:serious-home:about:coming-soon:knowledge-arena:wwfm-flyer:wwfm-live-sessions:yubl"/>
     <file name="jquery.musemenu.js" crc="3784699396" ref="index:aboutcontact:studio-cam:coming-soon"/>
-    <file name="jquery.watch.js" crc="99325471" ref="index:aboutcontact:studio-cam:serious-home:about:coming-soon"/>
-    <file name="jquery.scrolleffects.js" crc="530399994" ref="index:aboutcontact:studio-cam:serious-home"/>
-    <file name="html5shiv.js" crc="4241844378" ref="index:aboutcontact:studio-cam:serious-home:about:coming-soon"/>
-    <file name="require.js" crc="4157109226" ref="index:aboutcontact:studio-cam:serious-home:about:coming-soon"/>
-    <file name="webpro.js" crc="242022427" ref="serious-home"/>
-    <file name="musewpslideshow.js" crc="457073769" ref="serious-home"/>
-    <file name="jquery.museoverlay.js" crc="483674903" ref="serious-home"/>
-    <file name="touchswipe.js" crc="4066113679" ref="serious-home"/>
+    <file name="jquery.watch.js" crc="99325471" ref="index:aboutcontact:studio-cam:serious-home:about:coming-soon:knowledge-arena:wwfm-flyer:wwfm-live-sessions:yubl"/>
+    <file name="jquery.scrolleffects.js" crc="530399994" ref="index:aboutcontact:studio-cam"/>
+    <file name="html5shiv.js" crc="4241844378" ref="index:aboutcontact:studio-cam:serious-home:about:coming-soon:knowledge-arena:wwfm-flyer:wwfm-live-sessions:yubl"/>
+    <file name="require.js" crc="4157109226" ref="index:aboutcontact:studio-cam:serious-home:about:coming-soon:knowledge-arena:wwfm-flyer:wwfm-live-sessions:yubl"/>
   </folder>
   <folder name="images">
     <file name="favicon.ico" crc="4212706539" ref="index"/>
-    <file name="portfolio-photo.png" crc="4017327085" seo="true" ref="index:aboutcontact:studio-cam:serious-home:about">
+    <file name="portfolio-photo.png" crc="4017327085" seo="true" ref="index:aboutcontact:studio-cam">
       <caption webpage="index" alt=""/>
-      <caption webpage="serious-home" alt=""/>
-      <caption webpage="studio-cam" alt=""/>
       <caption webpage="aboutcontact" alt=""/>
+      <caption webpage="studio-cam" alt=""/>
+      <caption webpage="serious-home" alt=""/>
       <caption webpage="about" alt=""/>
     </file>
-    <file name="portfolio-photo_2x.png" crc="51849880" seo="true" ref="index:aboutcontact:studio-cam:serious-home:about:coming-soon">
+    <file name="portfolio-photo_2x.png" crc="51849880" seo="true" ref="index:aboutcontact:studio-cam:coming-soon">
       <caption webpage="index" alt=""/>
-      <caption webpage="serious-home" alt=""/>
-      <caption webpage="studio-cam" alt=""/>
       <caption webpage="aboutcontact" alt=""/>
+      <caption webpage="studio-cam" alt=""/>
+      <caption webpage="serious-home" alt=""/>
       <caption webpage="about" alt=""/>
       <caption webpage="coming-soon" alt=""/>
     </file>
     <file name="alex beausire.gif" crc="39614180" seo="true" ref="index:aboutcontact:studio-cam:coming-soon">
       <caption webpage="index" alt=""/>
-      <caption webpage="studio-cam" alt=""/>
       <caption webpage="aboutcontact" alt=""/>
+      <caption webpage="studio-cam" alt=""/>
       <caption webpage="coming-soon" alt=""/>
     </file>
     <file name="jon-rust-poster.jpg" crc="511042082" seo="true" ref="index">
@@ -172,69 +172,11 @@
     <file name="dj-sports---ck-a3_2x.jpg" crc="408602657" seo="true" ref="index">
       <caption webpage="index" alt=""/>
     </file>
-    <file name="blank.gif" crc="4208392903" ref="serious-home:about"/>
-    <file name="u9974_states.png" crc="67724452" ref="serious-home:about"/>
-    <file name="u9974_states_2x.png" crc="4234172610" ref="serious-home:about"/>
-    <file name="u9974_states-r.png" crc="67724452" ref="serious-home:about"/>
-    <file name="u9974_states-r_2x.png" crc="4234172610" ref="serious-home:about"/>
-    <file name="u9974_states-a.png" crc="67724452" ref="serious-home:about"/>
-    <file name="u9974_states-a_2x.png" crc="4234172610" ref="serious-home:about"/>
-    <file name="u9977_states.png" crc="4259338744" ref="serious-home:about"/>
-    <file name="u9977_states_2x.png" crc="4151248854" ref="serious-home:about"/>
-    <file name="u9977_states-r.png" crc="4259338744" ref="serious-home:about"/>
-    <file name="u9977_states-r_2x.png" crc="4151248854" ref="serious-home:about"/>
-    <file name="u9977_states-a.png" crc="4259338744" ref="serious-home:about"/>
-    <file name="u9977_states-a_2x.png" crc="4151248854" ref="serious-home:about"/>
-    <file name="u9062.png" crc="190198789" ref="serious-home:about"/>
-    <file name="u9062_2x.png" crc="4057147470" ref="serious-home:about"/>
-    <file name="u9062-r.png" crc="3979781072" ref="serious-home:about"/>
-    <file name="u9062-r_2x.png" crc="4267913901" ref="serious-home:about"/>
-    <file name="u9183-4.png" crc="109957763" ref="serious-home:about"/>
-    <file name="u9183-4_2x.png" crc="26658658" ref="serious-home:about"/>
-    <file name="u9186-4.png" crc="4281828733" ref="serious-home:about"/>
-    <file name="u9186-4_2x.png" crc="3990497459" ref="serious-home:about"/>
-    <file name="ab-logo.svg" crc="66144619" seo="true" ref="serious-home:about">
-      <caption webpage="serious-home" alt=""/>
-      <caption webpage="about" alt=""/>
-    </file>
-    <file name="ab-logo_poster_.png" crc="505558828" ref="serious-home"/>
-    <file name="u10819-4.png" crc="3916544394" ref="serious-home:about"/>
-    <file name="u10819-4_2x.png" crc="3867900873" ref="serious-home:about"/>
-    <file name="20170530-thris-tian-with-dj-lag-1620x1080.png" crc="3875137061" seo="true" ref="serious-home">
-      <caption webpage="serious-home" alt=""/>
-    </file>
-    <file name="nmw-black-clear-bg-crop-u10690.jpg" crc="4091245579" seo="true" ref="serious-home">
-      <caption webpage="serious-home" alt=""/>
-    </file>
-    <file name="loading.gif" crc="3815509949" ref="serious-home"/>
-    <file name="u10695-4.png" crc="343140705" ref="serious-home"/>
-    <file name="u10695-4_2x.png" crc="3999513831" ref="serious-home"/>
-    <file name="u10673-4.png" crc="451019417" ref="serious-home"/>
-    <file name="u10673-4_2x.png" crc="3899603855" ref="serious-home"/>
-    <file name="20170530-thris-tian-with-dj-lag-1620x1080-crop-u10241.png" crc="447573172" seo="true" ref="serious-home">
-      <caption webpage="serious-home" alt=""/>
-    </file>
-    <file name="nmw-black-clear-bg633x633.jpg" crc="518695841" seo="true" ref="serious-home">
-      <caption webpage="serious-home" alt=""/>
-      <caption webpage="serious-home" alt=""/>
-    </file>
-    <file name="23376377_1693493050725290_2723432662954101471_n.jpg" crc="3761426911" seo="true" ref="serious-home">
-      <caption webpage="serious-home" alt=""/>
-      <caption webpage="serious-home" alt=""/>
-    </file>
-    <file name="u10614-4.png" crc="4242994733" ref="serious-home"/>
-    <file name="u10614-4_2x.png" crc="3974770575" ref="serious-home"/>
-    <file name="u10617-4.png" crc="3917694445" ref="serious-home"/>
-    <file name="u10617-4_2x.png" crc="278233661" ref="serious-home"/>
-    <file name="20170530-thris-tian-with-dj-lag-1620x1080-crop-u11067.png" crc="447573172" seo="true" ref="serious-home">
-      <caption webpage="serious-home" alt=""/>
-    </file>
-    <file name="u11072-4.png" crc="4242994733" ref="serious-home"/>
-    <file name="u11072-4_2x.png" crc="3974770575" ref="serious-home"/>
-    <file name="u11045-4.png" crc="3917694445" ref="serious-home"/>
-    <file name="u11045-4_2x.png" crc="278233661" ref="serious-home"/>
-    <file name="u10165-7.png" crc="146744853" ref="about"/>
-    <file name="u10165-7_2x.png" crc="3765131275" ref="about"/>
+    <file name="blank.gif" crc="4208392903" ref="serious-home:about:knowledge-arena:wwfm-flyer:wwfm-live-sessions:yubl"/>
+    <file name="u9062.png" crc="190198789" ref="serious-home:about:knowledge-arena:wwfm-flyer:wwfm-live-sessions:yubl"/>
+    <file name="u9062_2x.png" crc="4057147470" ref="serious-home:about:knowledge-arena:wwfm-flyer:wwfm-live-sessions:yubl"/>
+    <file name="u9062-r.png" crc="3979781072" ref="serious-home:about:knowledge-arena:wwfm-flyer:wwfm-live-sessions:yubl"/>
+    <file name="u9062-r_2x.png" crc="4267913901" ref="serious-home:about:knowledge-arena:wwfm-flyer:wwfm-live-sessions:yubl"/>
     <file name="portfolio-photo155x117.png" crc="3950876698" seo="true" ref="coming-soon">
       <caption webpage="coming-soon" alt=""/>
     </file>
@@ -244,11 +186,87 @@
     <file name="5a2727b1f1239c5a860bd75b-crop-u11809_2x.png" crc="4061377823" seo="true" ref="coming-soon">
       <caption webpage="coming-soon" alt=""/>
     </file>
+    <file name="portfolio-photo115x86.png" crc="192659634" seo="true" ref="serious-home">
+      <caption webpage="serious-home" alt=""/>
+    </file>
+    <file name="portfolio-photo115x86_2x.png" crc="81241197" seo="true" ref="serious-home">
+      <caption webpage="serious-home" alt=""/>
+    </file>
+    <file name="u12239-4.png" crc="4153962336" ref="serious-home:about:knowledge-arena:wwfm-flyer:wwfm-live-sessions:yubl"/>
+    <file name="u12239-4_2x.png" crc="3996896222" ref="serious-home:about:knowledge-arena:wwfm-flyer:wwfm-live-sessions:yubl"/>
+    <file name="u12327-4.png" crc="274524961" ref="serious-home:about:knowledge-arena:wwfm-flyer:wwfm-live-sessions:yubl"/>
+    <file name="u12327-4_2x.png" crc="4151195361" ref="serious-home:about:knowledge-arena:wwfm-flyer:wwfm-live-sessions:yubl"/>
+    <file name="esa-presents-27-11501x501.png" crc="522361157" seo="true" ref="serious-home">
+      <caption webpage="serious-home" alt=""/>
+    </file>
+    <file name="esa-presents-27-11501x501_2x.png" crc="299885899" seo="true" ref="serious-home">
+      <caption webpage="serious-home" alt=""/>
+    </file>
+    <file name="u12522-r.png" crc="147893675" ref="serious-home"/>
+    <file name="u12522-r_2x.png" crc="432462026" ref="serious-home"/>
+    <file name="c029100_08_15_14still001891x502.jpg" crc="4208296387" seo="true" ref="serious-home">
+      <caption webpage="serious-home" alt=""/>
+    </file>
+    <file name="c029100_08_15_14still001891x502_2x.jpg" crc="4055032847" seo="true" ref="serious-home">
+      <caption webpage="serious-home" alt=""/>
+    </file>
+    <file name="u12653-r.png" crc="220781223" ref="serious-home"/>
+    <file name="u12653-r_2x.png" crc="131086547" ref="serious-home"/>
+    <file name="nmw-black-clear-bg.jpg" crc="254790867" seo="true" ref="serious-home">
+      <caption webpage="serious-home" alt=""/>
+    </file>
+    <file name="nmw-black-clear-bg_2x.jpg" crc="428655249" seo="true" ref="serious-home">
+      <caption webpage="serious-home" alt=""/>
+    </file>
+    <file name="14138177_1065566890195539_6477286897123957916_o.jpg" crc="3903335284" seo="true" ref="serious-home">
+      <caption webpage="serious-home" alt=""/>
+    </file>
+    <file name="14138177_1065566890195539_6477286897123957916_o_2x.jpg" crc="4210408908" seo="true" ref="serious-home">
+      <caption webpage="serious-home" alt=""/>
+    </file>
+    <file name="u12710-r.png" crc="4173301493" ref="serious-home"/>
+    <file name="u12710-r_2x.png" crc="3795083797" ref="serious-home"/>
+    <file name="13592792_1047402062017033_5291141489049294713_n.jpg" crc="331300426" seo="true" ref="serious-home">
+      <caption webpage="serious-home" alt=""/>
+    </file>
+    <file name="u12904-r.png" crc="4239475029" ref="serious-home"/>
+    <file name="u12904-r_2x.png" crc="370997627" ref="serious-home"/>
+    <file name="u15088-7.png" crc="284873383" ref="about"/>
+    <file name="u15088-7_2x.png" crc="3969208885" ref="about"/>
+    <file name="esa-presents-27-11.png" crc="405911443" seo="true" ref="wwfm-flyer">
+      <caption webpage="wwfm-flyer" alt=""/>
+      <caption webpage="wwfm-flyer" alt=""/>
+    </file>
+    <file name="esa-presents-27-11_2x.png" crc="532004306" seo="true" ref="wwfm-flyer">
+      <caption webpage="wwfm-flyer" alt=""/>
+      <caption webpage="wwfm-flyer" alt=""/>
+    </file>
+    <file name="u15672-4.png" crc="4020062644" ref="wwfm-flyer"/>
+    <file name="u15672-4_2x.png" crc="4062697771" ref="wwfm-flyer"/>
+    <file name="u15659-4.png" crc="4126940035" ref="wwfm-flyer"/>
+    <file name="u15659-4_2x.png" crc="135983870" ref="wwfm-flyer"/>
+    <file name="rush-hour.jpg" crc="322891339" seo="true" ref="wwfm-flyer">
+      <caption webpage="wwfm-flyer" alt=""/>
+    </file>
+    <file name="c029100_08_15_14still001.jpg" crc="4209091571" seo="true" ref="wwfm-live-sessions">
+      <caption webpage="wwfm-live-sessions" alt=""/>
+    </file>
+    <file name="c029100_08_15_14still001_2x.jpg" crc="3962024467" seo="true" ref="wwfm-live-sessions">
+      <caption webpage="wwfm-live-sessions" alt=""/>
+    </file>
+    <file name="u15727-4.png" crc="448212682" ref="wwfm-live-sessions"/>
+    <file name="u15727-4_2x.png" crc="20850422" ref="wwfm-live-sessions"/>
+    <file name="u15726-4.png" crc="3957358444" ref="wwfm-live-sessions"/>
+    <file name="u15726-4_2x.png" crc="446344323" ref="wwfm-live-sessions"/>
   </folder>
-  <file name="index.html" crc="333679527" seo="true" mt="1512515832691" redirect="true"/>
-  <file name="aboutcontact.html" crc="4164208582" seo="true" mt="1512515832691" redirect="true"/>
-  <file name="studio-cam.html" crc="3989719546" seo="true" mt="1512515832691" redirect="true"/>
-  <file name="serious-home.html" crc="230168371" seo="true" mt="1512514718156" redirect="true"/>
-  <file name="about.html" crc="3998109624" seo="true" mt="1512514718163" redirect="true"/>
-  <file name="coming-soon.html" crc="4142455715" seo="true" mt="1512515832691" redirect="true"/>
+  <file name="index.html" crc="107137541" seo="true" mt="1513185581208" redirect="true"/>
+  <file name="aboutcontact.html" crc="3979999243" seo="true" mt="1513185581208" redirect="true"/>
+  <file name="studio-cam.html" crc="205967680" seo="true" mt="1513185581208" redirect="true"/>
+  <file name="serious-home.html" crc="3796735401" seo="true" mt="1513188693475" redirect="true"/>
+  <file name="about.html" crc="512370641" seo="true" mt="1513188352849" redirect="true"/>
+  <file name="coming-soon.html" crc="193831969" seo="true" mt="1513185581208" redirect="true"/>
+  <file name="knowledge-arena.html" crc="374443816" seo="true" mt="1513188502102" redirect="true"/>
+  <file name="wwfm-flyer.html" crc="4252984409" seo="true" mt="1513210117655" redirect="true"/>
+  <file name="wwfm-live-sessions.html" crc="129111089" seo="true" mt="1513213011250" redirect="true"/>
+  <file name="yubl.html" crc="497744449" seo="true" mt="1513188526599" redirect="true"/>
 </manifest>

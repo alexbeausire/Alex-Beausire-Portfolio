@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>http://alexbeausi.re/index.html</loc>
-    <lastmod>2017-12-05</lastmod>
+    <lastmod>2017-12-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
     <image:image>
@@ -134,7 +134,7 @@
   </url>
   <url>
     <loc>http://alexbeausi.re/aboutcontact.html</loc>
-    <lastmod>2017-12-05</lastmod>
+    <lastmod>2017-12-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
     <image:image>
@@ -152,7 +152,7 @@
   </url>
   <url>
     <loc>http://alexbeausi.re/studio-cam.html</loc>
-    <lastmod>2017-12-05</lastmod>
+    <lastmod>2017-12-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
     <image:image>
@@ -170,55 +170,52 @@
   </url>
   <url>
     <loc>http://alexbeausi.re/serious-home.html</loc>
-    <lastmod>2017-12-05</lastmod>
+    <lastmod>2017-12-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
     <image:image>
-      <image:loc>http://alexbeausi.re/images/portfolio-photo.png</image:loc>
+      <image:loc>http://alexbeausi.re/images/portfolio-photo115x86.png</image:loc>
     </image:image>
     <image:image>
-      <image:loc>http://alexbeausi.re/images/portfolio-photo_2x.png</image:loc>
+      <image:loc>http://alexbeausi.re/images/portfolio-photo115x86_2x.png</image:loc>
     </image:image>
     <image:image>
-      <image:loc>http://alexbeausi.re/images/ab-logo.svg</image:loc>
+      <image:loc>http://alexbeausi.re/images/esa-presents-27-11501x501.png</image:loc>
     </image:image>
     <image:image>
-      <image:loc>http://alexbeausi.re/images/20170530-thris-tian-with-dj-lag-1620x1080.png</image:loc>
+      <image:loc>http://alexbeausi.re/images/esa-presents-27-11501x501_2x.png</image:loc>
     </image:image>
     <image:image>
-      <image:loc>http://alexbeausi.re/images/nmw-black-clear-bg-crop-u10690.jpg</image:loc>
+      <image:loc>http://alexbeausi.re/images/c029100_08_15_14still001891x502.jpg</image:loc>
     </image:image>
     <image:image>
-      <image:loc>http://alexbeausi.re/images/20170530-thris-tian-with-dj-lag-1620x1080-crop-u10241.png</image:loc>
+      <image:loc>http://alexbeausi.re/images/c029100_08_15_14still001891x502_2x.jpg</image:loc>
     </image:image>
     <image:image>
-      <image:loc>http://alexbeausi.re/images/nmw-black-clear-bg633x633.jpg</image:loc>
+      <image:loc>http://alexbeausi.re/images/nmw-black-clear-bg.jpg</image:loc>
     </image:image>
     <image:image>
-      <image:loc>http://alexbeausi.re/images/23376377_1693493050725290_2723432662954101471_n.jpg</image:loc>
+      <image:loc>http://alexbeausi.re/images/nmw-black-clear-bg_2x.jpg</image:loc>
     </image:image>
     <image:image>
-      <image:loc>http://alexbeausi.re/images/20170530-thris-tian-with-dj-lag-1620x1080-crop-u11067.png</image:loc>
+      <image:loc>http://alexbeausi.re/images/14138177_1065566890195539_6477286897123957916_o.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>http://alexbeausi.re/images/14138177_1065566890195539_6477286897123957916_o_2x.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>http://alexbeausi.re/images/13592792_1047402062017033_5291141489049294713_n.jpg</image:loc>
     </image:image>
   </url>
   <url>
     <loc>http://alexbeausi.re/about.html</loc>
-    <lastmod>2017-12-05</lastmod>
+    <lastmod>2017-12-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
-    <image:image>
-      <image:loc>http://alexbeausi.re/images/portfolio-photo.png</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>http://alexbeausi.re/images/portfolio-photo_2x.png</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>http://alexbeausi.re/images/ab-logo.svg</image:loc>
-    </image:image>
   </url>
   <url>
     <loc>http://alexbeausi.re/coming-soon.html</loc>
-    <lastmod>2017-12-05</lastmod>
+    <lastmod>2017-12-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
     <image:image>
@@ -236,5 +233,44 @@
     <image:image>
       <image:loc>http://alexbeausi.re/images/5a2727b1f1239c5a860bd75b-crop-u11809_2x.png</image:loc>
     </image:image>
+  </url>
+  <url>
+    <loc>http://alexbeausi.re/knowledge-arena.html</loc>
+    <lastmod>2017-12-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://alexbeausi.re/wwfm-flyer.html</loc>
+    <lastmod>2017-12-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+    <image:image>
+      <image:loc>http://alexbeausi.re/images/esa-presents-27-11.png</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>http://alexbeausi.re/images/esa-presents-27-11_2x.png</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>http://alexbeausi.re/images/rush-hour.jpg</image:loc>
+    </image:image>
+  </url>
+  <url>
+    <loc>http://alexbeausi.re/wwfm-live-sessions.html</loc>
+    <lastmod>2017-12-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+    <image:image>
+      <image:loc>http://alexbeausi.re/images/c029100_08_15_14still001.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>http://alexbeausi.re/images/c029100_08_15_14still001_2x.jpg</image:loc>
+    </image:image>
+  </url>
+  <url>
+    <loc>http://alexbeausi.re/yubl.html</loc>
+    <lastmod>2017-12-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
 </urlset>
