@@ -133,32 +133,8 @@
     </image:image>
   </url>
   <url>
-    <loc>http://alexbeausi.re/about.html</loc>
-    <lastmod>2017-12-13</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>http://alexbeausi.re/aboutcontact.html</loc>
-    <lastmod>2017-12-13</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-    <image:image>
-      <image:loc>http://alexbeausi.re/images/portfolio-photo.png</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>http://alexbeausi.re/images/portfolio-photo_2x.png</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>http://alexbeausi.re/images/alex%20beausire.gif</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>http://alexbeausi.re/images/k1_azul.gif</image:loc>
-    </image:image>
-  </url>
-  <url>
-    <loc>http://alexbeausi.re/studio-cam.html</loc>
-    <lastmod>2017-12-13</lastmod>
+    <loc>http://alexbeausi.re/alex-beausire--studio-cam.html</loc>
+    <lastmod>2017-12-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
     <image:image>
@@ -175,7 +151,7 @@
     </image:image>
   </url>
   <url>
-    <loc>http://alexbeausi.re/serious-home.html</loc>
+    <loc>http://alexbeausi.re/alex-beausire--serious-home.html</loc>
     <lastmod>2017-12-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -214,16 +190,34 @@
     </image:image>
   </url>
   <url>
-    <loc>http://alexbeausi.re/wwfm-flyer.html</loc>
+    <loc>http://alexbeausi.re/aboutcontact.html</loc>
     <lastmod>2017-12-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
     <image:image>
-      <image:loc>http://alexbeausi.re/images/portfolio-photo115x86.png</image:loc>
+      <image:loc>http://alexbeausi.re/images/portfolio-photo.png</image:loc>
     </image:image>
     <image:image>
-      <image:loc>http://alexbeausi.re/images/portfolio-photo115x86_2x.png</image:loc>
+      <image:loc>http://alexbeausi.re/images/portfolio-photo_2x.png</image:loc>
     </image:image>
+    <image:image>
+      <image:loc>http://alexbeausi.re/images/alex%20beausire.gif</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>http://alexbeausi.re/images/k1_azul.gif</image:loc>
+    </image:image>
+  </url>
+  <url>
+    <loc>http://alexbeausi.re/about.html</loc>
+    <lastmod>2017-12-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://alexbeausi.re/alex-beausire--wwfm-flyer.html</loc>
+    <lastmod>2017-12-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
     <image:image>
       <image:loc>http://alexbeausi.re/images/esa-presents-27-11.png</image:loc>
     </image:image>
@@ -241,40 +235,19 @@
     </image:image>
   </url>
   <url>
-    <loc>http://alexbeausi.re/coming-soon.html</loc>
-    <lastmod>2017-12-13</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-    <image:image>
-      <image:loc>http://alexbeausi.re/images/portfolio-photo_2x.png</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>http://alexbeausi.re/images/alex%20beausire.gif</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>http://alexbeausi.re/images/portfolio-photo155x117.png</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>http://alexbeausi.re/images/5a2727b1f1239c5a860bd75b-crop-u11809.png</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>http://alexbeausi.re/images/5a2727b1f1239c5a860bd75b-crop-u11809_2x.png</image:loc>
-    </image:image>
-  </url>
-  <url>
-    <loc>http://alexbeausi.re/knowledge-arena.html</loc>
-    <lastmod>2017-12-13</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>http://alexbeausi.re/wwfm-live-sessions.html</loc>
+    <loc>http://alexbeausi.re/alex-beausire--wwfm-live-sessions.html</loc>
     <lastmod>2017-12-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>http://alexbeausi.re/yubl.html</loc>
+    <loc>http://alexbeausi.re/alex-beausire--knowledge-arena.html</loc>
+    <lastmod>2017-12-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://alexbeausi.re/alex-beausire--yubl.html</loc>
     <lastmod>2017-12-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -293,6 +266,12 @@
     <image:image>
       <image:loc>http://alexbeausi.re/images/giphy%20(1).gif</image:loc>
     </image:image>
+  </url>
+  <url>
+    <loc>http://alexbeausi.re/assets/img_6326.gif</loc>
+    <lastmod>2017-10-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   <url>
     <loc>http://alexbeausi.re/assets/sequence-02_2.mp4</loc>
