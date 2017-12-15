@@ -1,4 +1,4 @@
-<manifest alg="2" build="2018.0.0.379" opt="true" iceEnabled="true" iceMarkupVersion="2" iceEnabledOptions="link,responsive,cachebuster,textStyling" exportTarget="other" domain="alexbeausi.re" resolutions="1x,2x" timestamp="1513344340157">
+<manifest alg="2" build="2018.0.0.379" opt="true" iceEnabled="true" iceMarkupVersion="2" iceEnabledOptions="link,responsive,cachebuster,textStyling" exportTarget="other" domain="alexbeausi.re" resolutions="1x,2x" timestamp="1513345090436">
   <folder name="assets">
     <file name="sequence-02_2.mp4" crc="120514884" seo="true" mt="1511441900000"/>
   </folder>
@@ -13,7 +13,7 @@
     <file name="about.css" crc="3796759190" ref="about"/>
     <file name="serious-home.css" crc="435477845" ref="serious-home"/>
     <file name="knowledge-arena.css" crc="4171313607" ref="knowledge-arena"/>
-    <file name="yubl.css" crc="375262334" ref="yubl"/>
+    <file name="yubl.css" crc="293405620" ref="yubl"/>
     <file name="wwfm-flyer.css" crc="3867676996" ref="wwfm-flyer"/>
     <file name="wwfm-live-sessions.css" crc="183245150" ref="wwfm-live-sessions"/>
     <file name="nomq_preview_master_a-master.css" crc="3824530138" ref="index"/>
@@ -29,12 +29,12 @@
     <file name="jquery.musemenu.js" crc="3784699396" ref="index:aboutcontact:studio-cam:coming-soon"/>
     <file name="jquery.watch.js" crc="99325471" ref="index:aboutcontact:studio-cam:serious-home:about:coming-soon:knowledge-arena:wwfm-flyer:wwfm-live-sessions:yubl"/>
     <file name="jquery.scrolleffects.js" crc="530399994" ref="index:aboutcontact:studio-cam"/>
-    <file name="html5shiv.js" crc="4241844378" ref="index:aboutcontact:studio-cam:serious-home:about:coming-soon:knowledge-arena:wwfm-flyer:wwfm-live-sessions:yubl"/>
+    <file name="html5shiv.js" crc="4241844378" ref="index:aboutcontact:studio-cam:serious-home:about:coming-soon:knowledge-arena"/>
     <file name="require.js" crc="4157109226" ref="index:aboutcontact:studio-cam:serious-home:about:coming-soon:knowledge-arena:wwfm-flyer:wwfm-live-sessions:yubl"/>
     <file name="jquery.museresponsive.js" crc="3955820958" ref="wwfm-flyer"/>
   </folder>
   <folder name="images">
-    <file name="favicon.ico" crc="4212706539" ref="index"/>
+    <file name="favicon.ico" crc="4212706539" ref="index:wwfm-flyer"/>
     <file name="portfolio-photo.png" crc="4017327085" seo="true" ref="index:aboutcontact:studio-cam">
       <caption webpage="index" alt=""/>
       <caption webpage="studio-cam" alt=""/>
@@ -194,10 +194,12 @@
     <file name="5a2727b1f1239c5a860bd75b-crop-u11809_2x.png" crc="4061377823" seo="true" ref="coming-soon">
       <caption webpage="coming-soon" alt=""/>
     </file>
-    <file name="portfolio-photo115x86.png" crc="192659634" seo="true" ref="serious-home">
+    <file name="portfolio-photo115x86.png" crc="192659634" seo="true" ref="serious-home:wwfm-flyer">
+      <caption webpage="wwfm-flyer" alt=""/>
       <caption webpage="serious-home" alt=""/>
     </file>
-    <file name="portfolio-photo115x86_2x.png" crc="81241197" seo="true" ref="serious-home">
+    <file name="portfolio-photo115x86_2x.png" crc="81241197" seo="true" ref="serious-home:wwfm-flyer">
+      <caption webpage="wwfm-flyer" alt=""/>
       <caption webpage="serious-home" alt=""/>
     </file>
     <file name="u12239-4.png" crc="4153962336" ref="serious-home:about:knowledge-arena:wwfm-flyer:wwfm-live-sessions:yubl"/>
@@ -245,8 +247,8 @@
     </file>
     <file name="u15672-4.png" crc="4020062644" ref="wwfm-flyer"/>
     <file name="u15672-4_2x.png" crc="4062697771" ref="wwfm-flyer"/>
-    <file name="u15659-4.png" crc="481577791" ref="wwfm-flyer"/>
-    <file name="u15659-4_2x.png" crc="509112164" ref="wwfm-flyer"/>
+    <file name="u15659-4.png" crc="4212443768" ref="wwfm-flyer"/>
+    <file name="u15659-4_2x.png" crc="147768348" ref="wwfm-flyer"/>
     <file name="rush-hour.jpg" crc="322891339" seo="true" ref="wwfm-flyer">
       <caption webpage="wwfm-flyer" alt=""/>
       <caption webpage="wwfm-flyer" alt=""/>
@@ -261,8 +263,8 @@
     </file>
     <file name="u15727-4.png" crc="448212682" ref="wwfm-live-sessions"/>
     <file name="u15727-4_2x.png" crc="20850422" ref="wwfm-live-sessions"/>
-    <file name="u15726-4.png" crc="3951953189" ref="wwfm-live-sessions"/>
-    <file name="u15726-4_2x.png" crc="3927573147" ref="wwfm-live-sessions"/>
+    <file name="u15726-4.png" crc="272070003" ref="wwfm-live-sessions"/>
+    <file name="u15726-4_2x.png" crc="428533791" ref="wwfm-live-sessions"/>
     <file name="portfolio-photo92x70.png" crc="4092848738" seo="true" ref="wwfm-flyer">
       <caption webpage="wwfm-flyer" alt=""/>
     </file>
@@ -271,8 +273,8 @@
     </file>
     <file name="u15672-42.png" crc="4020062644" ref="wwfm-flyer"/>
     <file name="u15672-4_2x2.png" crc="4062697771" ref="wwfm-flyer"/>
-    <file name="u15659-42.png" crc="481577791" ref="wwfm-flyer"/>
-    <file name="u15659-4_2x2.png" crc="509112164" ref="wwfm-flyer"/>
+    <file name="u15659-42.png" crc="4212443768" ref="wwfm-flyer"/>
+    <file name="u15659-4_2x2.png" crc="147768348" ref="wwfm-flyer"/>
     <file name="13619866_1050733851683854_830180105603999018_n.jpg" crc="3814132371" seo="true" ref="yubl">
       <caption webpage="yubl" alt=""/>
     </file>
@@ -290,8 +292,8 @@
     </file>
     <file name="u16016-4.png" crc="534481509" ref="yubl"/>
     <file name="u16016-4_2x.png" crc="4278385931" ref="yubl"/>
-    <file name="u16015-7.png" crc="313080476" ref="yubl"/>
-    <file name="u16015-7_2x.png" crc="505544630" ref="yubl"/>
+    <file name="u16015-7.png" crc="249549211" ref="yubl"/>
+    <file name="u16015-7_2x.png" crc="4212931490" ref="yubl"/>
   </folder>
   <file name="index.html" crc="4264181340" seo="true" mt="1513344285898" redirect="true"/>
   <file name="aboutcontact.html" crc="3979999243" seo="true" mt="1513185581208" redirect="true"/>
@@ -300,7 +302,7 @@
   <file name="about.html" crc="512370641" seo="true" mt="1513188352849" redirect="true"/>
   <file name="coming-soon.html" crc="193831969" seo="true" mt="1513185581208" redirect="true"/>
   <file name="knowledge-arena.html" crc="374443816" seo="true" mt="1513188502102" redirect="true"/>
-  <file name="wwfm-flyer.html" crc="4111656518" seo="true" mt="1513337239288" redirect="true"/>
-  <file name="wwfm-live-sessions.html" crc="199187000" seo="true" mt="1513342520469" redirect="true"/>
-  <file name="yubl.html" crc="290101494" seo="true" mt="1513343776869" redirect="true"/>
+  <file name="wwfm-flyer.html" crc="493775025" seo="true" mt="1513345048220" redirect="true"/>
+  <file name="wwfm-live-sessions.html" crc="3975656954" seo="true" mt="1513345074571" redirect="true"/>
+  <file name="yubl.html" crc="4168555697" seo="true" mt="1513345062574" redirect="true"/>
 </manifest>
