@@ -1,25 +1,26 @@
-<manifest alg="2" build="2018.0.0.379" opt="true" iceEnabled="true" iceMarkupVersion="2" iceEnabledOptions="link,responsive,cachebuster,textStyling" exportTarget="other" domain="alexbeausi.re" resolutions="1x,2x" timestamp="1513347329277">
+<manifest alg="2" build="2018.0.0.379" opt="true" iceEnabled="true" iceMarkupVersion="2" iceEnabledOptions="link,responsive,cachebuster,textStyling" exportTarget="other" domain="alexbeausi.re" resolutions="1x,2x" timestamp="1513532129591">
   <folder name="assets">
     <file name="sequence-02_2.mp4" crc="120514884" seo="true" mt="1511441900000"/>
     <file name="img_6326.gif" crc="3965961172" seo="true" mt="1508270031000"/>
   </folder>
   <folder name="css">
-    <file name="site_global.css" crc="4201589213"/>
+    <file name="site_global.css" crc="3943228728"/>
     <file name="master_a-master.css" crc="3791780384" ref="index:aboutcontact:alex-beausire--studio-cam"/>
     <file name="index.css" crc="3958815712" ref="index"/>
     <file name="aboutcontact.css" crc="61138948" ref="aboutcontact"/>
     <file name="master_a-master-copy.css" crc="185592318" ref="about:alex-beausire--yubl:alex-beausire--knowledge-arena:alex-beausire--serious-home:alex-beausire--wwfm-flyer:alex-beausire--wwfm-live-sessions"/>
-    <file name="about.css" crc="3796759190" ref="about"/>
+    <file name="about.css" crc="496960200" ref="about"/>
     <file name="nomq_preview_master_a-master.css" crc="3824530138" ref="index:aboutcontact:alex-beausire--studio-cam"/>
-    <file name="nomq_preview_master_a-master-copy.css" crc="3824530138" ref="alex-beausire--yubl:alex-beausire--knowledge-arena:alex-beausire--serious-home:alex-beausire--wwfm-flyer:alex-beausire--wwfm-live-sessions:about"/>
-    <file name="alex-beausire--yubl.css" crc="3833616992" ref="alex-beausire--yubl"/>
-    <file name="alex-beausire--knowledge-arena.css" crc="4171313607" ref="alex-beausire--knowledge-arena"/>
-    <file name="alex-beausire--serious-home.css" crc="435477845" ref="alex-beausire--serious-home"/>
-    <file name="alex-beausire--wwfm-flyer.css" crc="449032037" ref="alex-beausire--wwfm-flyer"/>
-    <file name="nomq_alex-beausire--wwfm-flyer.css" crc="111275299" ref="alex-beausire--wwfm-flyer"/>
-    <file name="alex-beausire--wwfm-live-sessions.css" crc="223079188" ref="alex-beausire--wwfm-live-sessions"/>
+    <file name="nomq_preview_master_a-master-copy.css" crc="3824530138" ref="alex-beausire--yubl:alex-beausire--knowledge-arena:alex-beausire--wwfm-flyer:alex-beausire--wwfm-live-sessions:alex-beausire--serious-home"/>
+    <file name="alex-beausire--yubl.css" crc="3781032563" ref="alex-beausire--yubl"/>
+    <file name="alex-beausire--knowledge-arena.css" crc="4095108292" ref="alex-beausire--knowledge-arena"/>
+    <file name="alex-beausire--serious-home.css" crc="456252248" ref="alex-beausire--serious-home"/>
+    <file name="alex-beausire--wwfm-flyer.css" crc="3980213215" ref="alex-beausire--wwfm-flyer"/>
+    <file name="nomq_alex-beausire--wwfm-flyer.css" crc="3935854152" ref="alex-beausire--wwfm-flyer"/>
+    <file name="alex-beausire--wwfm-live-sessions.css" crc="4133404528" ref="alex-beausire--wwfm-live-sessions"/>
     <file name="alex-beausire--studio-cam.css" crc="210361478" ref="alex-beausire--studio-cam"/>
     <file name="nomq_alex-beausire--studio-cam.css" crc="3824530138" ref="alex-beausire--studio-cam"/>
+    <file name="nomq_index.css" crc="3824530138" ref="index"/>
   </folder>
   <folder name="scripts">
     <file name="jquery-1.8.3.min.js" crc="209076791" ref="index:aboutcontact:about:alex-beausire--studio-cam:alex-beausire--serious-home:alex-beausire--knowledge-arena:alex-beausire--wwfm-flyer:alex-beausire--wwfm-live-sessions:alex-beausire--yubl"/>
@@ -29,35 +30,35 @@
     <file name="jquery.musemenu.js" crc="3784699396" ref="index:aboutcontact:alex-beausire--studio-cam"/>
     <file name="jquery.watch.js" crc="99325471" ref="index:aboutcontact:about:alex-beausire--studio-cam:alex-beausire--serious-home:alex-beausire--knowledge-arena:alex-beausire--wwfm-flyer:alex-beausire--wwfm-live-sessions:alex-beausire--yubl"/>
     <file name="jquery.scrolleffects.js" crc="530399994" ref="index:aboutcontact:alex-beausire--studio-cam"/>
-    <file name="html5shiv.js" crc="4241844378" ref="index:aboutcontact:about:alex-beausire--studio-cam:alex-beausire--serious-home:alex-beausire--knowledge-arena:alex-beausire--wwfm-flyer:alex-beausire--wwfm-live-sessions:alex-beausire--yubl"/>
+    <file name="html5shiv.js" crc="4241844378" ref="index:aboutcontact:alex-beausire--studio-cam:alex-beausire--knowledge-arena:alex-beausire--wwfm-live-sessions:alex-beausire--yubl"/>
     <file name="require.js" crc="4157109226" ref="index:aboutcontact:about:alex-beausire--studio-cam:alex-beausire--serious-home:alex-beausire--knowledge-arena:alex-beausire--wwfm-flyer:alex-beausire--wwfm-live-sessions:alex-beausire--yubl"/>
     <file name="jquery.museresponsive.js" crc="3955820958" ref="alex-beausire--wwfm-flyer"/>
   </folder>
   <folder name="images">
-    <file name="favicon.ico" crc="4212706539" ref="index"/>
+    <file name="favicon.ico" crc="4212706539" ref="index:alex-beausire--serious-home"/>
     <file name="portfolio-photo.png" crc="4017327085" seo="true" ref="index:aboutcontact:alex-beausire--studio-cam">
       <caption webpage="index" alt=""/>
+      <caption webpage="aboutcontact" alt=""/>
+      <caption webpage="alex-beausire--studio-cam" alt=""/>
       <caption webpage="about" alt=""/>
       <caption webpage="studio-cam" alt=""/>
-      <caption webpage="aboutcontact" alt=""/>
       <caption webpage="serious-home" alt=""/>
-      <caption webpage="alex-beausire--studio-cam" alt=""/>
     </file>
     <file name="portfolio-photo_2x.png" crc="51849880" seo="true" ref="index:aboutcontact:alex-beausire--studio-cam">
+      <caption webpage="aboutcontact" alt=""/>
       <caption webpage="about" alt=""/>
       <caption webpage="serious-home" alt=""/>
-      <caption webpage="coming-soon" alt=""/>
-      <caption webpage="alex-beausire--studio-cam" alt=""/>
       <caption webpage="index" alt=""/>
       <caption webpage="studio-cam" alt=""/>
-      <caption webpage="aboutcontact" alt=""/>
+      <caption webpage="alex-beausire--studio-cam" alt=""/>
+      <caption webpage="coming-soon" alt=""/>
     </file>
     <file name="alex beausire.gif" crc="39614180" seo="true" ref="index:aboutcontact:alex-beausire--studio-cam">
       <caption webpage="index" alt=""/>
-      <caption webpage="studio-cam" alt=""/>
       <caption webpage="aboutcontact" alt=""/>
-      <caption webpage="coming-soon" alt=""/>
+      <caption webpage="studio-cam" alt=""/>
       <caption webpage="alex-beausire--studio-cam" alt=""/>
+      <caption webpage="coming-soon" alt=""/>
     </file>
     <file name="jon-rust-poster.jpg" crc="511042082" seo="true" ref="index">
       <caption webpage="index" alt=""/>
@@ -168,7 +169,8 @@
     <file name="k1_azul.gif" crc="3888193817" seo="true" ref="aboutcontact">
       <caption webpage="aboutcontact" alt=""/>
     </file>
-    <file name="img_6326.gif" crc="3965961172" seo="true" ref="alex-beausire--studio-cam">
+    <file name="img_6326.gif" crc="3965961172" seo="true" ref="alex-beausire--studio-cam:about">
+      <caption webpage="about" alt=""/>
       <caption webpage="alex-beausire--studio-cam" alt=""/>
       <caption webpage="studio-cam" alt=""/>
     </file>
@@ -189,15 +191,17 @@
     <file name="u9062_2x.png" crc="4057147470" ref="about:alex-beausire--serious-home:alex-beausire--knowledge-arena:alex-beausire--wwfm-flyer:alex-beausire--wwfm-live-sessions:alex-beausire--yubl"/>
     <file name="u9062-r.png" crc="3979781072" ref="about:alex-beausire--serious-home:alex-beausire--knowledge-arena:alex-beausire--wwfm-flyer:alex-beausire--wwfm-live-sessions:alex-beausire--yubl"/>
     <file name="u9062-r_2x.png" crc="4267913901" ref="about:alex-beausire--serious-home:alex-beausire--knowledge-arena:alex-beausire--wwfm-flyer:alex-beausire--wwfm-live-sessions:alex-beausire--yubl"/>
-    <file name="portfolio-photo115x86.png" crc="192659634" seo="true" ref="alex-beausire--serious-home">
-      <caption webpage="alex-beausire--serious-home" alt=""/>
-      <caption webpage="wwfm-flyer" alt=""/>
+    <file name="portfolio-photo115x86.png" crc="192659634" seo="true" ref="alex-beausire--serious-home:alex-beausire--knowledge-arena">
       <caption webpage="serious-home" alt=""/>
+      <caption webpage="alex-beausire--knowledge-arena" alt=""/>
+      <caption webpage="wwfm-flyer" alt=""/>
+      <caption webpage="alex-beausire--serious-home" alt=""/>
     </file>
-    <file name="portfolio-photo115x86_2x.png" crc="81241197" seo="true" ref="alex-beausire--serious-home">
-      <caption webpage="alex-beausire--serious-home" alt=""/>
-      <caption webpage="wwfm-flyer" alt=""/>
+    <file name="portfolio-photo115x86_2x.png" crc="81241197" seo="true" ref="alex-beausire--serious-home:alex-beausire--knowledge-arena">
       <caption webpage="serious-home" alt=""/>
+      <caption webpage="alex-beausire--knowledge-arena" alt=""/>
+      <caption webpage="wwfm-flyer" alt=""/>
+      <caption webpage="alex-beausire--serious-home" alt=""/>
     </file>
     <file name="u12239-4.png" crc="4153962336" ref="about:alex-beausire--serious-home:alex-beausire--knowledge-arena:alex-beausire--wwfm-flyer:alex-beausire--wwfm-live-sessions:alex-beausire--yubl"/>
     <file name="u12239-4_2x.png" crc="3996896222" ref="about:alex-beausire--serious-home:alex-beausire--knowledge-arena:alex-beausire--wwfm-flyer:alex-beausire--wwfm-live-sessions:alex-beausire--yubl"/>
@@ -211,8 +215,8 @@
       <caption webpage="alex-beausire--serious-home" alt=""/>
       <caption webpage="serious-home" alt=""/>
     </file>
-    <file name="u12522-r.png" crc="147893675" ref="alex-beausire--serious-home"/>
-    <file name="u12522-r_2x.png" crc="432462026" ref="alex-beausire--serious-home"/>
+    <file name="u12522-r.png" crc="535971721" ref="alex-beausire--serious-home"/>
+    <file name="u12522-r_2x.png" crc="4071284793" ref="alex-beausire--serious-home"/>
     <file name="u12653-r.png" crc="220781223" ref="alex-beausire--serious-home"/>
     <file name="u12653-r_2x.png" crc="131086547" ref="alex-beausire--serious-home"/>
     <file name="nmw-black-clear-bg.jpg" crc="254790867" seo="true" ref="alex-beausire--serious-home">
@@ -220,10 +224,6 @@
       <caption webpage="serious-home" alt=""/>
     </file>
     <file name="nmw-black-clear-bg_2x.jpg" crc="428655249" seo="true" ref="alex-beausire--serious-home">
-      <caption webpage="alex-beausire--serious-home" alt=""/>
-      <caption webpage="serious-home" alt=""/>
-    </file>
-    <file name="14138177_1065566890195539_6477286897123957916_o.jpg" crc="3903335284" seo="true" ref="alex-beausire--serious-home">
       <caption webpage="alex-beausire--serious-home" alt=""/>
       <caption webpage="serious-home" alt=""/>
     </file>
@@ -239,25 +239,23 @@
     </file>
     <file name="u12904-r.png" crc="4239475029" ref="alex-beausire--serious-home"/>
     <file name="u12904-r_2x.png" crc="370997627" ref="alex-beausire--serious-home"/>
-    <file name="u15088-7.png" crc="507520603" ref="about"/>
-    <file name="u15088-7_2x.png" crc="3918071678" ref="about"/>
     <file name="esa-presents-27-11.png" crc="405911443" seo="true" ref="alex-beausire--wwfm-flyer">
-      <caption webpage="wwfm-flyer" alt=""/>
-      <caption webpage="wwfm-flyer" alt=""/>
       <caption webpage="alex-beausire--wwfm-flyer" alt=""/>
       <caption webpage="alex-beausire--wwfm-flyer" alt=""/>
+      <caption webpage="wwfm-flyer" alt=""/>
+      <caption webpage="wwfm-flyer" alt=""/>
     </file>
     <file name="esa-presents-27-11_2x.png" crc="532004306" seo="true" ref="alex-beausire--wwfm-flyer">
-      <caption webpage="wwfm-flyer" alt=""/>
-      <caption webpage="wwfm-flyer" alt=""/>
       <caption webpage="alex-beausire--wwfm-flyer" alt=""/>
       <caption webpage="alex-beausire--wwfm-flyer" alt=""/>
+      <caption webpage="wwfm-flyer" alt=""/>
+      <caption webpage="wwfm-flyer" alt=""/>
     </file>
     <file name="rush-hour.jpg" crc="322891339" seo="true" ref="alex-beausire--wwfm-flyer">
-      <caption webpage="wwfm-flyer" alt=""/>
-      <caption webpage="wwfm-flyer" alt=""/>
       <caption webpage="alex-beausire--wwfm-flyer" alt=""/>
       <caption webpage="alex-beausire--wwfm-flyer" alt=""/>
+      <caption webpage="wwfm-flyer" alt=""/>
+      <caption webpage="wwfm-flyer" alt=""/>
     </file>
     <file name="c029100_08_15_14still001.jpg" crc="4208296387" seo="true" ref="alex-beausire--serious-home">
       <caption webpage="alex-beausire--serious-home" alt=""/>
@@ -270,41 +268,76 @@
       <caption webpage="serious-home" alt=""/>
     </file>
     <file name="portfolio-photo92x70.png" crc="4092848738" seo="true" ref="alex-beausire--wwfm-flyer">
-      <caption webpage="wwfm-flyer" alt=""/>
       <caption webpage="alex-beausire--wwfm-flyer" alt=""/>
+      <caption webpage="wwfm-flyer" alt=""/>
     </file>
     <file name="portfolio-photo92x70_2x.png" crc="4339479" seo="true" ref="alex-beausire--wwfm-flyer">
-      <caption webpage="wwfm-flyer" alt=""/>
       <caption webpage="alex-beausire--wwfm-flyer" alt=""/>
+      <caption webpage="wwfm-flyer" alt=""/>
     </file>
     <file name="13619866_1050733851683854_830180105603999018_n.jpg" crc="3814132371" seo="true" ref="alex-beausire--yubl">
-      <caption webpage="yubl" alt=""/>
       <caption webpage="alex-beausire--yubl" alt=""/>
+      <caption webpage="yubl" alt=""/>
     </file>
     <file name="13754436_1058816677542238_7822077954221802807_n.jpg" crc="457198524" seo="true" ref="alex-beausire--yubl">
-      <caption webpage="yubl" alt=""/>
       <caption webpage="alex-beausire--yubl" alt=""/>
+      <caption webpage="yubl" alt=""/>
     </file>
     <file name="giphy.gif" crc="286096889" seo="true" ref="alex-beausire--yubl">
-      <caption webpage="yubl" alt=""/>
       <caption webpage="alex-beausire--yubl" alt=""/>
+      <caption webpage="yubl" alt=""/>
     </file>
     <file name="giphy_2x.gif" crc="286096889" seo="true" ref="alex-beausire--yubl">
-      <caption webpage="yubl" alt=""/>
       <caption webpage="alex-beausire--yubl" alt=""/>
+      <caption webpage="yubl" alt=""/>
     </file>
     <file name="giphy (1).gif" crc="278170323" seo="true" ref="alex-beausire--yubl">
-      <caption webpage="yubl" alt=""/>
       <caption webpage="alex-beausire--yubl" alt=""/>
+      <caption webpage="yubl" alt=""/>
+    </file>
+    <file name="knowledge-arena-final.png" crc="500754701" seo="true" ref="alex-beausire--knowledge-arena">
+      <caption webpage="alex-beausire--knowledge-arena" alt=""/>
+    </file>
+    <file name="knowledge-arena-final_2x.png" crc="65206606" seo="true" ref="alex-beausire--knowledge-arena">
+      <caption webpage="alex-beausire--knowledge-arena" alt=""/>
+    </file>
+    <file name="14138177_1065566890195539_6477286897123957916_o-crop-u16424.jpg" crc="4006650259" seo="true" ref="alex-beausire--knowledge-arena">
+      <caption webpage="alex-beausire--knowledge-arena" alt=""/>
+    </file>
+    <file name="14138177_1065566890195539_6477286897123957916_o-crop-u16424_2x.jpg" crc="196175714" seo="true" ref="alex-beausire--knowledge-arena">
+      <caption webpage="alex-beausire--knowledge-arena" alt=""/>
+    </file>
+    <file name="13938525_1051025201649708_522481043277698244_n.jpg" crc="3941503683" seo="true" ref="alex-beausire--knowledge-arena">
+      <caption webpage="alex-beausire--knowledge-arena" alt=""/>
+    </file>
+    <file name="13938525_1051025201649708_522481043277698244_n_2x.jpg" crc="4260205585" seo="true" ref="alex-beausire--knowledge-arena">
+      <caption webpage="alex-beausire--knowledge-arena" alt=""/>
+    </file>
+    <file name="13876562_1036425153109713_7130231272769841883_n.jpg" crc="3965857186" seo="true" ref="alex-beausire--knowledge-arena">
+      <caption webpage="alex-beausire--knowledge-arena" alt=""/>
+    </file>
+    <file name="13876562_1036425153109713_7130231272769841883_n_2x.jpg" crc="4041718494" seo="true" ref="alex-beausire--knowledge-arena">
+      <caption webpage="alex-beausire--knowledge-arena" alt=""/>
+    </file>
+    <file name="giphy (3).gif" crc="424982003" seo="true" ref="alex-beausire--knowledge-arena">
+      <caption webpage="alex-beausire--knowledge-arena" alt=""/>
+    </file>
+    <file name="giphy (3)_2x.gif" crc="424982003" seo="true" ref="alex-beausire--knowledge-arena">
+      <caption webpage="alex-beausire--knowledge-arena" alt=""/>
+    </file>
+    <file name="u16640-8-a.png" crc="3882725980" ref="alex-beausire--serious-home"/>
+    <file name="u16640-8-a_2x.png" crc="322146665" ref="alex-beausire--serious-home"/>
+    <file name="14138177_1065566890195539_6477286897123957916_o592x394.jpg" crc="3903335284" seo="true" ref="alex-beausire--serious-home">
+      <caption webpage="alex-beausire--serious-home" alt=""/>
     </file>
   </folder>
-  <file name="index.html" crc="3827384986" seo="true" mt="1513347249797" redirect="true"/>
+  <file name="index.html" crc="3776889680" seo="true" mt="1513348182404" redirect="true"/>
   <file name="aboutcontact.html" crc="368295834" seo="true" mt="1513345991627" redirect="true"/>
-  <file name="about.html" crc="4081394255" seo="true" mt="1513345926088" redirect="true"/>
+  <file name="about.html" crc="255197794" seo="true" mt="1513531746587" redirect="true"/>
   <file name="alex-beausire--studio-cam.html" crc="116372590" seo="true" mt="1513345891347" redirect="true"/>
-  <file name="alex-beausire--serious-home.html" crc="3988721443" seo="true" mt="1513345915359" redirect="true"/>
-  <file name="alex-beausire--knowledge-arena.html" crc="190503641" seo="true" mt="1513345908693" redirect="true"/>
-  <file name="alex-beausire--wwfm-flyer.html" crc="8142377" seo="true" mt="1513347029502" redirect="true"/>
-  <file name="alex-beausire--wwfm-live-sessions.html" crc="4293552085" seo="true" mt="1513346997873" redirect="true"/>
-  <file name="alex-beausire--yubl.html" crc="4071030968" seo="true" mt="1513347310137" redirect="true"/>
+  <file name="alex-beausire--serious-home.html" crc="341213956" seo="true" mt="1513532118750" redirect="true"/>
+  <file name="alex-beausire--knowledge-arena.html" crc="4288945378" seo="true" mt="1513530814018" redirect="true"/>
+  <file name="alex-beausire--wwfm-flyer.html" crc="395294414" seo="true" mt="1513532076228" redirect="true"/>
+  <file name="alex-beausire--wwfm-live-sessions.html" crc="3883318785" seo="true" mt="1513530853415" redirect="true"/>
+  <file name="alex-beausire--yubl.html" crc="3904353405" seo="true" mt="1513530821386" redirect="true"/>
 </manifest>

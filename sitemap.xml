@@ -152,7 +152,7 @@
   </url>
   <url>
     <loc>http://alexbeausi.re/alex-beausire--serious-home.html</loc>
-    <lastmod>2017-12-15</lastmod>
+    <lastmod>2017-12-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
     <image:image>
@@ -174,9 +174,6 @@
       <image:loc>http://alexbeausi.re/images/nmw-black-clear-bg_2x.jpg</image:loc>
     </image:image>
     <image:image>
-      <image:loc>http://alexbeausi.re/images/14138177_1065566890195539_6477286897123957916_o.jpg</image:loc>
-    </image:image>
-    <image:image>
       <image:loc>http://alexbeausi.re/images/14138177_1065566890195539_6477286897123957916_o_2x.jpg</image:loc>
     </image:image>
     <image:image>
@@ -187,6 +184,9 @@
     </image:image>
     <image:image>
       <image:loc>http://alexbeausi.re/images/c029100_08_15_14still001_2x.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>http://alexbeausi.re/images/14138177_1065566890195539_6477286897123957916_o592x394.jpg</image:loc>
     </image:image>
   </url>
   <url>
@@ -209,13 +209,16 @@
   </url>
   <url>
     <loc>http://alexbeausi.re/about.html</loc>
-    <lastmod>2017-12-15</lastmod>
+    <lastmod>2017-12-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
+    <image:image>
+      <image:loc>http://alexbeausi.re/images/img_6326.gif</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>http://alexbeausi.re/alex-beausire--wwfm-flyer.html</loc>
-    <lastmod>2017-12-15</lastmod>
+    <lastmod>2017-12-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
     <image:image>
@@ -236,19 +239,55 @@
   </url>
   <url>
     <loc>http://alexbeausi.re/alex-beausire--wwfm-live-sessions.html</loc>
-    <lastmod>2017-12-15</lastmod>
+    <lastmod>2017-12-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>http://alexbeausi.re/alex-beausire--knowledge-arena.html</loc>
-    <lastmod>2017-12-15</lastmod>
+    <lastmod>2017-12-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
+    <image:image>
+      <image:loc>http://alexbeausi.re/images/portfolio-photo115x86.png</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>http://alexbeausi.re/images/portfolio-photo115x86_2x.png</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>http://alexbeausi.re/images/knowledge-arena-final.png</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>http://alexbeausi.re/images/knowledge-arena-final_2x.png</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>http://alexbeausi.re/images/14138177_1065566890195539_6477286897123957916_o-crop-u16424.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>http://alexbeausi.re/images/14138177_1065566890195539_6477286897123957916_o-crop-u16424_2x.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>http://alexbeausi.re/images/13938525_1051025201649708_522481043277698244_n.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>http://alexbeausi.re/images/13938525_1051025201649708_522481043277698244_n_2x.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>http://alexbeausi.re/images/13876562_1036425153109713_7130231272769841883_n.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>http://alexbeausi.re/images/13876562_1036425153109713_7130231272769841883_n_2x.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>http://alexbeausi.re/images/giphy%20(3).gif</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>http://alexbeausi.re/images/giphy%20(3)_2x.gif</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>http://alexbeausi.re/alex-beausire--yubl.html</loc>
-    <lastmod>2017-12-15</lastmod>
+    <lastmod>2017-12-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
     <image:image>
