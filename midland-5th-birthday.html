@@ -19,6 +19,10 @@ if(typeof Muse == "undefined") window.Muse = {}; window.Muse.assets = {"required
   <link rel="stylesheet" type="text/css" href="css/site_global.css?crc=3943228728"/>
   <link rel="stylesheet" type="text/css" href="css/master_a-master.css?crc=3791780384"/>
   <link rel="stylesheet" type="text/css" href="css/midland-5th-birthday.css?crc=4106156610" id="pagesheet"/>
+  <!-- IE-only CSS -->
+  <!--[if lt IE 9]>
+  <link rel="stylesheet" type="text/css" href="css/nomq_preview_master_a-master.css?crc=3824530138" id="nomq_pagesheet"/>
+  <![endif]-->
   <!-- JS includes -->
   <!--[if lt IE 9]>
   <script src="scripts/html5shiv.js?crc=4241844378" type="text/javascript"></script>
@@ -33,7 +37,7 @@ if(typeof Muse == "undefined") window.Muse = {}; window.Muse.assets = {"required
       <a class="nonblock nontext MenuItem MenuItemWithSubMenu borderbox clearfix grpelem" id="u7669" href="aboutcontact.html"><!-- horizontal box --><div class="MenuItemLabel borderbox clearfix grpelem" id="u7671-4"><!-- content --><p><span id="u7671">About / Contact</span></p></div></a>
      </div>
      <div class="MenuItemContainer clearfix colelem" id="u9066"><!-- horizontal box -->
-      <a class="nonblock nontext MenuItem MenuItemWithSubMenu borderbox clearfix grpelem" id="u9069" href="alex-beausire--serious-home.html"><!-- horizontal box --><div class="MenuItemLabel borderbox clearfix grpelem" id="u9070-4"><!-- content --><p><span id="u9070">Serious Work</span></p></div></a>
+      <a class="nonblock nontext MenuItem MenuItemWithSubMenu borderbox clearfix grpelem" id="u9069" href="serious-home.html"><!-- horizontal box --><div class="MenuItemLabel borderbox clearfix grpelem" id="u9070-4"><!-- content --><p><span id="u9070">Serious Work</span></p></div></a>
      </div>
      <div class="MenuItemContainer clearfix colelem" id="u7661"><!-- horizontal box -->
       <a class="nonblock nontext MenuItem MenuItemWithSubMenu borderbox clearfix grpelem" id="u7662" href="alex-beausire--studio-cam.html"><!-- horizontal box --><div class="MenuItemLabel borderbox clearfix grpelem" id="u7663-4"><!-- content --><p><span id="u7663">Studio Webcam</span></p></div></a>
@@ -74,7 +78,7 @@ if(typeof Muse == "undefined") window.Muse = {}; window.Muse.assets = {"required
       <img class="block" id="u17236_img" src="images/our-house-tee-crop-u17236.jpg?crc=401673390" alt="" width="507" height="507"/>
      </div>
      <div class="clip_frame grpelem" id="u17244"><!-- image -->
-      <img class="block" id="u17244_img" src="images/our-house-tee2-crop-u17244.jpg?crc=4222432503" alt="" width="507" height="507"/>
+      <img class="block" id="u17244_img" src="images/our-house-tee2-crop-u17244.jpg?crc=3875266035" alt="" width="507" height="507"/>
      </div>
     </div>
    </div>
@@ -99,7 +103,7 @@ Muse.Utils.prepHyperlinks(true);/* body */
 Muse.Utils.makeButtonsVisibleAfterSettingMinWidth();/* body */
 Muse.Utils.initWidget('.MenuBar', ['#bp_infinity'], function(elem) { return $(elem).museMenu(); });/* unifiedNavBar */
 Muse.Utils.fullPage('#page');/* 100% height page */
-$('#u7677').registerOpacityScrollEffect([{"in":[-Infinity,32],"opacity":100,"fade":32.05},{"in":[32,32],"opacity":100},{"in":[32,Infinity],"opacity":0,"fade":47}]);/* scroll effect */
+$('#u7677').registerOpacityScrollEffect([{"in":[-Infinity,32],"fade":32.05,"opacity":100},{"in":[32,32],"opacity":100},{"in":[32,Infinity],"fade":47,"opacity":0}]);/* scroll effect */
 Muse.Utils.showWidgetsWhenReady();/* body */
 Muse.Utils.transformMarkupToFixBrowserProblems();/* body */
 }catch(b){if(b&&"function"==typeof b.notify?b.notify():Muse.Assert.fail("Error calling selector function: "+b),false)throw b;}})})};
