@@ -214,66 +214,6 @@
     </image:image>
   </url>
   <url>
-    <loc>http://alexbeausi.re/midland-5th-birthday-serious.html</loc>
-    <lastmod>2017-12-27</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-    <image:image>
-      <image:loc>http://alexbeausi.re/images/midland%20poster.jpg</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>http://alexbeausi.re/images/midland%20poster_2x.jpg</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>http://alexbeausi.re/images/midland-banner-wborder.jpg</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>http://alexbeausi.re/images/midland-banner-wborder_2x.jpg</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>http://alexbeausi.re/images/5-gif.gif</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>http://alexbeausi.re/images/midland-gif-frame2.gif</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>http://alexbeausi.re/images/portfolio-photo131x98.png</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>http://alexbeausi.re/images/portfolio-photo131x98_2x.png</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>http://alexbeausi.re/images/midland-socials-4.png</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>http://alexbeausi.re/images/midland%20flyer%20back.jpg</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>http://alexbeausi.re/images/midland%20flyer%20back_2x.jpg</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>http://alexbeausi.re/images/midland%20flyer%20front.jpg</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>http://alexbeausi.re/images/midland%20flyer%20front_2x.jpg</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>http://alexbeausi.re/images/ticket%20front.jpg</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>http://alexbeausi.re/images/ticket%20front_2x.jpg</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>http://alexbeausi.re/images/our-house-tee-crop-u17378.jpg</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>http://alexbeausi.re/images/our-house-tee-crop-u17378_2x.jpg</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>http://alexbeausi.re/images/our-house-tee2-crop-u17380.jpg</image:loc>
-    </image:image>
-  </url>
-  <url>
     <loc>http://alexbeausi.re/nmw.html</loc>
     <lastmod>2017-12-27</lastmod>
     <changefreq>weekly</changefreq>
@@ -313,6 +253,72 @@
     </image:image>
     <image:image>
       <image:loc>http://alexbeausi.re/images/giphy%20(1).gif</image:loc>
+    </image:image>
+  </url>
+  <url>
+    <loc>http://alexbeausi.re/serious-home.html</loc>
+    <lastmod>2018-01-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+    <image:image>
+      <image:loc>http://alexbeausi.re/images/portfolio-photo115x86.png</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>http://alexbeausi.re/images/portfolio-photo115x86_2x.png</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>http://alexbeausi.re/images/esa-presents-27-11501x501.png</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>http://alexbeausi.re/images/esa-presents-27-11501x501_2x.png</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>http://alexbeausi.re/images/13592792_1047402062017033_5291141489049294713_n.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>http://alexbeausi.re/images/c029100_08_15_14still001.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>http://alexbeausi.re/images/c029100_08_15_14still001_2x.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>http://alexbeausi.re/images/14138177_1065566890195539_6477286897123957916_o592x394.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>http://alexbeausi.re/images/14138177_1065566890195539_6477286897123957916_o592x394_2x.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>http://alexbeausi.re/images/midland%20poster481x680.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>http://alexbeausi.re/images/midland%20poster481x680_2x.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>http://alexbeausi.re/images/nmw-black-clear-bg395x396.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>http://alexbeausi.re/images/nmw-black-clear-bg395x396_2x.jpg</image:loc>
+    </image:image>
+  </url>
+  <url>
+    <loc>http://alexbeausi.re/wwfm-flyer.html</loc>
+    <lastmod>2017-12-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+    <image:image>
+      <image:loc>http://alexbeausi.re/images/esa-presents-27-11.png</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>http://alexbeausi.re/images/esa-presents-27-11_2x.png</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>http://alexbeausi.re/images/rush-hour.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>http://alexbeausi.re/images/portfolio-photo92x70.png</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>http://alexbeausi.re/images/portfolio-photo92x70_2x.png</image:loc>
     </image:image>
   </url>
   <url>
@@ -379,74 +385,74 @@
     </image:image>
   </url>
   <url>
-    <loc>http://alexbeausi.re/wwfm-flyer.html</loc>
-    <lastmod>2017-12-27</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-    <image:image>
-      <image:loc>http://alexbeausi.re/images/esa-presents-27-11.png</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>http://alexbeausi.re/images/esa-presents-27-11_2x.png</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>http://alexbeausi.re/images/rush-hour.jpg</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>http://alexbeausi.re/images/portfolio-photo92x70.png</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>http://alexbeausi.re/images/portfolio-photo92x70_2x.png</image:loc>
-    </image:image>
-  </url>
-  <url>
-    <loc>http://alexbeausi.re/serious-home.html</loc>
-    <lastmod>2018-01-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-    <image:image>
-      <image:loc>http://alexbeausi.re/images/portfolio-photo115x86.png</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>http://alexbeausi.re/images/portfolio-photo115x86_2x.png</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>http://alexbeausi.re/images/esa-presents-27-11501x501.png</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>http://alexbeausi.re/images/esa-presents-27-11501x501_2x.png</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>http://alexbeausi.re/images/13592792_1047402062017033_5291141489049294713_n.jpg</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>http://alexbeausi.re/images/c029100_08_15_14still001.jpg</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>http://alexbeausi.re/images/c029100_08_15_14still001_2x.jpg</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>http://alexbeausi.re/images/14138177_1065566890195539_6477286897123957916_o592x394.jpg</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>http://alexbeausi.re/images/14138177_1065566890195539_6477286897123957916_o592x394_2x.jpg</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>http://alexbeausi.re/images/midland%20poster481x680.jpg</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>http://alexbeausi.re/images/midland%20poster481x680_2x.jpg</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>http://alexbeausi.re/images/nmw-black-clear-bg395x396.jpg</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>http://alexbeausi.re/images/nmw-black-clear-bg395x396_2x.jpg</image:loc>
-    </image:image>
-  </url>
-  <url>
     <loc>http://alexbeausi.re/wwfm-live-sessions.html</loc>
     <lastmod>2017-12-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://alexbeausi.re/midland-5th-birthday-serious.html</loc>
+    <lastmod>2017-12-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+    <image:image>
+      <image:loc>http://alexbeausi.re/images/midland%20poster.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>http://alexbeausi.re/images/midland%20poster_2x.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>http://alexbeausi.re/images/midland-banner-wborder.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>http://alexbeausi.re/images/midland-banner-wborder_2x.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>http://alexbeausi.re/images/5-gif.gif</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>http://alexbeausi.re/images/midland-gif-frame2.gif</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>http://alexbeausi.re/images/portfolio-photo131x98.png</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>http://alexbeausi.re/images/portfolio-photo131x98_2x.png</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>http://alexbeausi.re/images/midland-socials-4.png</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>http://alexbeausi.re/images/midland%20flyer%20back.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>http://alexbeausi.re/images/midland%20flyer%20back_2x.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>http://alexbeausi.re/images/midland%20flyer%20front.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>http://alexbeausi.re/images/midland%20flyer%20front_2x.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>http://alexbeausi.re/images/ticket%20front.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>http://alexbeausi.re/images/ticket%20front_2x.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>http://alexbeausi.re/images/our-house-tee-crop-u17378.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>http://alexbeausi.re/images/our-house-tee-crop-u17378_2x.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>http://alexbeausi.re/images/our-house-tee2-crop-u17380.jpg</image:loc>
+    </image:image>
+  </url>
+  <url>
+    <loc>http://alexbeausi.re/assets/alex-beausire.png</loc>
+    <lastmod>2018-01-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -457,25 +463,25 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>http://alexbeausi.re/assets/15726496_10157902155895654_1947666480022295591_n.png</loc>
+    <lastmod>2018-01-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>http://alexbeausi.re/assets/sequence-02_2.mp4</loc>
     <lastmod>2017-11-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>http://alexbeausi.re/assets/globale-roots-3.mp4</loc>
+    <loc>http://alexbeausi.re/assets/globale-roots-2.mp4</loc>
     <lastmod>2017-12-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>http://alexbeausi.re/assets/alex-beausire.png</loc>
-    <lastmod>2018-01-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>http://alexbeausi.re/assets/globale-roots-2.mp4</loc>
+    <loc>http://alexbeausi.re/assets/globale-roots-3.mp4</loc>
     <lastmod>2017-12-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
