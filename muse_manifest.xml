@@ -1,4 +1,4 @@
-<manifest alg="2" build="2018.0.0.379" opt="true" iceEnabled="true" iceMarkupVersion="2" iceEnabledOptions="link,responsive,cachebuster,textStyling" exportTarget="other" domain="alexbeausi.re" resolutions="1x,2x" timestamp="1515245851059">
+<manifest alg="2" build="2018.0.0.379" opt="true" iceEnabled="true" iceMarkupVersion="2" iceEnabledOptions="link,responsive,cachebuster,textStyling" exportTarget="other" domain="alexbeausi.re" resolutions="1x,2x" timestamp="1515246362974">
   <folder name="assets">
     <file name="sequence-02_2.mp4" crc="120514884" seo="true" mt="1511441900000"/>
     <file name="globale-roots-3.mov" crc="4018133483" seo="true" mt="1511787421000"/>
@@ -10,7 +10,7 @@
   <folder name="css">
     <file name="site_global.css" crc="4029444646"/>
     <file name="master_a-master.css" crc="3791780384" ref="index:aboutcontact:alex-beausire--studio-cam:midland-5th-birthday"/>
-    <file name="index.css" crc="4155588135" ref="index"/>
+    <file name="index.css" crc="328218551" ref="index"/>
     <file name="aboutcontact.css" crc="454302459" ref="aboutcontact"/>
     <file name="master_a-master-copy.css" crc="185592318" ref="about:midland-5th-birthday-serious:wwfm-live-sessions:nmw:yubl:knowledge-arena:wwfm-flyer:serious-home"/>
     <file name="about.css" crc="496960200" ref="about"/>
@@ -24,7 +24,7 @@
     <file name="knowledge-arena.css" crc="3848988742" ref="knowledge-arena"/>
     <file name="wwfm-flyer.css" crc="3951425250" ref="wwfm-flyer"/>
     <file name="nomq_wwfm-flyer.css" crc="3935854152" ref="wwfm-flyer"/>
-    <file name="serious-home.css" crc="219294931" ref="serious-home"/>
+    <file name="serious-home.css" crc="483699303" ref="serious-home"/>
   </folder>
   <folder name="scripts">
     <file name="jquery-1.8.3.min.js" crc="209076791" ref="index:aboutcontact:about:alex-beausire--studio-cam:midland-5th-birthday:midland-5th-birthday-serious:knowledge-arena:wwfm-flyer:wwfm-live-sessions:yubl:nmw:serious-home"/>
@@ -41,22 +41,22 @@
   <folder name="images">
     <file name="favicon.ico" crc="4212706539" ref="index"/>
     <file name="portfolio-photo.png" crc="4017327085" seo="true" ref="index:aboutcontact:alex-beausire--studio-cam:midland-5th-birthday">
+      <caption webpage="studio-cam" alt=""/>
       <caption webpage="midland-5th-birthday" alt=""/>
       <caption webpage="serious-home" alt=""/>
       <caption webpage="about" alt=""/>
       <caption webpage="index" alt=""/>
       <caption webpage="aboutcontact" alt=""/>
-      <caption webpage="studio-cam" alt=""/>
       <caption webpage="alex-beausire--studio-cam" alt=""/>
     </file>
     <file name="portfolio-photo_2x.png" crc="51849880" seo="true" ref="index:aboutcontact:alex-beausire--studio-cam:midland-5th-birthday">
+      <caption webpage="studio-cam" alt=""/>
       <caption webpage="midland-5th-birthday" alt=""/>
       <caption webpage="serious-home" alt=""/>
       <caption webpage="about" alt=""/>
       <caption webpage="coming-soon" alt=""/>
       <caption webpage="index" alt=""/>
       <caption webpage="aboutcontact" alt=""/>
-      <caption webpage="studio-cam" alt=""/>
       <caption webpage="alex-beausire--studio-cam" alt=""/>
     </file>
     <file name="alex beausire.gif" crc="39614180" seo="true" ref="index:aboutcontact:alex-beausire--studio-cam:midland-5th-birthday">
@@ -205,15 +205,15 @@
     <file name="u9062-r_2x.png" crc="4267913901" ref="about:midland-5th-birthday-serious:knowledge-arena:wwfm-flyer:wwfm-live-sessions:yubl:nmw:serious-home"/>
     <file name="portfolio-photo115x86.png" crc="192659634" seo="true" ref="serious-home">
       <caption webpage="alex-beausire--serious-home" alt=""/>
+      <caption webpage="alex-beausire--knowledge-arena" alt=""/>
       <caption webpage="wwfm-flyer" alt=""/>
       <caption webpage="serious-home" alt=""/>
-      <caption webpage="alex-beausire--knowledge-arena" alt=""/>
     </file>
     <file name="portfolio-photo115x86_2x.png" crc="81241197" seo="true" ref="serious-home">
       <caption webpage="alex-beausire--serious-home" alt=""/>
+      <caption webpage="alex-beausire--knowledge-arena" alt=""/>
       <caption webpage="wwfm-flyer" alt=""/>
       <caption webpage="serious-home" alt=""/>
-      <caption webpage="alex-beausire--knowledge-arena" alt=""/>
     </file>
     <file name="u12239-4.png" crc="4153962336" ref="about:midland-5th-birthday-serious:knowledge-arena:wwfm-flyer:wwfm-live-sessions:yubl:nmw:serious-home"/>
     <file name="u12239-4_2x.png" crc="3996896222" ref="about:midland-5th-birthday-serious:knowledge-arena:wwfm-flyer:wwfm-live-sessions:yubl:nmw:serious-home"/>
@@ -468,7 +468,7 @@
       <caption webpage="about" alt=""/>
     </file>
   </folder>
-  <file name="index.html" crc="432411637" seo="true" mt="1515245838916" redirect="true"/>
+  <file name="index.html" crc="4238206034" seo="true" mt="1515246350651" redirect="true"/>
   <file name="aboutcontact.html" crc="276535842" seo="true" mt="1515245208341" redirect="true"/>
   <file name="about.html" crc="412087511" seo="true" mt="1514380354589" redirect="true"/>
   <file name="alex-beausire--studio-cam.html" crc="246717588" seo="true" mt="1514380695147" redirect="true"/>
@@ -479,5 +479,5 @@
   <file name="wwfm-live-sessions.html" crc="305717472" seo="true" mt="1514380354589" redirect="true"/>
   <file name="yubl.html" crc="284575914" seo="true" mt="1514380354589" redirect="true"/>
   <file name="nmw.html" crc="3794863307" seo="true" mt="1514380354589" redirect="true"/>
-  <file name="serious-home.html" crc="426707031" seo="true" mt="1515243934347" redirect="true"/>
+  <file name="serious-home.html" crc="267759922" seo="true" mt="1515246357431" redirect="true"/>
 </manifest>
