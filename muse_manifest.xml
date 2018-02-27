@@ -1,4 +1,4 @@
-<manifest alg="2" build="2018.0.0.379" opt="true" iceEnabled="true" iceMarkupVersion="2" iceEnabledOptions="link,responsive,cachebuster,textStyling" exportTarget="other" domain="alexbeausi.re" resolutions="1x,2x" timestamp="1519740607525">
+<manifest alg="2" build="2018.0.0.379" opt="true" iceEnabled="true" iceMarkupVersion="2" iceEnabledOptions="link,responsive,cachebuster,textStyling" exportTarget="other" domain="alexbeausi.re" resolutions="1x,2x" timestamp="1519740853444">
   <folder name="assets">
     <file name="sequence-02_2.mp4" crc="120514884" seo="true" mt="1511441900000"/>
     <file name="globale-roots-3.mov" crc="4018133483" seo="true" mt="1511787421000"/>
@@ -43,29 +43,29 @@
   <folder name="images">
     <file name="favicon.ico" crc="4212706539" ref="index"/>
     <file name="portfolio-photo.png" crc="4017327085" seo="true" ref="index:aboutcontact:alex-beausire--studio-cam:midland-5th-birthday">
-      <caption webpage="aboutcontact" alt=""/>
       <caption webpage="studio-cam" alt=""/>
+      <caption webpage="aboutcontact" alt=""/>
+      <caption webpage="midland-5th-birthday" alt=""/>
       <caption webpage="index" alt=""/>
       <caption webpage="alex-beausire--studio-cam" alt=""/>
-      <caption webpage="midland-5th-birthday" alt=""/>
       <caption webpage="about" alt=""/>
       <caption webpage="serious-home" alt=""/>
     </file>
     <file name="portfolio-photo_2x.png" crc="51849880" seo="true" ref="index:aboutcontact:alex-beausire--studio-cam:midland-5th-birthday">
-      <caption webpage="aboutcontact" alt=""/>
       <caption webpage="studio-cam" alt=""/>
-      <caption webpage="about" alt=""/>
-      <caption webpage="index" alt=""/>
-      <caption webpage="alex-beausire--studio-cam" alt=""/>
+      <caption webpage="aboutcontact" alt=""/>
       <caption webpage="midland-5th-birthday" alt=""/>
+      <caption webpage="index" alt=""/>
       <caption webpage="coming-soon" alt=""/>
+      <caption webpage="alex-beausire--studio-cam" alt=""/>
+      <caption webpage="about" alt=""/>
       <caption webpage="serious-home" alt=""/>
     </file>
     <file name="alex beausire.gif" crc="39614180" seo="true" ref="index:aboutcontact:alex-beausire--studio-cam:midland-5th-birthday">
       <caption webpage="index" alt=""/>
+      <caption webpage="studio-cam" alt=""/>
       <caption webpage="aboutcontact" alt=""/>
       <caption webpage="alex-beausire--studio-cam" alt=""/>
-      <caption webpage="studio-cam" alt=""/>
       <caption webpage="coming-soon" alt=""/>
       <caption webpage="midland-5th-birthday" alt=""/>
     </file>
@@ -298,14 +298,14 @@
       <caption webpage="yubl" alt=""/>
     </file>
     <file name="giphy.gif" crc="4067365897" seo="true" ref="index:yubl">
-      <caption webpage="alex-beausire--yubl" alt=""/>
       <caption webpage="index" alt=""/>
       <caption webpage="yubl" alt=""/>
+      <caption webpage="alex-beausire--yubl" alt=""/>
     </file>
     <file name="giphy_2x.gif" crc="4067365897" seo="true" ref="index">
-      <caption webpage="alex-beausire--yubl" alt=""/>
       <caption webpage="index" alt=""/>
       <caption webpage="yubl" alt=""/>
+      <caption webpage="alex-beausire--yubl" alt=""/>
     </file>
     <file name="giphy (1).gif" crc="278170323" seo="true" ref="yubl">
       <caption webpage="alex-beausire--yubl" alt=""/>
@@ -498,7 +498,7 @@
       <caption webpage="index" alt=""/>
     </file>
   </folder>
-  <file name="index.html" crc="176970200" seo="true" mt="1519128661738" redirect="true"/>
+  <file name="index.html" crc="176970200" seo="true" mt="1519740822878" redirect="true"/>
   <file name="aboutcontact.html" crc="84523688" seo="true" mt="1516209441635" redirect="true"/>
   <file name="about.html" crc="483059158" seo="true" mt="1516209462076" redirect="true"/>
   <file name="alex-beausire--studio-cam.html" crc="235422441" seo="true" mt="1516209441636" redirect="true"/>
