@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>http://alexbeausi.re/index.html</loc>
-    <lastmod>2018-01-17</lastmod>
+    <lastmod>2018-02-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
     <image:image>
@@ -149,6 +149,18 @@
     <image:image>
       <image:loc>http://alexbeausi.re/images/giphy%20(2).gif</image:loc>
     </image:image>
+    <image:image>
+      <image:loc>http://alexbeausi.re/images/the-bakery.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>http://alexbeausi.re/images/the-bakery_2x.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>http://alexbeausi.re/images/bruce-a3.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>http://alexbeausi.re/images/bruce-a3_2x.jpg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>http://alexbeausi.re/alex-beausire--studio-cam.html</loc>
@@ -254,9 +266,15 @@
   </url>
   <url>
     <loc>http://alexbeausi.re/yubl.html</loc>
-    <lastmod>2018-01-17</lastmod>
+    <lastmod>2018-02-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
+    <image:image>
+      <image:loc>http://alexbeausi.re/images/portfolio-photo115x86.png</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>http://alexbeausi.re/images/portfolio-photo115x86_2x.png</image:loc>
+    </image:image>
     <image:image>
       <image:loc>http://alexbeausi.re/images/13619866_1050733851683854_830180105603999018_n.jpg</image:loc>
     </image:image>
@@ -264,13 +282,10 @@
       <image:loc>http://alexbeausi.re/images/13754436_1058816677542238_7822077954221802807_n.jpg</image:loc>
     </image:image>
     <image:image>
+      <image:loc>http://alexbeausi.re/images/giphy.gif</image:loc>
+    </image:image>
+    <image:image>
       <image:loc>http://alexbeausi.re/images/giphy%20(1).gif</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>http://alexbeausi.re/images/giphy2.gif</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>http://alexbeausi.re/images/giphy_2x2.gif</image:loc>
     </image:image>
   </url>
   <url>
