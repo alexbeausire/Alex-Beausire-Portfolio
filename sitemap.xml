@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>http://alexbeausi.re/index.html</loc>
-    <lastmod>2018-05-02</lastmod>
+    <lastmod>2018-08-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
     <image:image>
@@ -162,28 +162,10 @@
       <image:loc>http://alexbeausi.re/images/bruce-a3_2x.jpg</image:loc>
     </image:image>
     <image:image>
-      <image:loc>http://alexbeausi.re/images/vertical%20hoochhooch%20up2artboard%201@3x.png</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>http://alexbeausi.re/images/vertical%20hoochhooch%20up2artboard%201@3x_2x.png</image:loc>
-    </image:image>
-    <image:image>
       <image:loc>http://alexbeausi.re/images/optimyo.jpg</image:loc>
     </image:image>
     <image:image>
       <image:loc>http://alexbeausi.re/images/optimyo_2x.jpg</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>http://alexbeausi.re/images/4artboard%201.jpg</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>http://alexbeausi.re/images/4artboard%201_2x.jpg</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>http://alexbeausi.re/images/funk%20on%20the%20farm2artboard%201@3x.jpg</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>http://alexbeausi.re/images/funk%20on%20the%20farm2artboard%201@3x_2x.jpg</image:loc>
     </image:image>
     <image:image>
       <image:loc>http://alexbeausi.re/images/a3-poster-01-01.jpg</image:loc>
@@ -202,6 +184,51 @@
     </image:image>
     <image:image>
       <image:loc>http://alexbeausi.re/images/we-are-fstvl-1-square_2x.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>http://alexbeausi.re/images/holly%20lester%20my%20wayartboard%201@3x.png</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>http://alexbeausi.re/images/holly%20lester%20my%20wayartboard%201@3x_2x.png</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>http://alexbeausi.re/images/solid%20blake%20a3artboard%201@3x.png</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>http://alexbeausi.re/images/solid%20blake%20a3artboard%201@3x_2x.png</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>http://alexbeausi.re/images/coeo%20flyer%20rgb%201-01.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>http://alexbeausi.re/images/coeo%20flyer%20rgb%201-01_2x.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>http://alexbeausi.re/images/kornel%20kovacs%20a3%20rgb%20(for%20online).png</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>http://alexbeausi.re/images/kornel%20kovacs%20a3%20rgb%20(for%20online)_2x.png</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>http://alexbeausi.re/images/chip%20and%20run.png</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>http://alexbeausi.re/images/chip%20and%20run_2x.png</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>http://alexbeausi.re/images/saoirse%20a3.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>http://alexbeausi.re/images/saoirse%20a3_2x.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>http://alexbeausi.re/images/meraki%20bbq%20posterartboard%201.png</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>http://alexbeausi.re/images/meraki%20bbq%20posterartboard%201_2x.png</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>http://alexbeausi.re/images/summer%20smash%20a3artboard%201.png</image:loc>
     </image:image>
   </url>
   <url>
