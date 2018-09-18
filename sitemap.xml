@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>http://alexbeausi.re/index.html</loc>
-    <lastmod>2018-09-09</lastmod>
+    <lastmod>2018-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
     <image:image>
@@ -165,25 +165,82 @@
       <image:loc>http://alexbeausi.re/images/rezzies%20posterartboard%201@3x_2x.jpg</image:loc>
     </image:image>
     <image:image>
-      <image:loc>http://alexbeausi.re/images/dan-beaumont-crop-u18854.jpg</image:loc>
+      <image:loc>http://alexbeausi.re/images/boogaloo%20baba%20a3%20for%20onlineartboard%201@3x.png</image:loc>
     </image:image>
     <image:image>
-      <image:loc>http://alexbeausi.re/images/pss-a3-crop-u18661.jpg</image:loc>
+      <image:loc>http://alexbeausi.re/images/boogaloo%20baba%20a3%20for%20onlineartboard%201@3x_2x.png</image:loc>
     </image:image>
     <image:image>
-      <image:loc>http://alexbeausi.re/images/pss-a3-crop-u18661_2x.jpg</image:loc>
+      <image:loc>http://alexbeausi.re/images/chip%20and%20run.png</image:loc>
     </image:image>
     <image:image>
-      <image:loc>http://alexbeausi.re/images/dj-sports---ck-a3-crop-u11517.jpg</image:loc>
+      <image:loc>http://alexbeausi.re/images/chip%20and%20run_2x.png</image:loc>
     </image:image>
     <image:image>
-      <image:loc>http://alexbeausi.re/images/dj-sports---ck-a3-crop-u11517_2x.jpg</image:loc>
+      <image:loc>http://alexbeausi.re/images/dan-beaumont.jpg</image:loc>
     </image:image>
     <image:image>
-      <image:loc>http://alexbeausi.re/images/jon-rust-poster-crop-u8967.jpg</image:loc>
+      <image:loc>http://alexbeausi.re/images/pss-a3.jpg</image:loc>
     </image:image>
     <image:image>
-      <image:loc>http://alexbeausi.re/images/jon-rust-poster-crop-u8967_2x.jpg</image:loc>
+      <image:loc>http://alexbeausi.re/images/pss-a3_2x.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>http://alexbeausi.re/images/residents-banner.png</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>http://alexbeausi.re/images/residents-banner_2x.png</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>http://alexbeausi.re/images/dj-sports---ck-a3.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>http://alexbeausi.re/images/dj-sports---ck-a3_2x.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>http://alexbeausi.re/images/jon-rust-poster.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>http://alexbeausi.re/images/jon-rust-poster_2x.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>http://alexbeausi.re/images/stw.png</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>http://alexbeausi.re/images/stw_2x.png</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>http://alexbeausi.re/images/holly%20lester%20my%20wayartboard%201@3x.png</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>http://alexbeausi.re/images/holly%20lester%20my%20wayartboard%201@3x_2x.png</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>http://alexbeausi.re/images/solid%20blake%20a3artboard%201@3x.png</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>http://alexbeausi.re/images/solid%20blake%20a3artboard%201@3x_2x.png</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>http://alexbeausi.re/images/poster%20a3artboard%201@3x.png</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>http://alexbeausi.re/images/poster%20a3artboard%201@3x_2x.png</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>http://alexbeausi.re/images/kornel%20kovacs%20a3%20rgb%20(for%20online).png</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>http://alexbeausi.re/images/kornel%20kovacs%20a3%20rgb%20(for%20online)_2x.png</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>http://alexbeausi.re/images/meraki%20bbq%20posterartboard%201.png</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>http://alexbeausi.re/images/meraki%20bbq%20posterartboard%201_2x.png</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>http://alexbeausi.re/images/summer%20smash%20a3artboard%201.png</image:loc>
     </image:image>
   </url>
   <url>

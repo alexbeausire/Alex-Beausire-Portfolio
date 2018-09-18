@@ -1,4 +1,4 @@
-<manifest alg="2" build="2018.0.0.379" opt="true" iceEnabled="true" iceMarkupVersion="2" iceEnabledOptions="link,responsive,cachebuster,textStyling" exportTarget="other" domain="alexbeausi.re" resolutions="1x,2x" timestamp="1536517391624">
+<manifest alg="2" build="2018.0.0.379" opt="true" iceEnabled="true" iceMarkupVersion="2" iceEnabledOptions="link,responsive,cachebuster,textStyling" exportTarget="other" domain="alexbeausi.re" resolutions="1x,2x" timestamp="1537311787603">
   <folder name="assets">
     <file name="sequence-02_2.mp4" crc="120514884" seo="true" mt="1511441900000"/>
     <file name="globale-roots-3.mov" crc="4018133483" seo="true" mt="1511787421000"/>
@@ -10,7 +10,7 @@
   <folder name="css">
     <file name="site_global.css" crc="4029444646"/>
     <file name="master_a-master.css" crc="3791780384" ref="index:aboutcontact:alex-beausire--studio-cam:midland-5th-birthday"/>
-    <file name="index.css" crc="4049145701" ref="index"/>
+    <file name="index.css" crc="4082981374" ref="index"/>
     <file name="aboutcontact.css" crc="454302459" ref="aboutcontact"/>
     <file name="master_a-master-copy.css" crc="185592318" ref="about:midland-5th-birthday-serious:wwfm-live-sessions:nmw:yubl:knowledge-arena:wwfm-flyer:serious-home"/>
     <file name="about.css" crc="496960200" ref="about"/>
@@ -43,30 +43,30 @@
   <folder name="images">
     <file name="favicon.ico" crc="4212706539" ref="index"/>
     <file name="portfolio-photo.png" crc="4017327085" seo="true" ref="index:aboutcontact:alex-beausire--studio-cam:midland-5th-birthday">
+      <caption webpage="index" alt=""/>
       <caption webpage="serious-home" alt=""/>
-      <caption webpage="studio-cam" alt=""/>
       <caption webpage="about" alt=""/>
       <caption webpage="midland-5th-birthday" alt=""/>
-      <caption webpage="alex-beausire--studio-cam" alt=""/>
-      <caption webpage="index" alt=""/>
       <caption webpage="aboutcontact" alt=""/>
+      <caption webpage="studio-cam" alt=""/>
+      <caption webpage="alex-beausire--studio-cam" alt=""/>
     </file>
     <file name="portfolio-photo_2x.png" crc="51849880" seo="true" ref="index:aboutcontact:alex-beausire--studio-cam:midland-5th-birthday">
-      <caption webpage="serious-home" alt=""/>
-      <caption webpage="studio-cam" alt=""/>
-      <caption webpage="about" alt=""/>
-      <caption webpage="midland-5th-birthday" alt=""/>
-      <caption webpage="alex-beausire--studio-cam" alt=""/>
       <caption webpage="index" alt=""/>
+      <caption webpage="about" alt=""/>
+      <caption webpage="serious-home" alt=""/>
       <caption webpage="aboutcontact" alt=""/>
       <caption webpage="coming-soon" alt=""/>
+      <caption webpage="midland-5th-birthday" alt=""/>
+      <caption webpage="studio-cam" alt=""/>
+      <caption webpage="alex-beausire--studio-cam" alt=""/>
     </file>
     <file name="alex beausire.gif" crc="39614180" seo="true" ref="index:aboutcontact:alex-beausire--studio-cam:midland-5th-birthday">
       <caption webpage="index" alt=""/>
+      <caption webpage="midland-5th-birthday" alt=""/>
+      <caption webpage="coming-soon" alt=""/>
       <caption webpage="studio-cam" alt=""/>
       <caption webpage="aboutcontact" alt=""/>
-      <caption webpage="coming-soon" alt=""/>
-      <caption webpage="midland-5th-birthday" alt=""/>
       <caption webpage="alex-beausire--studio-cam" alt=""/>
     </file>
     <file name="banoffe-pies-poster.jpg" crc="353950106" seo="true" ref="index">
@@ -79,6 +79,7 @@
       <caption webpage="index" alt=""/>
     </file>
     <file name="manekineko.gif" crc="82523099" seo="true" ref="index">
+      <caption webpage="index" alt=""/>
       <caption webpage="index" alt=""/>
     </file>
     <file name="boogie-nights-poster.jpg" crc="352845266" seo="true" ref="index">
@@ -137,13 +138,13 @@
     </file>
     <file name="midland poster.jpg" crc="4236488405" seo="true" ref="index:midland-5th-birthday:midland-5th-birthday-serious">
       <caption webpage="index" alt=""/>
-      <caption webpage="midland-5th-birthday-serious" alt=""/>
       <caption webpage="midland-5th-birthday" alt=""/>
+      <caption webpage="midland-5th-birthday-serious" alt=""/>
     </file>
     <file name="midland poster_2x.jpg" crc="3840044123" seo="true" ref="index:midland-5th-birthday:midland-5th-birthday-serious">
       <caption webpage="index" alt=""/>
-      <caption webpage="midland-5th-birthday-serious" alt=""/>
       <caption webpage="midland-5th-birthday" alt=""/>
+      <caption webpage="midland-5th-birthday-serious" alt=""/>
     </file>
     <file name="gif22.gif" crc="79707868" seo="true" ref="index">
       <caption webpage="index" alt=""/>
@@ -274,13 +275,13 @@
     </file>
     <file name="giphy.gif" crc="4067365897" seo="true" ref="index:yubl">
       <caption webpage="index" alt=""/>
-      <caption webpage="yubl" alt=""/>
       <caption webpage="alex-beausire--yubl" alt=""/>
+      <caption webpage="yubl" alt=""/>
     </file>
     <file name="giphy_2x.gif" crc="4067365897" seo="true" ref="index">
       <caption webpage="index" alt=""/>
-      <caption webpage="yubl" alt=""/>
       <caption webpage="alex-beausire--yubl" alt=""/>
+      <caption webpage="yubl" alt=""/>
     </file>
     <file name="giphy (1).gif" crc="278170323" seo="true" ref="yubl">
       <caption webpage="alex-beausire--yubl" alt=""/>
@@ -499,47 +500,86 @@
     <file name="rezzies posterartboard 1@3x_2x.jpg" crc="4190057684" seo="true" ref="index">
       <caption webpage="index" alt=""/>
     </file>
-    <file name="holly lester my wayartboard 1@3x-u19695.png" crc="4213437357" ref="index"/>
-    <file name="holly lester my wayartboard 1@3x-u19695_2x.png" crc="3779223975" ref="index"/>
-    <file name="solid blake a3artboard 1@3x-u19576.png" crc="256167234" ref="index"/>
-    <file name="solid blake a3artboard 1@3x-u19576_2x.png" crc="3923030654" ref="index"/>
-    <file name="kornel kovacs a3 rgb (for online)-u19532.png" crc="4111308380" ref="index"/>
-    <file name="kornel kovacs a3 rgb (for online)-u19532_2x.png" crc="398236604" ref="index"/>
-    <file name="chip and run-u19593.png" crc="3888650626" ref="index"/>
-    <file name="chip and run-u19593_2x.png" crc="3836551296" ref="index"/>
-    <file name="meraki bbq posterartboard 1-u19239.png" crc="4270020048" ref="index"/>
-    <file name="meraki bbq posterartboard 1-u19239_2x.png" crc="3927726436" ref="index"/>
-    <file name="summer smash a3artboard 1-u19214.png" crc="283153750" ref="index"/>
-    <file name="dan-beaumont-crop-u18854.jpg" crc="4198996775" seo="true" ref="index">
+    <file name="boogaloo baba a3 for onlineartboard 1@3x.png" crc="4276246130" seo="true" ref="index">
       <caption webpage="index" alt=""/>
     </file>
-    <file name="pss-a3-crop-u18661.jpg" crc="3761583972" seo="true" ref="index">
+    <file name="boogaloo baba a3 for onlineartboard 1@3x_2x.png" crc="4053724090" seo="true" ref="index">
       <caption webpage="index" alt=""/>
     </file>
-    <file name="pss-a3-crop-u18661_2x.jpg" crc="81438151" seo="true" ref="index">
+    <file name="chip and run.png" crc="485208347" seo="true" ref="index">
       <caption webpage="index" alt=""/>
     </file>
-    <file name="residents-banner-u11544.png" crc="271934178" ref="index"/>
-    <file name="residents-banner-u11544_2x.png" crc="4217601441" ref="index"/>
-    <file name="dj-sports---ck-a3-crop-u11517.jpg" crc="4070052524" seo="true" ref="index">
+    <file name="chip and run_2x.png" crc="148164797" seo="true" ref="index">
       <caption webpage="index" alt=""/>
     </file>
-    <file name="dj-sports---ck-a3-crop-u11517_2x.jpg" crc="13872376" seo="true" ref="index">
+    <file name="dan-beaumont.jpg" crc="4026388246" seo="true" ref="index">
       <caption webpage="index" alt=""/>
     </file>
-    <file name="jon-rust-poster-crop-u8967.jpg" crc="467305698" seo="true" ref="index">
+    <file name="pss-a3.jpg" crc="349769475" seo="true" ref="index">
       <caption webpage="index" alt=""/>
     </file>
-    <file name="jon-rust-poster-crop-u8967_2x.jpg" crc="355664287" seo="true" ref="index">
+    <file name="pss-a3_2x.jpg" crc="3953455683" seo="true" ref="index">
       <caption webpage="index" alt=""/>
     </file>
-    <file name="stw-u8864.png" crc="4160159164" ref="index"/>
-    <file name="stw-u8864_2x.png" crc="234768852" ref="index"/>
-    <file name="manekineko-u8704.png" crc="4289493410" ref="index"/>
-    <file name="poster a3artboard 1@3x-u19787.png" crc="4036836903" ref="index"/>
-    <file name="poster a3artboard 1@3x-u19787_2x.png" crc="417126476" ref="index"/>
+    <file name="residents-banner.png" crc="4278513917" seo="true" ref="index">
+      <caption webpage="index" alt=""/>
+    </file>
+    <file name="residents-banner_2x.png" crc="464247150" seo="true" ref="index">
+      <caption webpage="index" alt=""/>
+    </file>
+    <file name="dj-sports---ck-a3.jpg" crc="4207252935" seo="true" ref="index">
+      <caption webpage="index" alt=""/>
+    </file>
+    <file name="dj-sports---ck-a3_2x.jpg" crc="408602657" seo="true" ref="index">
+      <caption webpage="index" alt=""/>
+    </file>
+    <file name="jon-rust-poster.jpg" crc="511042082" seo="true" ref="index">
+      <caption webpage="index" alt=""/>
+    </file>
+    <file name="jon-rust-poster_2x.jpg" crc="4250369235" seo="true" ref="index">
+      <caption webpage="index" alt=""/>
+    </file>
+    <file name="stw.png" crc="3852632564" seo="true" ref="index">
+      <caption webpage="index" alt=""/>
+    </file>
+    <file name="stw_2x.png" crc="3813644080" seo="true" ref="index">
+      <caption webpage="index" alt=""/>
+    </file>
+    <file name="holly lester my wayartboard 1@3x.png" crc="12301771" seo="true" ref="index">
+      <caption webpage="index" alt=""/>
+    </file>
+    <file name="holly lester my wayartboard 1@3x_2x.png" crc="153377833" seo="true" ref="index">
+      <caption webpage="index" alt=""/>
+    </file>
+    <file name="solid blake a3artboard 1@3x.png" crc="3886900722" seo="true" ref="index">
+      <caption webpage="index" alt=""/>
+    </file>
+    <file name="solid blake a3artboard 1@3x_2x.png" crc="192376343" seo="true" ref="index">
+      <caption webpage="index" alt=""/>
+    </file>
+    <file name="poster a3artboard 1@3x.png" crc="4214756960" seo="true" ref="index">
+      <caption webpage="index" alt=""/>
+    </file>
+    <file name="poster a3artboard 1@3x_2x.png" crc="111171030" seo="true" ref="index">
+      <caption webpage="index" alt=""/>
+    </file>
+    <file name="kornel kovacs a3 rgb (for online).png" crc="83308711" seo="true" ref="index">
+      <caption webpage="index" alt=""/>
+    </file>
+    <file name="kornel kovacs a3 rgb (for online)_2x.png" crc="4230620238" seo="true" ref="index">
+      <caption webpage="index" alt=""/>
+    </file>
+    <file name="meraki bbq posterartboard 1.png" crc="60684517" seo="true" ref="index">
+      <caption webpage="index" alt=""/>
+    </file>
+    <file name="meraki bbq posterartboard 1_2x.png" crc="3800155497" seo="true" ref="index">
+      <caption webpage="index" alt=""/>
+    </file>
+    <file name="summer smash a3artboard 1.png" crc="372402534" seo="true" ref="index">
+      <caption webpage="index" alt=""/>
+    </file>
   </folder>
-  <file name="index.html" crc="3923811186" seo="true" mt="1536517377978" redirect="true"/>
+  <file name="index.html" crc="231474606" seo="true" mt="1537311775360" redirect="true"/>
   <file name="aboutcontact.html" crc="84523688" seo="true" mt="1516209441635" redirect="true"/>
   <file name="about.html" crc="483059158" seo="true" mt="1516209462076" redirect="true"/>
   <file name="alex-beausire--studio-cam.html" crc="235422441" seo="true" mt="1516209441636" redirect="true"/>
