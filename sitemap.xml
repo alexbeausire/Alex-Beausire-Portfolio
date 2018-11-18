@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>http://alexbeausi.re/index.html</loc>
-    <lastmod>2018-10-31</lastmod>
+    <lastmod>2018-11-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
     <image:image>
@@ -19,12 +19,6 @@
     </image:image>
     <image:image>
       <image:loc>http://alexbeausi.re/images/central%20and%20manamdeartboard%201@2x_2x.png</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>http://alexbeausi.re/images/janeret%20a3artboard%201@2x.png</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>http://alexbeausi.re/images/janeret%20a3artboard%201@2x_2x.png</image:loc>
     </image:image>
     <image:image>
       <image:loc>http://alexbeausi.re/images/boogaloo%20baba%20a3%20for%20onlineartboard%201@3x.png</image:loc>
@@ -51,12 +45,6 @@
       <image:loc>http://alexbeausi.re/images/solid%20blake%20a3artboard%201@3x_2x.png</image:loc>
     </image:image>
     <image:image>
-      <image:loc>http://alexbeausi.re/images/coeo%20flyer%20rgb%201-01.jpg</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>http://alexbeausi.re/images/coeo%20flyer%20rgb%201-01_2x.jpg</image:loc>
-    </image:image>
-    <image:image>
       <image:loc>http://alexbeausi.re/images/kornel%20kovacs%20a3%20rgb%20(for%20online).png</image:loc>
     </image:image>
     <image:image>
@@ -81,19 +69,10 @@
       <image:loc>http://alexbeausi.re/images/meraki%20bbq%20posterartboard%201_2x.png</image:loc>
     </image:image>
     <image:image>
-      <image:loc>http://alexbeausi.re/images/summer%20smash%20a3artboard%201.png</image:loc>
-    </image:image>
-    <image:image>
       <image:loc>http://alexbeausi.re/images/a3-poster-01-01.jpg</image:loc>
     </image:image>
     <image:image>
       <image:loc>http://alexbeausi.re/images/a3-poster-01-01_2x.jpg</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>http://alexbeausi.re/images/poster2-01-01-01.jpg</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>http://alexbeausi.re/images/poster2-01-01-01_2x.jpg</image:loc>
     </image:image>
     <image:image>
       <image:loc>http://alexbeausi.re/images/we-are-fstvl-1-square.jpg</image:loc>
@@ -222,18 +201,6 @@
       <image:loc>http://alexbeausi.re/images/gif22.gif</image:loc>
     </image:image>
     <image:image>
-      <image:loc>http://alexbeausi.re/images/logo_motorola.gif</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>http://alexbeausi.re/images/giphy.gif</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>http://alexbeausi.re/images/giphy_2x.gif</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>http://alexbeausi.re/images/giphy%20(2).gif</image:loc>
-    </image:image>
-    <image:image>
       <image:loc>http://alexbeausi.re/images/midland-gif-frame.gif</image:loc>
     </image:image>
     <image:image>
@@ -247,6 +214,30 @@
     </image:image>
     <image:image>
       <image:loc>http://alexbeausi.re/images/2_orig.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>http://alexbeausi.re/images/our%20hosue%20rezziers%20a3artboard%201@2x.png</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>http://alexbeausi.re/images/our%20hosue%20rezziers%20a3artboard%201@2x_2x.png</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>http://alexbeausi.re/images/aka%20ishan%20sound%20a%C2%A3artboard%201@2x.png</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>http://alexbeausi.re/images/aka%20ishan%20sound%20a%C2%A3artboard%201@2x_2x.png</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>http://alexbeausi.re/images/notre%20dance%20janeretartboard%201@2x.png</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>http://alexbeausi.re/images/notre%20dance%20janeretartboard%201@2x_2x.png</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>http://alexbeausi.re/images/our%20hosue%202artboard%201@2x.png</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>http://alexbeausi.re/images/our%20hosue%202artboard%201@2x_2x.png</image:loc>
     </image:image>
   </url>
   <url>
