@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>http://alexbeausi.re/index.html</loc>
-    <lastmod>2018-11-18</lastmod>
+    <lastmod>2018-11-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
     <image:image>
@@ -67,12 +67,6 @@
     </image:image>
     <image:image>
       <image:loc>http://alexbeausi.re/images/meraki%20bbq%20posterartboard%201_2x.png</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>http://alexbeausi.re/images/a3-poster-01-01.jpg</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>http://alexbeausi.re/images/a3-poster-01-01_2x.jpg</image:loc>
     </image:image>
     <image:image>
       <image:loc>http://alexbeausi.re/images/we-are-fstvl-1-square.jpg</image:loc>
@@ -222,12 +216,6 @@
       <image:loc>http://alexbeausi.re/images/our%20hosue%20rezziers%20a3artboard%201@2x_2x.png</image:loc>
     </image:image>
     <image:image>
-      <image:loc>http://alexbeausi.re/images/aka%20ishan%20sound%20a%C2%A3artboard%201@2x.png</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>http://alexbeausi.re/images/aka%20ishan%20sound%20a%C2%A3artboard%201@2x_2x.png</image:loc>
-    </image:image>
-    <image:image>
       <image:loc>http://alexbeausi.re/images/notre%20dance%20janeretartboard%201@2x.png</image:loc>
     </image:image>
     <image:image>
@@ -238,6 +226,12 @@
     </image:image>
     <image:image>
       <image:loc>http://alexbeausi.re/images/our%20hosue%202artboard%201@2x_2x.png</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>http://alexbeausi.re/images/plo%20man%20poster-01.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>http://alexbeausi.re/images/plo%20man%20poster-01_2x.jpg</image:loc>
     </image:image>
   </url>
   <url>
