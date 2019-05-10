@@ -2,11 +2,17 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>http://alexbeausi.re/index.html</loc>
-    <lastmod>2019-05-07</lastmod>
+    <lastmod>2019-05-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
     <image:image>
       <image:loc>http://alexbeausi.re/images/alex%20beausire.gif</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>http://alexbeausi.re/images/5-gif.gif</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>http://alexbeausi.re/images/midland-gif-frame2.gif</image:loc>
     </image:image>
     <image:image>
       <image:loc>http://alexbeausi.re/images/portfolio-photo-crop-u7675.png</image:loc>
@@ -111,12 +117,6 @@
       <image:loc>http://alexbeausi.re/images/we-are-fsvtl-4-square_2x.jpg</image:loc>
     </image:image>
     <image:image>
-      <image:loc>http://alexbeausi.re/images/insta-story-mockup.png</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>http://alexbeausi.re/images/insta-story-mockup_2x.png</image:loc>
-    </image:image>
-    <image:image>
       <image:loc>http://alexbeausi.re/images/boogaloo%20baba%20a3%20for%20onlineartboard%201@3x422x597.png</image:loc>
     </image:image>
     <image:image>
@@ -134,10 +134,28 @@
     <image:image>
       <image:loc>http://alexbeausi.re/images/kornel%20kovacs%20a3%20rgb%20(for%20online)419x593_2x.png</image:loc>
     </image:image>
+    <image:image>
+      <image:loc>http://alexbeausi.re/images/45793893_2210734775832113_8867208897184864576_n.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>http://alexbeausi.re/images/insta-story-mockup-crop-u23785.png</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>http://alexbeausi.re/images/insta-story-mockup-crop-u23785_2x.png</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>http://alexbeausi.re/images/our-house-tee-crop-u27830.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>http://alexbeausi.re/images/our-house-tee-crop-u27830_2x.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>http://alexbeausi.re/images/midland-gif-frame_2x.gif</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>http://alexbeausi.re/aboutcontact.html</loc>
-    <lastmod>2019-05-07</lastmod>
+    <lastmod>2019-05-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
     <image:image>
@@ -180,28 +198,10 @@
       <image:loc>http://alexbeausi.re/images/midland-gif-frame2.gif</image:loc>
     </image:image>
     <image:image>
-      <image:loc>http://alexbeausi.re/images/midland%20flyer%20back397x559.jpg</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>http://alexbeausi.re/images/midland%20flyer%20back397x559_2x.jpg</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>http://alexbeausi.re/images/midland%20flyer%20front397x559.jpg</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>http://alexbeausi.re/images/midland%20flyer%20front397x559_2x.jpg</image:loc>
-    </image:image>
-    <image:image>
       <image:loc>http://alexbeausi.re/images/ticket%20back.jpg</image:loc>
     </image:image>
     <image:image>
       <image:loc>http://alexbeausi.re/images/ticket%20back_2x.jpg</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>http://alexbeausi.re/images/ticket%20front591x207.jpg</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>http://alexbeausi.re/images/ticket%20front591x207_2x.jpg</image:loc>
     </image:image>
     <image:image>
       <image:loc>http://alexbeausi.re/images/our-house-tee-crop-u17236.jpg</image:loc>
@@ -214,6 +214,24 @@
     </image:image>
     <image:image>
       <image:loc>http://alexbeausi.re/images/portfolio-photo-crop-u7675_2x.png</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>http://alexbeausi.re/images/midland%20flyer%20back.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>http://alexbeausi.re/images/midland%20flyer%20back_2x.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>http://alexbeausi.re/images/midland%20flyer%20front.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>http://alexbeausi.re/images/midland%20flyer%20front_2x.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>http://alexbeausi.re/images/ticket%20front.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>http://alexbeausi.re/images/ticket%20front_2x.jpg</image:loc>
     </image:image>
   </url>
   <url>
