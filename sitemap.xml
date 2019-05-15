@@ -2,29 +2,26 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>http://alexbeausi.re/index.html</loc>
-    <lastmod>2019-05-13</lastmod>
+    <lastmod>2019-05-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
     <image:image>
       <image:loc>http://alexbeausi.re/images/alex%20beausire.gif</image:loc>
     </image:image>
     <image:image>
+      <image:loc>http://alexbeausi.re/images/midland-gif-frame.gif</image:loc>
+    </image:image>
+    <image:image>
       <image:loc>http://alexbeausi.re/images/5-gif.gif</image:loc>
     </image:image>
     <image:image>
-      <image:loc>http://alexbeausi.re/images/midland-gif-frame2.gif</image:loc>
+      <image:loc>http://alexbeausi.re/images/notre%20dance%20janeretartboard%201@2x_2x.png</image:loc>
     </image:image>
     <image:image>
       <image:loc>http://alexbeausi.re/images/portfolio-photo-crop-u7675.png</image:loc>
     </image:image>
     <image:image>
       <image:loc>http://alexbeausi.re/images/portfolio-photo-crop-u7675_2x.png</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>http://alexbeausi.re/images/timetable.jpg</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>http://alexbeausi.re/images/timetable_2x.jpg</image:loc>
     </image:image>
     <image:image>
       <image:loc>http://alexbeausi.re/images/untitled-1.jpg</image:loc>
@@ -79,9 +76,6 @@
     </image:image>
     <image:image>
       <image:loc>http://alexbeausi.re/images/gene%20on%20earth%20notre%20dance%20notre%20d%20a3artboard%201483x683_2x.png</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>http://alexbeausi.re/images/notre%20dance%20janeretartboard%201@2x_2x2.png</image:loc>
     </image:image>
     <image:image>
       <image:loc>http://alexbeausi.re/images/notre%20dance%20janeretartboard%201@2x_2x_2x.png</image:loc>
@@ -151,6 +145,18 @@
     </image:image>
     <image:image>
       <image:loc>http://alexbeausi.re/images/midland-gif-frame_2x.gif</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>http://alexbeausi.re/images/timetable%20june.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>http://alexbeausi.re/images/timetable%20june_2x.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>http://alexbeausi.re/images/phase%20one%20timetable%20may.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>http://alexbeausi.re/images/phase%20one%20timetable%20may_2x.jpg</image:loc>
     </image:image>
   </url>
   <url>
