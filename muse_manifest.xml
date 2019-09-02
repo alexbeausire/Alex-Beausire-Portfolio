@@ -1,36 +1,39 @@
-<manifest alg="2" build="2018.1.0.386" opt="true" iceEnabled="true" iceMarkupVersion="2" iceEnabledOptions="link,responsive,cachebuster,textStyling" exportTarget="other" domain="alexbeausi.re" resolutions="1x,2x" timestamp="1562414550814">
+<manifest alg="2" build="2018.1.0.386" opt="true" iceEnabled="true" iceMarkupVersion="2" iceEnabledOptions="link,responsive,cachebuster,textStyling" exportTarget="other" domain="alexbeausi.re" resolutions="1x,2x" timestamp="1567461807936">
   <folder name="css">
     <file name="site_global.css" crc="4029444646"/>
-    <file name="master_a-master.css" crc="168049301" ref="index:aboutcontact:alex-beausire--studio-cam:alex-beausire--posters"/>
+    <file name="master_a-master.css" crc="168049301" ref="index:aboutcontact:alex-beausire--studio-cam:alex-beausire--posters:untitled-5"/>
     <file name="index.css" crc="3852114883" ref="index"/>
     <file name="aboutcontact.css" crc="118757531" ref="aboutcontact"/>
     <file name="alex-beausire--studio-cam.css" crc="3793281750" ref="alex-beausire--studio-cam"/>
-    <file name="alex-beausire--posters.css" crc="4120066573" ref="alex-beausire--posters"/>
+    <file name="alex-beausire--posters.css" crc="526510149" ref="alex-beausire--posters"/>
+    <file name="untitled-5.css" crc="4121229346" ref="untitled-5"/>
   </folder>
   <folder name="assets">
     <file name="globale-roots-3.mov" crc="4018133483" seo="true" mt="1511787421000"/>
     <file name="enter-details-about-your-video-(1).mp4" crc="3899736435" seo="true" mt="1557170132000"/>
     <file name="enter-details-about-your-video.mp4" crc="4116805971" seo="true" mt="1557170127000"/>
     <file name="wewfm-video-flyer.mp4" crc="120514884" seo="true" mt="1557170519000"/>
+    <file name="insta-story-mockup-2.mp4" crc="180505895" seo="true" mt="1567461331000"/>
   </folder>
   <folder name="scripts">
-    <file name="jquery-1.8.3.min.js" crc="209076791" ref="index:aboutcontact:alex-beausire--studio-cam:alex-beausire--posters"/>
-    <file name="museutils.js" crc="340535759" ref="index:aboutcontact:alex-beausire--studio-cam:alex-beausire--posters"/>
-    <file name="whatinput.js" crc="86476730" ref="index:aboutcontact:alex-beausire--studio-cam:alex-beausire--posters"/>
-    <file name="museconfig.js" crc="310584261" ref="index:aboutcontact:alex-beausire--studio-cam:alex-beausire--posters"/>
-    <file name="jquery.musemenu.js" crc="510910590" ref="index:aboutcontact:alex-beausire--studio-cam:alex-beausire--posters"/>
-    <file name="jquery.watch.js" crc="51536988" ref="index:aboutcontact:alex-beausire--studio-cam:alex-beausire--posters"/>
-    <file name="html5shiv.js" crc="4241844378" ref="index:aboutcontact:alex-beausire--studio-cam:alex-beausire--posters"/>
-    <file name="require.js" crc="7928878" ref="index:aboutcontact:alex-beausire--studio-cam:alex-beausire--posters"/>
+    <file name="jquery-1.8.3.min.js" crc="209076791" ref="index:aboutcontact:alex-beausire--studio-cam:alex-beausire--posters:untitled-5"/>
+    <file name="museutils.js" crc="340535759" ref="index:aboutcontact:alex-beausire--studio-cam:alex-beausire--posters:untitled-5"/>
+    <file name="whatinput.js" crc="86476730" ref="index:aboutcontact:alex-beausire--studio-cam:alex-beausire--posters:untitled-5"/>
+    <file name="museconfig.js" crc="310584261" ref="index:aboutcontact:alex-beausire--studio-cam:alex-beausire--posters:untitled-5"/>
+    <file name="jquery.musemenu.js" crc="510910590" ref="index:aboutcontact:alex-beausire--studio-cam:alex-beausire--posters:untitled-5"/>
+    <file name="jquery.watch.js" crc="51536988" ref="index:aboutcontact:alex-beausire--studio-cam:alex-beausire--posters:untitled-5"/>
+    <file name="html5shiv.js" crc="4241844378" ref="index:aboutcontact:alex-beausire--studio-cam:alex-beausire--posters:untitled-5"/>
+    <file name="require.js" crc="7928878" ref="index:aboutcontact:alex-beausire--studio-cam:alex-beausire--posters:untitled-5"/>
     <file name="jquery.scrolleffects.js" crc="39568856" ref="index:aboutcontact:alex-beausire--studio-cam:alex-beausire--posters"/>
   </folder>
   <folder name="images">
-    <file name="favicon.ico" crc="4212706539" ref="alex-beausire--posters:index"/>
-    <file name="alex beausire.gif" crc="39614180" seo="true" ref="index:aboutcontact:alex-beausire--studio-cam:alex-beausire--posters">
-      <caption webpage="index" alt=""/>
+    <file name="favicon.ico" crc="4212706539" ref="alex-beausire--posters"/>
+    <file name="alex beausire.gif" crc="39614180" seo="true" ref="index:aboutcontact:alex-beausire--studio-cam:alex-beausire--posters:untitled-5">
       <caption webpage="alex-beausire--posters" alt=""/>
-      <caption webpage="untitled-13" alt=""/>
+      <caption webpage="untitled-5" alt=""/>
       <caption webpage="midland-5th-birthday" alt=""/>
+      <caption webpage="index" alt=""/>
+      <caption webpage="untitled-13" alt=""/>
       <caption webpage="alex-beausire--studio-cam" alt=""/>
       <caption webpage="aboutcontact" alt=""/>
     </file>
@@ -226,17 +229,17 @@
     </file>
     <file name="midland poster.jpg" crc="4236488405" seo="true" ref="alex-beausire--posters">
       <caption webpage="index" alt=""/>
+      <caption webpage="midland-5th-birthday-serious" alt=""/>
       <caption webpage="alex-beausire--posters" alt=""/>
       <caption webpage="midland-5th-birthday" alt=""/>
-      <caption webpage="midland-5th-birthday-serious" alt=""/>
     </file>
     <file name="midland poster_2x.jpg" crc="3840044123" seo="true" ref="alex-beausire--posters">
       <caption webpage="index" alt=""/>
+      <caption webpage="midland-5th-birthday-serious" alt=""/>
       <caption webpage="alex-beausire--posters" alt=""/>
       <caption webpage="midland-5th-birthday" alt=""/>
-      <caption webpage="midland-5th-birthday-serious" alt=""/>
     </file>
-    <file name="midland-gif-frame.gif" crc="229636850" seo="true" ref="alex-beausire--posters:index">
+    <file name="midland-gif-frame.gif" crc="229636850" seo="true" ref="alex-beausire--posters">
       <caption webpage="index" alt=""/>
       <caption webpage="alex-beausire--posters" alt=""/>
     </file>
@@ -271,7 +274,7 @@
       <caption webpage="index" alt=""/>
       <caption webpage="alex-beausire--posters" alt=""/>
     </file>
-    <file name="notre dance janeretartboard 1@2x_2x.png" crc="3776780476" seo="true" ref="alex-beausire--posters:index">
+    <file name="notre dance janeretartboard 1@2x_2x.png" crc="229952301" seo="true" ref="alex-beausire--posters">
       <caption webpage="index" alt=""/>
       <caption webpage="alex-beausire--posters" alt=""/>
     </file>
@@ -495,16 +498,18 @@
       <caption webpage="index" alt=""/>
       <caption webpage="alex-beausire--posters" alt=""/>
     </file>
-    <file name="portfolio-photo-crop-u7675.png" crc="447609407" seo="true" ref="alex-beausire--posters:aboutcontact:alex-beausire--studio-cam:index">
-      <caption webpage="alex-beausire--posters" alt=""/>
+    <file name="portfolio-photo-crop-u7675.png" crc="215262045" seo="true" ref="alex-beausire--posters:aboutcontact:alex-beausire--studio-cam:index:untitled-5">
       <caption webpage="index" alt=""/>
+      <caption webpage="alex-beausire--posters" alt=""/>
       <caption webpage="alex-beausire--studio-cam" alt=""/>
+      <caption webpage="untitled-5" alt=""/>
       <caption webpage="aboutcontact" alt=""/>
     </file>
-    <file name="portfolio-photo-crop-u7675_2x.png" crc="112303857" seo="true" ref="alex-beausire--posters:aboutcontact:alex-beausire--studio-cam:index">
-      <caption webpage="alex-beausire--posters" alt=""/>
+    <file name="portfolio-photo-crop-u7675_2x.png" crc="389945107" seo="true" ref="alex-beausire--posters:aboutcontact:alex-beausire--studio-cam:index:untitled-5">
       <caption webpage="index" alt=""/>
+      <caption webpage="alex-beausire--posters" alt=""/>
       <caption webpage="alex-beausire--studio-cam" alt=""/>
+      <caption webpage="untitled-5" alt=""/>
       <caption webpage="aboutcontact" alt=""/>
     </file>
     <file name="45793893_2210734775832113_8867208897184864576_n.jpg" crc="103930485" seo="true" ref="index">
@@ -561,9 +566,52 @@
     <file name="midland-gif-frame_2x.gif" crc="229636850" seo="true" ref="index">
       <caption webpage="index" alt=""/>
     </file>
+    <file name="priori a3artboard 1@3x.png" crc="414333455" seo="true" ref="alex-beausire--posters">
+      <caption webpage="alex-beausire--posters" alt=""/>
+    </file>
+    <file name="priori a3artboard 1@3x_2x.png" crc="3979625665" seo="true" ref="alex-beausire--posters">
+      <caption webpage="alex-beausire--posters" alt=""/>
+    </file>
+    <file name="stevie2artboard 1@3x.png" crc="351796836" seo="true" ref="alex-beausire--posters">
+      <caption webpage="alex-beausire--posters" alt=""/>
+    </file>
+    <file name="stevie2artboard 1@3x_2x.png" crc="122996232" seo="true" ref="alex-beausire--posters">
+      <caption webpage="alex-beausire--posters" alt=""/>
+    </file>
+    <file name="neuropol.jpg" crc="190290756" seo="true" ref="alex-beausire--posters">
+      <caption webpage="alex-beausire--posters" alt=""/>
+    </file>
+    <file name="neuropol_2x.jpg" crc="4170785693" seo="true" ref="alex-beausire--posters">
+      <caption webpage="alex-beausire--posters" alt=""/>
+    </file>
+    <file name="rezzies a3artboard 1@3x.png" crc="385194115" seo="true" ref="alex-beausire--posters">
+      <caption webpage="alex-beausire--posters" alt=""/>
+    </file>
+    <file name="rezzies a3artboard 1@3x_2x.png" crc="4209250148" seo="true" ref="alex-beausire--posters">
+      <caption webpage="alex-beausire--posters" alt=""/>
+    </file>
+    <file name="notre dance janeretartboard 1@2x_2x2.png" crc="3776780476" seo="true" ref="index">
+      <caption webpage="index" alt=""/>
+    </file>
+    <file name="midland-gif-frame2.gif" crc="229636850" seo="true" ref="index">
+      <caption webpage="index" alt=""/>
+    </file>
+    <file name="insta-story-mockup-2.gif" crc="4138574538" seo="true" ref="untitled-5">
+      <caption webpage="untitled-5" alt=""/>
+    </file>
+    <file name="insta-story-mockup-2_2x.gif" crc="4138574538" seo="true" ref="untitled-5">
+      <caption webpage="untitled-5" alt=""/>
+    </file>
+    <file name="ver1_1.gif" crc="3953234859" seo="true" ref="untitled-5">
+      <caption webpage="untitled-5" alt=""/>
+    </file>
+    <file name="ver1_1_2x.gif" crc="3953234859" seo="true" ref="untitled-5">
+      <caption webpage="untitled-5" alt=""/>
+    </file>
   </folder>
-  <file name="index.html" crc="3855185797" seo="true" mt="1562414529378" redirect="true"/>
-  <file name="aboutcontact.html" crc="260852665" seo="true" mt="1562413738333" redirect="true"/>
-  <file name="alex-beausire--studio-cam.html" crc="3866564194" seo="true" mt="1562413738333" redirect="true"/>
-  <file name="alex-beausire--posters.html" crc="311305171" seo="true" mt="1562414070493" redirect="true"/>
+  <file name="index.html" crc="4179710400" seo="true" mt="1567025225968" redirect="true"/>
+  <file name="aboutcontact.html" crc="29177641" seo="true" mt="1567025280180" redirect="true"/>
+  <file name="alex-beausire--studio-cam.html" crc="349458722" seo="true" mt="1567025260102" redirect="true"/>
+  <file name="alex-beausire--posters.html" crc="4236384673" seo="true" mt="1567460189472" redirect="true"/>
+  <file name="untitled-5.html" crc="353592115" seo="true" mt="1567461632563" redirect="true"/>
 </manifest>

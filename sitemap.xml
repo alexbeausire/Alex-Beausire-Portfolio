@@ -2,20 +2,14 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>http://alexbeausi.re/index.html</loc>
-    <lastmod>2019-07-06</lastmod>
+    <lastmod>2019-08-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
     <image:image>
       <image:loc>http://alexbeausi.re/images/alex%20beausire.gif</image:loc>
     </image:image>
     <image:image>
-      <image:loc>http://alexbeausi.re/images/midland-gif-frame.gif</image:loc>
-    </image:image>
-    <image:image>
       <image:loc>http://alexbeausi.re/images/5-gif.gif</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>http://alexbeausi.re/images/notre%20dance%20janeretartboard%201@2x_2x.png</image:loc>
     </image:image>
     <image:image>
       <image:loc>http://alexbeausi.re/images/untitled-1.jpg</image:loc>
@@ -170,46 +164,16 @@
     <image:image>
       <image:loc>http://alexbeausi.re/images/midland-gif-frame_2x.gif</image:loc>
     </image:image>
-  </url>
-  <url>
-    <loc>http://alexbeausi.re/alex-beausire--studio-cam.html</loc>
-    <lastmod>2019-07-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
     <image:image>
-      <image:loc>http://alexbeausi.re/images/alex%20beausire.gif</image:loc>
+      <image:loc>http://alexbeausi.re/images/notre%20dance%20janeretartboard%201@2x_2x2.png</image:loc>
     </image:image>
     <image:image>
-      <image:loc>http://alexbeausi.re/images/img_6326.gif</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>http://alexbeausi.re/images/portfolio-photo-crop-u7675.png</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>http://alexbeausi.re/images/portfolio-photo-crop-u7675_2x.png</image:loc>
-    </image:image>
-  </url>
-  <url>
-    <loc>http://alexbeausi.re/aboutcontact.html</loc>
-    <lastmod>2019-07-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-    <image:image>
-      <image:loc>http://alexbeausi.re/images/alex%20beausire.gif</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>http://alexbeausi.re/images/k1_azul.gif</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>http://alexbeausi.re/images/portfolio-photo-crop-u7675.png</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>http://alexbeausi.re/images/portfolio-photo-crop-u7675_2x.png</image:loc>
+      <image:loc>http://alexbeausi.re/images/midland-gif-frame2.gif</image:loc>
     </image:image>
   </url>
   <url>
     <loc>http://alexbeausi.re/alex-beausire--posters.html</loc>
-    <lastmod>2019-07-06</lastmod>
+    <lastmod>2019-09-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
     <image:image>
@@ -437,6 +401,93 @@
     <image:image>
       <image:loc>http://alexbeausi.re/images/portfolio-photo-crop-u7675_2x.png</image:loc>
     </image:image>
+    <image:image>
+      <image:loc>http://alexbeausi.re/images/priori%20a3artboard%201@3x.png</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>http://alexbeausi.re/images/priori%20a3artboard%201@3x_2x.png</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>http://alexbeausi.re/images/stevie2artboard%201@3x.png</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>http://alexbeausi.re/images/stevie2artboard%201@3x_2x.png</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>http://alexbeausi.re/images/neuropol.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>http://alexbeausi.re/images/neuropol_2x.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>http://alexbeausi.re/images/rezzies%20a3artboard%201@3x.png</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>http://alexbeausi.re/images/rezzies%20a3artboard%201@3x_2x.png</image:loc>
+    </image:image>
+  </url>
+  <url>
+    <loc>http://alexbeausi.re/alex-beausire--studio-cam.html</loc>
+    <lastmod>2019-08-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+    <image:image>
+      <image:loc>http://alexbeausi.re/images/alex%20beausire.gif</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>http://alexbeausi.re/images/img_6326.gif</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>http://alexbeausi.re/images/portfolio-photo-crop-u7675.png</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>http://alexbeausi.re/images/portfolio-photo-crop-u7675_2x.png</image:loc>
+    </image:image>
+  </url>
+  <url>
+    <loc>http://alexbeausi.re/untitled-5.html</loc>
+    <lastmod>2019-09-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+    <image:image>
+      <image:loc>http://alexbeausi.re/images/alex%20beausire.gif</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>http://alexbeausi.re/images/portfolio-photo-crop-u7675.png</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>http://alexbeausi.re/images/portfolio-photo-crop-u7675_2x.png</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>http://alexbeausi.re/images/insta-story-mockup-2.gif</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>http://alexbeausi.re/images/insta-story-mockup-2_2x.gif</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>http://alexbeausi.re/images/ver1_1.gif</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>http://alexbeausi.re/images/ver1_1_2x.gif</image:loc>
+    </image:image>
+  </url>
+  <url>
+    <loc>http://alexbeausi.re/aboutcontact.html</loc>
+    <lastmod>2019-08-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+    <image:image>
+      <image:loc>http://alexbeausi.re/images/alex%20beausire.gif</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>http://alexbeausi.re/images/k1_azul.gif</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>http://alexbeausi.re/images/portfolio-photo-crop-u7675.png</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>http://alexbeausi.re/images/portfolio-photo-crop-u7675_2x.png</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>http://alexbeausi.re/assets/enter-details-about-your-video.mp4</loc>
@@ -447,6 +498,12 @@
   <url>
     <loc>http://alexbeausi.re/assets/wewfm-video-flyer.mp4</loc>
     <lastmod>2019-05-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://alexbeausi.re/assets/insta-story-mockup-2.mp4</loc>
+    <lastmod>2019-09-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>

@@ -14,7 +14,7 @@ if(typeof Muse == "undefined") window.Muse = {}; window.Muse.assets = {"required
 </script>
   
   <link rel="shortcut icon" href="images/favicon.ico?crc=4212706539"/>
-  <title>Alex Beausire | Studio Cam</title>
+  <title>Studio Cam</title>
   <!-- CSS -->
   <link rel="stylesheet" type="text/css" href="css/site_global.css?crc=4029444646"/>
   <link rel="stylesheet" type="text/css" href="css/master_a-master.css?crc=168049301"/>
@@ -69,7 +69,7 @@ Muse.Utils.prepHyperlinks(true);/* body */
 Muse.Utils.makeButtonsVisibleAfterSettingMinWidth();/* body */
 Muse.Utils.initWidget('.MenuBar', ['#bp_infinity'], function(elem) { return $(elem).museMenu(); });/* unifiedNavBar */
 Muse.Utils.fullPage('#page');/* 100% height page */
-$('#u7677').registerOpacityScrollEffect([{"fade":32.05,"in":[-Infinity,32],"opacity":100},{"opacity":100,"in":[32,32]},{"fade":47,"in":[32,Infinity],"opacity":0}]);/* scroll effect */
+$('#u7677').registerOpacityScrollEffect([{"in":[-Infinity,32],"opacity":100,"fade":32.05},{"in":[32,32],"opacity":100},{"in":[32,Infinity],"opacity":0,"fade":47}]);/* scroll effect */
 Muse.Utils.showWidgetsWhenReady();/* body */
 Muse.Utils.transformMarkupToFixBrowserProblems();/* body */
 }catch(b){if(b&&"function"==typeof b.notify?b.notify():Muse.Assert.fail("Error calling selector function: "+b),false)throw b;}})})};
