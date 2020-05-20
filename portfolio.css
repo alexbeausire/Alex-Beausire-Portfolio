@@ -8,23 +8,14 @@ body {
 .nav>li>a {
     color: black;
     padding:0;
-    margin: 15px;
 }
 
 .nav>li>a:hover {
     background-color: transparent;
 }
 
-.sidebar {
-    position: fixed;
-    z-index: 10;
-    margin-left: 50px;
-    font-size: 20px;
-
-}
-
 .navbar {
-    padding-left: 40px;
+    margin-left: 15px;
     background: transparent;
     border: 0;
 }
@@ -35,8 +26,27 @@ body {
 }
 
 .navbar .navbar-brand {
-    padding-top: 25px;
-    padding-left: 25px;
+	padding-top: 23px;
+}
+
+.navbar .navbar-right {
+	margin-right: 15px;
+	padding-top: 17px
+}
+
+.sidebar {
+    position: fixed;
+    z-index: 10;
+	margin-top: 10px;
+
+    margin-left: 30px;
+    font-size: 15px;
+	font-weight: 600;
+	font-style: oblique;
+≠}
+
+.sidebar li a {
+	margin-bottom: 15px;
 }
 
 ::-webkit-scrollbar {
