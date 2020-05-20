@@ -1,0 +1,90 @@
+/* GENERAL (HEADER/FOOTER) */
+
+body {
+    font-family: 'Helvetica', 'Arial', sans-serif;
+    overflow-x: hidden;
+}
+
+.nav>li>a {
+    color: black;
+    padding:0;
+    margin: 15px;
+}
+
+.nav>li>a:hover {
+    background-color: transparent;
+}
+
+.sidebar {
+    position: fixed;
+    z-index: 10;
+    margin-left: 50px;
+    font-size: 20px;
+
+}
+
+.navbar {
+    padding-left: 40px;
+    background: transparent;
+    border: 0;
+}
+
+.navbar-header img {
+    height: 30px;
+    max-height: none;
+}
+
+.navbar .navbar-brand {
+    padding-top: 25px;
+    padding-left: 25px;
+}
+
+::-webkit-scrollbar {
+display: none;
+}
+
+/* POSTERS PAGE (row) */
+
+.row-center {
+    text-align: center;
+}
+
+.posters > .row > .imglist {
+    display: inline-block;
+    float: none;
+    padding-right: 30px;
+}
+
+.posters img {
+    width: auto;
+    /* max-height: 100vh; */
+    height: 80vh;
+    display: block;
+}
+
+.posters > .row {
+    overflow-x: auto;
+    white-space: nowrap;
+
+}
+
+
+.col-xs-4 {
+    padding-bottom: 20px;
+    padding-right: 5px;
+}
+
+
+/* PROJECTS PAGE */
+
+#projectlist h3 {
+    font-size: 400%;
+    margin-top: 1%;
+    margin-bottom: 2%;
+}
+
+/* Webcam Page */
+
+.webcamgif {
+    text-align: center;
+}
