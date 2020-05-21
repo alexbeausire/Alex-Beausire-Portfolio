@@ -97,5 +97,33 @@ display: none;
 /* Webcam Page */
 
 .webcamgif {
+    padding-top: 10px;
     text-align: center;
+}
+
+/* About */
+
+.aboutinfo {
+    padding-top: 10px;
+}
+
+.col1 {
+    border-style: solid;    
+    border-width: 0px;
+    border-color: black;
+}
+
+.col1 img {
+    max-width: 100%
+}
+
+.col2 {
+    border-style: solid;    
+    border-width: 0px;
+    border-color: black;
+
+    font-size: 30px;
+    font-weight: lighter;
+    line-height: 32px;
+    color: black;
 }
