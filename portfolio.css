@@ -44,7 +44,7 @@ body {
     font-size: 15px;
 	font-weight: 600;
 	font-style: oblique;
-}
+≠}
 
 .sidebar li a {
 	margin-bottom: 15px;
@@ -61,7 +61,7 @@ display: none;
 }
 
 .posters > .row > .imglist {
-    display: block;
+    display: inline-block;
     float: none;
     padding-right: 30px;
 }
@@ -70,6 +70,7 @@ display: none;
     width: auto;
     /* max-height: 100vh; */
     height: 80vh;
+    display: block;
 }
 
 .posters > .row {
@@ -87,33 +88,10 @@ display: none;
 
 /* PROJECTS PAGE */
 
-.project {
-    padding-top: 10px;
-    outline: thin;
-    
-  }
-
-.colimage {
-   padding-bottom: 30px;
-}
-.colimage img{
-    width: 65vh;
-}
-
-.colinfo {
-    margin-left: 50px;
-    text-align: left;
-}
-
-.colheader{
-    font-size: 20px;
-}
-
-.colbody{
-    font-size: 17px;
-    font-weight: lighter;
-    line-height: 20px;
-    color: black;
+#projectlist h3 {
+    font-size: 400%;
+    margin-top: 1%;
+    margin-bottom: 2%;
 }
 
 /* Webcam Page */
