@@ -46,7 +46,7 @@ backgroundImage[39]= "images/029.png"
 backgroundImage[40]= "images/027Artboard_4x.png"
 backgroundImage[41]= "images/OpeningParty1202Artboard.png"
 backgroundImage[42]= "images/willow02Artboard-1@4x.png"
-backgroundImage[43]= "images/music-for-portfolioArtboard 1@3x.png"
+backgroundImage[43]= "images/music-for-portfolioArtboard-1@3x.png"
 
 
 function displayAllImages() {
