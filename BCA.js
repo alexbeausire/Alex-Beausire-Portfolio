@@ -6,7 +6,7 @@ var backgroundImage = new Array();
 backgroundImage[0] = "BCA/BCAhomepage.png";
 backgroundImage[1] = "BCA/windsorcastle.png";
 backgroundImage[2] = "BCA/Parliament.png";
-backgroundImage[3] = "BCA/bcalogo.png";
+backgroundImage[3] = "BCA/bcalogo2.png";
 
 
 function displayBCA() {
