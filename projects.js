@@ -14,7 +14,7 @@ backgroundImage[7] = "projects/027.png";
 backgroundImage[8] = "projects/8yearsshirt.jpeg";
 backgroundImage[9] = "projects/We-are-fstvl-1-square.jpg";
 backgroundImage[10] = "projects/vaccArtboard.png";
-backgroundImage[11] = "projects/BCAlogo.png";
+backgroundImage[11] = "projects/bcalogo.png";
 backgroundImage[12] = "projects/IllustrationArtboard.png";
 backgroundImage[13] = "projects/Off-Week-SquareArtboard-1.png";
 
