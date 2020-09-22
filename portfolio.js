@@ -47,14 +47,15 @@ backgroundImage[40]= "images/027Artboard_4x.png";
 backgroundImage[41]= "images/OpeningParty1202Artboard.png";
 backgroundImage[42]= "images/music-for-portfolioArtboard-1@3x.png";
 backgroundImage[43]= "images/Record-Sleeve-v2.jpeg";
-backgroundImage[44]= "images/Hero-100s.png";
-backgroundImage[45]= "images/willow02Artboard-1.png";
-backgroundImage[46]= "images/SAVESS-Square.png";
-backgroundImage[47]= "images/BL-BlackBack.png";
-backgroundImage[48]= "images/Billy-Low-03.png";
-backgroundImage[49]= "images/ADwide.png";
-backgroundImage[50]= "images/genesiswide.png";
-backgroundImage[51]= "images/JA-Teaser.png";
+backgroundImage[44]= "images/RezziesMarchInstagramArtboard.png";
+backgroundImage[45]= "images/Hero-100s.png";
+backgroundImage[46]= "images/willow02Artboard-1.png";
+backgroundImage[47]= "images/SAVESS-Square.png";
+backgroundImage[48]= "images/BL-BlackBack.png";
+backgroundImage[49]= "images/Billy-Low-03.png";
+backgroundImage[50]= "images/ADwide.png";
+backgroundImage[51]= "images/genesiswide.png";
+backgroundImage[52]= "images/JA-Teaser.png";
 
 function displayAllImages() {
     document.write("<div class='imglist col-xs-offset-4'><img src=" + backgroundImage[backgroundImage.length - 1] + "></div>")
