@@ -51,11 +51,16 @@ backgroundImage[44]= "images/RezziesMarchInstagramArtboard.png";
 backgroundImage[45]= "images/Hero-100s.png";
 backgroundImage[46]= "images/willow02Artboard-1.png";
 backgroundImage[47]= "images/SAVESS-Square.png";
-backgroundImage[48]= "images/BL-BlackBack.png";
+backgroundImage[48]= "images/Hero-HRW.png";
 backgroundImage[49]= "images/Billy-Low-03.png";
-backgroundImage[50]= "images/ADwide.png";
-backgroundImage[51]= "images/genesiswide.png";
-backgroundImage[52]= "images/JA-Teaser.png";
+backgroundImage[50]= "images/Artboard-4.png";
+backgroundImage[51]= "images/EP2.png";
+backgroundImage[52]= "images/EP3.png";
+backgroundImage[53]= "images/SS_BIRTHDAY_Square.png";
+backgroundImage[54]= "images/SS_THECLUB_Banner.png";
+backgroundImage[55]= "images/SECRET030-3-ONLINE-12";
+backgroundImage[56]= "images/SECRET030-3-ONLINE-1.png";
+
 
 function displayAllImages() {
     document.write("<div class='imglist col-xs-offset-4'><img src=" + backgroundImage[backgroundImage.length - 1] + "></div>")
