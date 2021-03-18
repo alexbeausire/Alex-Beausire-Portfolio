@@ -1,6 +1,12 @@
 <!DOCTYPE html>
     
 <html>
+<style>
+html {
+        scroll-behavior: smooth;
+    }
+</style>
+
     <head>
         <title>Portfolio</title>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -13,7 +19,7 @@
         <script>
         $(document).ready(function() {
             $('html, body, *').mousewheel(function(e, delta) {
-                this.scrollLeft -= (delta * 10);
+                this.scrollLeft -= (delta * 2);
                 e.preventDefault();
             });
         });
