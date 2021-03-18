@@ -60,6 +60,7 @@ backgroundImage[53]= "images/SS_BIRTHDAY_Square.png";
 backgroundImage[54]= "images/SS_THECLUB_Banner.png";
 backgroundImage[55]= "images/SECRET030-3-ONLINE-12.png";
 backgroundImage[56]= "images/SECRET030-3-ONLINE-1.png";
+backgroundImage[57]= "images/Dad-Jokes-Portoflio.png";
 
 
 function displayAllImages() {
