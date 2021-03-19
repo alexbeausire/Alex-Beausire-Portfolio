@@ -61,6 +61,10 @@ backgroundImage[54]= "images/SS_THECLUB_Banner.png";
 backgroundImage[55]= "images/SECRET030-3-ONLINE-12.png";
 backgroundImage[56]= "images/SECRET030-3-ONLINE-1.png";
 backgroundImage[57]= "images/Dad-Jokes-Portoflio.png";
+backgroundImage[58]= "images/SS_BEATDOWN_SQUARE.png";
+backgroundImage[59]= "images/Portofolio-004.png";
+
+
 
 
 function displayAllImages() {
