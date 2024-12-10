@@ -36,30 +36,136 @@ html {
             </div>
             <div class="collapse navbar-collapse">
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="mailto:hello@alexbeausi.re"><u>hello@alexbeausi.re</u><br/>07970024457</a></li>
+                    <li><a href="mailto:hello@alexbeausi.re"><u>me@alexbeausi.re</u><br/>say hi!</a></li>
                 </ul>
             </div>
         </div>
     </nav>
         
-    <ul class="nav flex-column sidebar">
-        <li class="nav-item">
-            <a class="nav-link" href="index.html"><u>recent</u></a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="webcam.html"><u>studio webcam</u></a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="About.html"><u>about</u></a>
+ 
+   
+         <div class="row">
+                    <div class="col-md-6 col1">
+                            <p>I'm Alex, a freelance graphic designer/ art director. I used to run a drinks company called These Days and I've worked with freelance clients like It's Nice That, Bombay Sapphire, Dazed Studion and Wildfarmed. </p>
 
-        </li>
-    </ul>
-    
-    <div class="posters">
-        <div class="row row-center">
-            <script>displayAllImages();</script>
-        </div>
-    </div>
+                            <p> While you're here take a look at my <a href="https://pitch.com/v/alex-beausire-selected-work-mmye9p"><u>portfolio</u></a> or have a look at what's going on in my <a href="https://alexbeausi.re/webcam.html"><u>studio</u></a> </p>
+
+                            <p>If you'd like to work with me send an electronic mail to <a href="mailto:hello@alexbeausi.re"><u>hello@alexbeausi.re</u></a></p>
+                            <p></p>
+                            
+                    </div>
+                    <div class="col-md-6 col2">
+                            <img id="slideshow" class="slideshow-image" src="" alt="Slideshow Image">
+                    </div>
+            </div>   
+   
+        
+          <script>
+            // List of image URLs
+            const images = [
+             "images/Artboard 1.png",  
+            "images/Artboard 2.png",  
+            "images/Artboard 2 copy.png",  
+            "images/Artboard 3.png",  
+            "images/Artboard 3 copy.png",  
+            "images/Artboard 4.png",  
+            "images/Artboard 5.png",  
+            "images/Artboard 6.png",  
+            "images/Artboard 7.png",  
+            "images/Artboard 8.png",  
+            "images/Artboard 9.png",  
+            "images/Artboard 10.png",  
+            "images/Artboard 11.png",  
+            "images/Artboard 12.png",  
+            "images/OGArtboard 1.jpg",  
+            "images/OGArtboard 3.png",  
+            "images/DSS-v1.png",  
+            "images/new-V2.png",  
+            "images/DSS_ooh mock ups2.jpg",  
+            "images/DSS_ooh mock ups.jpg",  
+            "images/DSS mock ups6.png",  
+            "images/DSS mock ups2.png",  
+            "images/DSS mock ups1.png",  
+            "images/DSS_Mock Up OOH.jpg",  
+            "images/DSS_Mock Up OOH24.jpg",  
+            "images/Billly Low_portfolio5.jpg",  
+            "images/Billly Low_portfolio3.jpg",  
+            "images/Billly Low_portfolio2.jpg",  
+            "images/Billly Low_portfolio.jpg",  
+            "images/Two Fodders_ooh mock ups_6.jpg",  
+            "images/Two Fodders_ooh mock ups_5.jpg",  
+            "images/Two Fodders_ooh mock ups_4.jpg",  
+            "images/Two Fodders_ooh mock ups_52.jpg",  
+            "images/Two Fodders_ooh mock ups2.jpg",  
+            "images/Two Fodders_ooh mock ups3.jpg",  
+            "images/Two Fodders_ooh mock ups.jpg",
+            "images/SS_BEATDOWN_SQUARE.png",
+            "images/Dad-Jokes-Portoflio.png",
+            "images/SECRET030-3-ONLINE-1.png",
+            "images/SECRET030-3-ONLINE-12.png",
+            "images/SS_THECLUB_Banner.png",
+            "images/SS_BIRTHDAY_Square.png",
+            "images/Hero-HRW.png",
+            "images/SAVESS-Square.png",
+            "images/Hero-100s.png",
+            "images/RezziesMarchInstagramArtboard.png",
+            "images/music-for-portfolioArtboard-1@3x.png",
+            "images/OpeningParty1202Artboard.png",
+            "images/OffWeekPortraitArtboard.png",
+            "images/The_Cause_SquareArtboard1.png",
+            "images/Livity001.png",
+            "images/ED_A3Artboard_@4x.png",
+            "images/br2.png",
+            "images/AD.jpg",
+            "images/priori1@3x_2x.png",
+            "images/CThruA3.png",
+            "images/salt_mines_a3artboard_1@4x_2x.png",
+            "images/ramzi_poster_a3artboard_1@4x_2x.png",
+            "images/krish@3x_2x.jpg",
+            "images/residents_a3_onlineartboard_1@3x_2x.png",
+            "images/peach_a3artboard_1-u20460_2x.png",
+            "images/the-bakery_2x.jpg",
+            "images/rezzies_posterartboard_1@3x_2x.jpg",
+            "images/plo_man_poster-01_2x.jpg",
+            "images/ourhouse1@2x_2x.png",
+            "images/kornel_2x.png",
+            "images/bruce-a3_2x.jpg",
+            "images/central_and_manamdeartboard1@2x_2x.png",
+            "images/midland-gif-frame2.gif",
+            "images/dj-sports---ck-a3_2x.jpg",
+            "images/banoffe-pies-poster.jpg"
+            ];
+        
+            // Preload images
+            const preloadedImages = [];
+            images.forEach((url) => {
+                const img = new Image();
+                img.src = url;
+                preloadedImages.push(img);
+            });
+
+            // Variables for slideshow
+            const slideshowElement = document.getElementById('slideshow');
+            let currentIndex = 0;
+
+            // Function to update the slideshow image
+            function updateSlideshow() {
+                slideshowElement.src = images[currentIndex]; // Update image
+                currentIndex = (currentIndex + 1) % images.length; // Loop back to start
+            }
+
+            // Start the slideshow
+            setInterval(updateSlideshow, 400); // Set interval to 3 seconds
+
+            // Initial image load
+            slideshowElement.src = images[currentIndex];
+
+
+                </script>
+        
+
+
+
     
 
     </body>

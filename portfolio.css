@@ -3,11 +3,11 @@
 body {
     font-family: 'Helvetica', 'Arial', sans-serif;
     overflow-x: hidden;
-	background: white;
+	background: rgb(255, 255, 255);
 }
 
 .nav>li>a {
-    color: black;
+    color: rgb(0, 0, 0);
     padding:0;
 }
 
@@ -16,13 +16,13 @@ body {
 }
 
 .navbar {
-    margin-left: 20px;
+    margin-left: 2vw;
     background: transparent;
     border: 0;
 }
 
 .navbar-header img {
-    height: 30px;
+    height: 40px;
     max-height: none;
 }
 
@@ -32,7 +32,8 @@ body {
 
 .navbar .navbar-right {
 	margin-right: 20px;
-	padding-top: 20px
+	padding-top: 20px;
+    font-size: 12pt;
 }
 
 .sidebar {
@@ -56,163 +57,43 @@ display: none;
 
 /* POSTERS PAGE (row) */
 
-.row-center {
-    text-align: center;
-}
-
-.posters > .row > .imglist {
-    display: inline-block;
-    position: relative;
-    float: none;
-    padding-right: 30px;
-}
-
-.posters img {
-    width: auto;
-    /* max-height: 100vh; */
-    height: 80vh;
-    display: block;
-}
-
-.posters > .row {
-    overflow-x: auto;
-    white-space: nowrap;
-
-}
-
-
-.col-xs-4 {
-    padding-bottom: 20px;
-    padding-right: 5px;
-}
-
-
-/* PROJECTS */
-
-#projectlist h3 {
-    font-size: 400%;
-    margin-top: 1%;
-    margin-bottom: 2%;
-}
-
-.projects > .row {
-    overflow-x: auto;
-    white-space: nowrap;
-}
-
-.projects img{
-    width: auto;
-    /* max-height: 100vh; */
-    height: 80vh;
-    display: block;
-    }
-
-.projects > .row > .imglist {
-    display: inline-block;
-    float: none;
-    padding-right: 30px;
-    position: relative;
-}
-
-/* overlay */
-
-.overlay{
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 100%;
-    width: 100%;
-    opacity: 0;
-    transition: .5s ease;
-    background-color: white;
-}
-
-.imglist:hover .overlay {
-  opacity: 95%;
-}
-
-.text {
-    opacity: 100%;
-    color: black;
-    font-size: 60px;
-    font-style: italic;
-    text-decoration: underline;
-    font-family: Arial, Helvetica, sans-serif;
-    position: absolute;
-    align-content: center;
-    top: 50%;
-    left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    text-align: center;
-  }
-
-/*Projects Pages*/
-
-.projectimage img{
-    object-fit: cover;
+.row{
+    margin-right: 25vw;
+    margin-left: 2vw;
     max-width: 100%;
-}
-
-.projectpage {
-    padding-bottom: 15px;
-    }
-
-.projectinfo { 
-    position: -webkit-sticky;
-    position: fixed;
-    width: inherit;
-}
-
-.projectinfo > p{
-    font-size: 20px;
-    font-weight: lighter;
-    line-height: 28px;
-    color: black;
-}
-
-.projectinfo > h1{
-    font-size: 35px;
-    line-height: 0px;
-    color: black;
-}
-
-.projectinfo > h2{
-    font-size: 25px;
-    line-height: 35px;
-    color: black;
-}
-
-/* About */
-
-.aboutinfo {
-    padding-top: 10px;
-}
-
-.col1 {
-    border-style: solid;    
-    border-width: 0px;
-    border-color: black;
-}
-
-.col1 img {
-    max-width: 100%
+    position: absolute;
+    left: 0vw;
+    padding-top: 2vw;
 }
 
 .col2 {
     border-style: solid;    
     border-width: 0px;
-    border-color: black;
+    border-color: rgb(0, 0, 0);
+}
+
+.col2 img {
+    max-height: 50vh;
+    max-width: 60vw;
+    overflow: visible;
+}
+
+.col1 {
+    border-style: solid;    
+    border-width: 0px;
+    border-color: rgb(0, 0, 0);
+    max-width: 50%;
+    min-width: 50%;
 
     font-size: 30px;
     font-weight: lighter;
     line-height: 32px;
-    color: black;
+    color: rgb(0, 0, 0);
     position: sticky;
 }
+
+
+
 
 /* Webcam Page */
 
