@@ -139,11 +139,13 @@ display: none;
 
 
 
-/* Webcam Page */
+/* Webcam Page 
 .webcam_container{
-
+background-image: url("images/webcam.gif");
 }
 .webcamgif {
     padding-top: 10px;
     text-align: center;
 }
+
+*/
