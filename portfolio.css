@@ -1,5 +1,15 @@
 /* GENERAL (HEADER/FOOTER) */
 
+/* Apply the custom cursor to all clickable items */
+a, button, [role="button"], input[type="button"], input[type="submit"] {
+    cursor: url('images/mouse-icon.png'), auto; /* Fallback to auto if image fails to load */
+}
+
+/* Optional: Add styles for hover to ensure the cursor applies specifically on hover */
+a:hover, button:hover, [role="button"]:hover, input[type="button"]:hover, input[type="submit"]:hover {
+    cursor: url('images/mouse-icon.png'), pointer; /* Pointer fallback for hover state */
+}
+
 body {
     font-family: 'Helvetica', 'Arial', sans-serif;
     overflow-x: hidden;
