@@ -55,21 +55,37 @@ body {
 display: none;
 }
 
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (max-width: 992px) {
+
+    .navbar .navbar-right {
+        display: none;
+    }
+
+    .navbar-header img {
+        height: 5vw;
+        max-height: none;
+    }
+
+}
+
+/*body content */
 
 .row{
     margin-right: 25vw;
     margin-left: 2vw;
     max-width: 100%;
-    position: absolute;
     left: 0vw;
     padding-top: 2vw;
+    display: flex;
+    flex-direction: row;
 }
 
 .col2 {
     border-style: solid;    
     border-width: 0px;
     border-color: rgb(0, 0, 0);
-    padding-left: 2vw;
+    padding-left: 4vw;
 }
 
 .col2 img {
@@ -79,24 +95,54 @@ display: none;
 }
 
 .col1 {
-    border-style: solid;
-    border-width: 0px;
-    border-color: rgb(0, 0, 0);
     max-width: 30%;
     min-width: 30%;
     font-size: 15px;
     font-weight: lighter;
-    line-height: normal;
     color: rgb(0, 0, 0);
     position: sticky;
 }
 
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (max-width: 992px) {
+
+    .row{
+        margin-right: 25vw;
+        margin-left: 2vw;
+        max-width: 100%;
+        left: 0vw;
+        padding-top: 4vw;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .col1 {
+        max-width: 100%;
+        min-width: 60%;
+        font-size: 2vh;
+        font-weight: lighter;
+        color: rgb(0, 0, 0);
+    }
+      
+    .col2{
+        padding-left: 2vw;
+    }
+        .col2 img {
+            padding-top: 5%;
+            max-height: 55vh;
+            max-width: 90vw;
+            overflow: visible;
+        }
+        
+
+}
 
 
 
 /* Webcam Page */
+.webcam_container{
 
-
+}
 .webcamgif {
     padding-top: 10px;
     text-align: center;
