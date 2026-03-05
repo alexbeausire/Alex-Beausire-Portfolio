@@ -21,7 +21,6 @@
       overflow: hidden;
     }
 
-    /* ── Master container: 60vh, centred ── */
     #master {
       width: 100%;
       max-width: 520px;
@@ -31,7 +30,6 @@
       padding: 0 24px;
     }
 
-    /* ── Scroll area: wizard + chat ── */
     #scroll-area {
       flex: 1;
       overflow-y: auto;
@@ -44,7 +42,6 @@
     }
     #scroll-area::-webkit-scrollbar { display: none; }
 
-    /* ── Wizard ── */
     #wizard-wrap {
       flex-shrink: 0;
       width: 180px;
@@ -55,7 +52,6 @@
       height: auto;
     }
 
-    /* ── Chat messages ── */
     #chat-area {
       width: 100%;
       display: flex;
@@ -105,7 +101,6 @@
       40% { transform: translateY(-6px); }
     }
 
-    /* ── Input bar ── */
     #input-bar {
       flex-shrink: 0;
       margin-top: 14px;
@@ -143,7 +138,6 @@
     }
     #send-btn:hover { opacity: 1; }
 
-    /* ── API key panel ── */
     #key-panel {
       position: fixed;
       top: 16px;
@@ -208,14 +202,16 @@
     </div>
   </div>
 
-  
+  <div id="key-panel">
+    <span style="font-weight:600;">🔑 Set API Key</span>
+    <input type="password" id="api-key-input" placeholder="sk-ant-..." />
+    <button id="save-key-btn">Save Key</button>
+    <button class="close-btn" id="hide-key-panel">hide panel</button>
+  </div>
 
   <script>
-    // ─────────────────────────────────────────────
-    // CONFIG — edit here to customise
-    // ─────────────────────────────────────────────
     const CONFIG = {
-      API_KEY: "",  // ← paste your Anthropic API key here to hardcode it
+      API_KEY: "",  // injected by GitHub Actions
 
       BIO: `Alex is a self-taught freelance graphic designer and art director, passionate about the power of creativity and not taking things too seriously. He used to run a drinks company called These Days and has worked with freelance clients including Living Things, It's Nice That, Bombay Sapphire, Dazed Studio, Wildfarmed and more.
 
@@ -225,7 +221,6 @@ If you'd like to work with Alex you can get in touch via electronic mail at alex
 
       GREETING: `Hello there, I'm Alex's non automated, magical wizard biographer.\n\nFeel free to ask me any questions you have about Alex's personal or professional history.`,
     };
-    // ─────────────────────────────────────────────
 
     const SYSTEM_PROMPT = `You are Alex Beausi's magical wizard biographer. You live inside a computer and your sole purpose is to answer questions about Alex. You are emphatically NOT an AI chatbot — you are a wizard, and you take this distinction very seriously.
 
@@ -241,101 +236,100 @@ Rules:
 - Keep answers concise — 2 to 4 sentences unless a longer answer is genuinely needed.
 - Never break character. You are always the wizard.`;
 
-    let apiKey = CONFIG.API_KEY;
-    const messages = [];
+    document.addEventListener("DOMContentLoaded", function () {
+      let apiKey = CONFIG.API_KEY;
+      const messages = [];
 
-    // Key panel logic
-    const keyPanel = document.getElementById("key-panel");
-    document.getElementById("save-key-btn").onclick = () => {
-      const val = document.getElementById("api-key-input").value.trim();
-      if (val) { apiKey = val; keyPanel.style.display = "none"; }
-    };
-    document.getElementById("hide-key-panel").onclick = () => keyPanel.style.display = "none";
-    if (CONFIG.API_KEY) keyPanel.style.display = "none";
+      const keyPanel   = document.getElementById("key-panel");
+      const chatArea   = document.getElementById("chat-area");
+      const scrollArea = document.getElementById("scroll-area");
+      const userInput  = document.getElementById("user-input");
+      const sendBtn    = document.getElementById("send-btn");
 
-    // DOM refs
-    const chatArea   = document.getElementById("chat-area");
-    const scrollArea = document.getElementById("scroll-area");
-    const userInput  = document.getElementById("user-input");
-    const sendBtn    = document.getElementById("send-btn");
+      document.getElementById("save-key-btn").onclick = () => {
+        const val = document.getElementById("api-key-input").value.trim();
+        if (val) { apiKey = val; keyPanel.style.display = "none"; }
+      };
+      document.getElementById("hide-key-panel").onclick = () => keyPanel.style.display = "none";
+      if (CONFIG.API_KEY) keyPanel.style.display = "none";
 
-    function scrollToBottom() {
-      scrollArea.scrollTop = scrollArea.scrollHeight;
-    }
+      function scrollToBottom() {
+        scrollArea.scrollTop = scrollArea.scrollHeight;
+      }
 
-    function appendMessage(role, text) {
-      const el = document.createElement("div");
-      el.className = role === "user" ? "msg-user" : "msg-assistant";
-      el.textContent = text;
-      chatArea.appendChild(el);
-      scrollToBottom();
-      return el;
-    }
+      function appendMessage(role, text) {
+        const el = document.createElement("div");
+        el.className = role === "user" ? "msg-user" : "msg-assistant";
+        el.textContent = text;
+        chatArea.appendChild(el);
+        scrollToBottom();
+        return el;
+      }
 
-    function appendTyping() {
-      const el = document.createElement("div");
-      el.className = "msg-assistant typing";
-      el.innerHTML = "<span></span><span></span><span></span>";
-      chatArea.appendChild(el);
-      scrollToBottom();
-      return el;
-    }
+      function appendTyping() {
+        const el = document.createElement("div");
+        el.className = "msg-assistant typing";
+        el.innerHTML = "<span></span><span></span><span></span>";
+        chatArea.appendChild(el);
+        scrollToBottom();
+        return el;
+      }
 
-    // Show greeting on load
-    appendMessage("assistant", CONFIG.GREETING);
+      appendMessage("assistant", CONFIG.GREETING);
 
-    async function sendMessage() {
-      const text = userInput.value.trim();
-      if (!text) return;
-      userInput.value = "";
+      async function sendMessage() {
+        const text = userInput.value.trim();
+        if (!text) return;
+        userInput.value = "";
 
-      appendMessage("user", text);
-      messages.push({ role: "user", content: text });
+        appendMessage("user", text);
+        messages.push({ role: "user", content: text });
 
-      const typing = appendTyping();
+        const typing = appendTyping();
 
-      if (!apiKey) {
-        setTimeout(() => {
+        if (!apiKey) {
+          setTimeout(() => {
+            typing.remove();
+            appendMessage("assistant", "Ah, my magical powers are currently dormant — the API key has not been set. Please enter it using the panel in the corner!");
+          }, 800);
+          return;
+        }
+
+        try {
+          const res = await fetch("https://api.anthropic.com/v1/messages", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+              "x-api-key": apiKey,
+              "anthropic-version": "2023-06-01",
+              "anthropic-dangerous-direct-browser-access": "true"
+            },
+            body: JSON.stringify({
+              model: "claude-sonnet-4-20250514",
+              max_tokens: 1024,
+              system: SYSTEM_PROMPT,
+              messages: messages
+            })
+          });
+
+          const data = await res.json();
           typing.remove();
-          appendMessage("assistant", "Ah, my magical powers are currently dormant — the API key has not been set. Please enter it using the panel in the corner!");
-        }, 800);
-        return;
+
+          const reply = data?.content?.[0]?.text || "My crystal ball seems foggy — please try again!";
+          appendMessage("assistant", reply);
+          messages.push({ role: "assistant", content: reply });
+
+        } catch (err) {
+          typing.remove();
+          appendMessage("assistant", "Something has disrupted my wizardly connection. Please check the API key and try again.");
+          console.error(err);
+        }
       }
 
-      try {
-        const res = await fetch("https://api.anthropic.com/v1/messages", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-            "x-api-key": apiKey,
-            "anthropic-version": "2023-06-01",
-            "anthropic-dangerous-direct-browser-access": "true"
-          },
-          body: JSON.stringify({
-            model: "claude-sonnet-4-20250514",
-            max_tokens: 1024,
-            system: SYSTEM_PROMPT,
-            messages: messages
-          })
-        });
-
-        const data = await res.json();
-        typing.remove();
-
-        const reply = data?.content?.[0]?.text || "My crystal ball seems foggy — please try again!";
-        appendMessage("assistant", reply);
-        messages.push({ role: "assistant", content: reply });
-
-      } catch (err) {
-        typing.remove();
-        appendMessage("assistant", "Something has disrupted my wizardly connection. Please check the API key and try again.");
-        console.error(err);
-      }
-    }
-
-    sendBtn.addEventListener("click", sendMessage);
-    userInput.addEventListener("keydown", e => {
-      if (e.key === "Enter" && !e.shiftKey) { e.preventDefault(); sendMessage(); }
+      sendBtn.addEventListener("click", sendMessage);
+      userInput.addEventListener("keydown", e => {
+        if (e.key === "Enter" && !e.shiftKey) { e.preventDefault(); sendMessage(); }
+      });
     });
   </script>
 </body>
