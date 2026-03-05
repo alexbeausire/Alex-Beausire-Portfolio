@@ -2,7 +2,7 @@ name: Deploy with API Key
 
 on:
   push:
-    branches: [main]
+    branches: [master]
 
 permissions:
   contents: read
