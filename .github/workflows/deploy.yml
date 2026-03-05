@@ -13,7 +13,7 @@ jobs:
       - name: Inject API key into HTML
         run: |
           sed -i 's|API_KEY: ""|API_KEY: "${{ secrets.ANTHROPIC_API_KEY }}"|' chat.html
-
+          
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
