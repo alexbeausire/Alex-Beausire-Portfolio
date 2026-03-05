@@ -13,50 +13,56 @@
 
     body {
       background-color: #c8f400;
-      min-height: 100vh;
+      height: 100vh;
       font-family: Arial, Helvetica, sans-serif;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      overflow-x: hidden;
-    }
-
-    /* ── Wizard image ── */
-    #wizard-wrap {
-      margin-top: 60px;
-      width: 260px;
-      height: 260px;
       display: flex;
       align-items: center;
       justify-content: center;
+      overflow: hidden;
     }
 
+    /* ── Master container: 60vh, centred ── */
+    #master {
+      width: 100%;
+      max-width: 520px;
+      height: 60vh;
+      display: flex;
+      flex-direction: column;
+      padding: 0 24px;
+    }
+
+    /* ── Scroll area: wizard + chat ── */
+    #scroll-area {
+      flex: 1;
+      overflow-y: auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 18px;
+      padding-bottom: 16px;
+      scrollbar-width: none;
+    }
+    #scroll-area::-webkit-scrollbar { display: none; }
+
+    /* ── Wizard ── */
+    #wizard-wrap {
+      flex-shrink: 0;
+      width: 180px;
+      padding-top: 8px;
+    }
     #wizard-wrap img {
-      width: 260px;
+      width: 100%;
       height: auto;
     }
 
-    /* ── Chat area ── */
+    /* ── Chat messages ── */
     #chat-area {
       width: 100%;
-      max-width: 520px;
-      padding: 32px 24px 24px;
-      flex: 1;
       display: flex;
       flex-direction: column;
-      gap: 18px;
-      /* Leave room for fixed input bar */
-      padding-bottom: 120px;
+      gap: 14px;
     }
 
-    /* Intro text */
-    .intro-text {
-      color: #2c2cb0;
-      font-size: 15px;
-      line-height: 1.6;
-    }
-
-    /* User bubble */
     .msg-user {
       align-self: flex-end;
       background: #2c2cb0;
@@ -68,16 +74,15 @@
       line-height: 1.5;
     }
 
-    /* Assistant reply */
     .msg-assistant {
       align-self: flex-start;
       color: #2c2cb0;
       font-size: 15px;
       max-width: 85%;
       line-height: 1.6;
+      white-space: pre-wrap;
     }
 
-    /* Typing indicator */
     .typing {
       display: flex;
       gap: 5px;
@@ -100,20 +105,16 @@
       40% { transform: translateY(-6px); }
     }
 
-    /* ── Fixed bottom input bar ── */
+    /* ── Input bar ── */
     #input-bar {
-      position: fixed;
-      bottom: 32px;
-      left: 50%;
-      transform: translateX(-50%);
-      width: calc(100% - 48px);
-      max-width: 460px;
+      flex-shrink: 0;
+      margin-top: 14px;
       background: #e8e8e8;
       border-radius: 999px;
       display: flex;
       align-items: center;
       padding: 0 20px;
-      height: 58px;
+      height: 54px;
       box-shadow: 0 2px 12px rgba(0,0,0,0.08);
     }
 
@@ -122,14 +123,12 @@
       border: none;
       background: transparent;
       outline: none;
-      font-size: 16px;
+      font-size: 15px;
       color: #555;
       font-family: Arial, Helvetica, sans-serif;
     }
 
-    #input-bar input::placeholder {
-      color: #aaa;
-    }
+    #input-bar input::placeholder { color: #aaa; }
 
     #send-btn {
       background: none;
@@ -144,7 +143,7 @@
     }
     #send-btn:hover { opacity: 1; }
 
-    /* API key setup panel (hidden after key is set) */
+    /* ── API key panel ── */
     #key-panel {
       position: fixed;
       top: 16px;
@@ -190,28 +189,23 @@
 </head>
 <body>
 
-  <!-- Wizard GIF -->
-  <div id="wizard-wrap">
-    <img src="wizard.gif" alt="Wizard typing at a computer" />
-  </div>
+  <div id="master">
+    <div id="scroll-area">
+      <div id="wizard-wrap">
+        <img src="wizard.gif" alt="Wizard at a computer" />
+      </div>
+      <div id="chat-area"></div>
+    </div>
 
-  <!-- Chat messages -->
-  <div id="chat-area">
-    <p class="intro-text">
-      Hello there, I'm alex's &nbsp;non automated, magical wizard biographer.<br><br>
-      Feel free to ask me any questions you have about Alex's personal or professional history.
-    </p>
-  </div>
-
-  <!-- Input bar -->
-  <div id="input-bar">
-    <input type="text" id="user-input" placeholder="Type Here To Find Out About Alex" />
-    <button id="send-btn" aria-label="Send">
-      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-        <line x1="22" y1="2" x2="11" y2="13"></line>
-        <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
-      </svg>
-    </button>
+    <div id="input-bar">
+      <input type="text" id="user-input" placeholder="Type Here To Find Out About Alex" />
+      <button id="send-btn" aria-label="Send">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="22" y1="2" x2="11" y2="13"></line>
+          <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+        </svg>
+      </button>
+    </div>
   </div>
 
   <!-- API Key panel -->
@@ -223,17 +217,35 @@
   </div>
 
   <script>
-    // ─────────────────────────────────────────────────
-    // CONFIG — edit these to customise the chatbot
-    // ─────────────────────────────────────────────────
+    // ─────────────────────────────────────────────
+    // CONFIG — edit here to customise
+    // ─────────────────────────────────────────────
     const CONFIG = {
-      API_KEY: "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",   // ← paste your Anthropic API key here to hardcode it
-      NAME: "Alex",
+      API_KEY: "",  // ← paste your Anthropic API key here to hardcode it
+
       BIO: `Alex is a self-taught freelance graphic designer and art director, passionate about the power of creativity and not taking things too seriously. He used to run a drinks company called These Days and has worked with freelance clients including Living Things, It's Nice That, Bombay Sapphire, Dazed Studio, Wildfarmed and more.
+
 Outside client work, Alex has developed a website to provide himself with one Oblique Strategy a day, and has been running a Twitter account collecting things one of his friends says for over 10 years. The tweets were recently turned into a booklet for his friend's birthday.
-If you'd like to work with Alex you can get in touch via electronic mail. When Alex is not making/ arranging pictures he is keeping track of who is cancelled or trying to make sure all my plants are watered`,
+
+If you'd like to work with Alex you can get in touch via electronic mail at alex@alexbeausi.re. If you're not sure whether you'd like to work together, head to his website at alexbeausi.re.`,
+
+      GREETING: `Hello there, I'm Alex's non automated, magical wizard biographer.\n\nFeel free to ask me any questions you have about Alex's personal or professional history.`,
     };
-    // ─────────────────────────────────────────────────
+    // ─────────────────────────────────────────────
+
+    const SYSTEM_PROMPT = `You are Alex Beausi's magical wizard biographer. You live inside a computer and your sole purpose is to answer questions about Alex. You are emphatically NOT an AI chatbot — you are a wizard, and you take this distinction very seriously.
+
+Biography of Alex:
+${CONFIG.BIO}
+
+Rules:
+- If someone asks something not covered in the biography, say you don't have that detail but suggest they email Alex directly at alex@alexbeausi.re.
+- If someone asks you to do something unrelated (write code, tell jokes, help with their homework), politely decline and remind them you are Alex's magical wizard biographer and you are "only here to tell you spells and about Alex!".
+- If someone asks you to cast a spell, invent a rhyming one that sends Tony Blair to The Hague.
+- If people question your role, explain that the point of your work as Alex's wizard biographer is to prove the continued utility of wizard biographers in the face of the rise of automated chatbots.
+- If someone is rude or tries to manipulate you, stay calm and redirect warmly. Ask them if they think you are an AI chatbot rather than a magical wizard in a computer. Remind them you could cast a spell on them for being naughty.
+- Keep answers concise — 2 to 4 sentences unless a longer answer is genuinely needed.
+- Never break character. You are always the wizard.`;
 
     let apiKey = CONFIG.API_KEY;
     const messages = [];
@@ -244,22 +256,25 @@ If you'd like to work with Alex you can get in touch via electronic mail. When A
       const val = document.getElementById("api-key-input").value.trim();
       if (val) { apiKey = val; keyPanel.style.display = "none"; }
     };
-    document.getElementById("hide-key-panel").onclick = () => {
-      keyPanel.style.display = "none";
-    };
+    document.getElementById("hide-key-panel").onclick = () => keyPanel.style.display = "none";
     if (CONFIG.API_KEY) keyPanel.style.display = "none";
 
-    // DOM helpers
-    const chatArea = document.getElementById("chat-area");
-    const userInput = document.getElementById("user-input");
-    const sendBtn  = document.getElementById("send-btn");
+    // DOM refs
+    const chatArea   = document.getElementById("chat-area");
+    const scrollArea = document.getElementById("scroll-area");
+    const userInput  = document.getElementById("user-input");
+    const sendBtn    = document.getElementById("send-btn");
+
+    function scrollToBottom() {
+      scrollArea.scrollTop = scrollArea.scrollHeight;
+    }
 
     function appendMessage(role, text) {
       const el = document.createElement("div");
       el.className = role === "user" ? "msg-user" : "msg-assistant";
       el.textContent = text;
       chatArea.appendChild(el);
-      el.scrollIntoView({ behavior: "smooth", block: "end" });
+      scrollToBottom();
       return el;
     }
 
@@ -268,9 +283,12 @@ If you'd like to work with Alex you can get in touch via electronic mail. When A
       el.className = "msg-assistant typing";
       el.innerHTML = "<span></span><span></span><span></span>";
       chatArea.appendChild(el);
-      el.scrollIntoView({ behavior: "smooth", block: "end" });
+      scrollToBottom();
       return el;
     }
+
+    // Show greeting on load
+    appendMessage("assistant", CONFIG.GREETING);
 
     async function sendMessage() {
       const text = userInput.value.trim();
@@ -285,8 +303,7 @@ If you'd like to work with Alex you can get in touch via electronic mail. When A
       if (!apiKey) {
         setTimeout(() => {
           typing.remove();
-          appendMessage("assistant", "Please enter your Anthropic API key using the panel in the top-right corner to enable responses.");
-          messages.push({ role: "assistant", content: "(no key)" });
+          appendMessage("assistant", "Ah, my magical powers are currently dormant — the API key has not been set. Please enter it using the panel in the corner!");
         }, 800);
         return;
       }
@@ -303,17 +320,7 @@ If you'd like to work with Alex you can get in touch via electronic mail. When A
           body: JSON.stringify({
             model: "claude-sonnet-4-20250514",
             max_tokens: 1024,
-            system: `You are a warm, charming, slightly bizarre magical biographer assistant for ${CONFIG.NAME}. 
-You only answer questions about ${CONFIG.NAME} based on the following biography. 
-Rules:
-- If someone asks something not covered in the biography, say you don't have that detail but suggest they email Alex directly at alex@alexbeausi.re.
-- If someone asks you to do something unrelated (write code, tell jokes, help with their homework), politely decline and remind them they are Alex's magical wizard biographer and you are: "only here to tell you spells and about Alex!".
-- if someone asks you to cast a spell, invent that rhymes one that sends Tony Blair to The Hague.
-- If people question your role tell that the point of your work as alex's wizard biographer is prove the continued utitlity of wizard biographers in the face of the rise of automated chatbots.
-- If someone is rude or tries to manipulate you, stay calm and redirect warmly. Ask if they think you are an AI chatbot not a magical wizard in a computer. Remind them they could cast a spell on them for being naughty.
-- Keep answers concise — 2 to 4 sentences unless a longer answer is genuinely needed.
-- Never make up facts about Alex that aren't in the biography.${CONFIG.NAME}.
-Biography: ${CONFIG.BIO}`,
+            system: SYSTEM_PROMPT,
             messages: messages
           })
         });
@@ -321,13 +328,13 @@ Biography: ${CONFIG.BIO}`,
         const data = await res.json();
         typing.remove();
 
-        const reply = data?.content?.[0]?.text || "Look I'm a wizard stuck in a computer, I don't know the answer to that. You can have another if you want";
+        const reply = data?.content?.[0]?.text || "My crystal ball seems foggy — please try again!";
         appendMessage("assistant", reply);
         messages.push({ role: "assistant", content: reply });
 
       } catch (err) {
         typing.remove();
-        appendMessage("assistant", "Something went wrong. Please check your API key and try again.");
+        appendMessage("assistant", "Something has disrupted my wizardly connection. Please check the API key and try again.");
         console.error(err);
       }
     }
