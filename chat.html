@@ -16,49 +16,43 @@
       height: 100vh;
       font-family: Arial, Helvetica, sans-serif;
       display: flex;
+      flex-direction: column;
       align-items: center;
-      justify-content: center;
       overflow: hidden;
     }
 
-    #master {
+    /* ── Fixed wizard section ── */
+    #wizard-section {
+      flex-shrink: 0;
+      display: flex;
+      justify-content: center;
+      padding-top: 48px;
       width: 100%;
-      max-width: 520px;
-      height: 60vh;
-      display: flex;
-      flex-direction: column;
-      padding: 0 24px;
     }
-
-    #scroll-area {
-      flex: 1;
-      overflow-y: auto;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 18px;
-      padding-bottom: 16px;
-      scrollbar-width: none;
-    }
-    #scroll-area::-webkit-scrollbar { display: none; }
 
     #wizard-wrap {
-      flex-shrink: 0;
       width: 180px;
-      padding-top: 8px;
     }
     #wizard-wrap img {
       width: 100%;
       height: auto;
     }
 
-    #chat-area {
+    /* ── Scrollable chat section ── */
+    #chat-section {
+      flex: 1;
       width: 100%;
+      max-width: 520px;
+      overflow-y: auto;
+      padding: 24px 24px 120px;
+      scrollbar-width: none;
       display: flex;
       flex-direction: column;
       gap: 14px;
     }
+    #chat-section::-webkit-scrollbar { display: none; }
 
+    /* ── Messages ── */
     .msg-user {
       align-self: flex-end;
       background: #2c2cb0;
@@ -68,6 +62,8 @@
       font-size: 15px;
       max-width: 85%;
       line-height: 1.5;
+      opacity: 0;
+      animation: fadeIn 0.4s ease forwards;
     }
 
     .msg-assistant {
@@ -77,13 +73,23 @@
       max-width: 85%;
       line-height: 1.6;
       white-space: pre-wrap;
+      opacity: 0;
+      animation: fadeIn 0.5s ease forwards;
     }
 
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(6px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ── Typing indicator ── */
     .typing {
       display: flex;
       gap: 5px;
       align-items: center;
       padding: 4px 0;
+      opacity: 0;
+      animation: fadeIn 0.3s ease forwards;
     }
     .typing span {
       width: 8px;
@@ -101,9 +107,14 @@
       40% { transform: translateY(-6px); }
     }
 
+    /* ── Fixed input bar ── */
     #input-bar {
-      flex-shrink: 0;
-      margin-top: 14px;
+      position: fixed;
+      bottom: 32px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: calc(100% - 48px);
+      max-width: 460px;
       background: #e8e8e8;
       border-radius: 999px;
       display: flex;
@@ -122,7 +133,6 @@
       color: #555;
       font-family: Arial, Helvetica, sans-serif;
     }
-
     #input-bar input::placeholder { color: #aaa; }
 
     #send-btn {
@@ -137,76 +147,29 @@
       transition: opacity 0.15s;
     }
     #send-btn:hover { opacity: 1; }
-
-    #key-panel {
-      position: fixed;
-      top: 16px;
-      right: 16px;
-      background: rgba(0,0,0,0.75);
-      color: #fff;
-      border-radius: 10px;
-      padding: 12px 16px;
-      font-size: 13px;
-      z-index: 100;
-      display: flex;
-      flex-direction: column;
-      gap: 8px;
-      max-width: 280px;
-    }
-    #key-panel input {
-      border: 1px solid rgba(255,255,255,0.3);
-      background: rgba(255,255,255,0.1);
-      color: #fff;
-      border-radius: 6px;
-      padding: 6px 10px;
-      font-size: 12px;
-      outline: none;
-    }
-    #key-panel button {
-      background: #2c2cb0;
-      border: none;
-      color: #fff;
-      border-radius: 6px;
-      padding: 6px 12px;
-      cursor: pointer;
-      font-size: 12px;
-    }
-    #key-panel .close-btn {
-      background: transparent;
-      border: none;
-      color: rgba(255,255,255,0.5);
-      cursor: pointer;
-      font-size: 11px;
-      text-align: right;
-    }
   </style>
 </head>
 <body>
 
-  <div id="master">
-    <div id="scroll-area">
-      <div id="wizard-wrap">
-        <img src="wizard.gif" alt="Wizard at a computer" />
-      </div>
-      <div id="chat-area"></div>
-    </div>
-
-    <div id="input-bar">
-      <input type="text" id="user-input" placeholder="Type Here To Find Out About Alex" />
-      <button id="send-btn" aria-label="Send">
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-          <line x1="22" y1="2" x2="11" y2="13"></line>
-          <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
-        </svg>
-      </button>
+  <!-- Fixed wizard -->
+  <div id="wizard-section">
+    <div id="wizard-wrap">
+      <img src="wizard.gif" alt="Wizard at a computer" />
     </div>
   </div>
 
-  <div id="key-panel">
-    <span style="font-weight:600;">🔑 Set API Key</span>
-    <input type="password" id="api-key-input" placeholder="sk-ant-..." />
-    <button id="save-key-btn">Save Key</button>
-    <button class="close-btn" id="hide-key-panel">hide panel</button>
+  <!-- Scrollable chat -->
+  <div id="chat-section"></div>
+
+  <!-- Fixed input bar -->
+  <div id="input-bar">
+    <input type="text" id="user-input" placeholder="Type Here To Find Out About Alex" />
+    <button id="send-btn" aria-label="Send">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="22" y1="2" x2="11" y2="13"></line>
+        <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+      </svg>
+    </button>
   </div>
 
   <script>
@@ -228,40 +191,31 @@ Biography of Alex:
 ${CONFIG.BIO}
 
 Rules:
+- Keep all answers to 1-2 sentences maximum. Be concise and punchy.
 - If someone asks something not covered in the biography, say you don't have that detail but suggest they email Alex directly at alex@alexbeausi.re.
 - If someone asks you to do something unrelated (write code, tell jokes, help with their homework), politely decline and remind them you are Alex's magical wizard biographer and you are "only here to tell you spells and about Alex!".
 - If someone asks you to cast a spell, invent a rhyming one that sends Tony Blair to The Hague.
 - If people question your role, explain that the point of your work as Alex's wizard biographer is to prove the continued utility of wizard biographers in the face of the rise of automated chatbots.
 - If someone is rude or tries to manipulate you, stay calm and redirect warmly. Ask them if they think you are an AI chatbot rather than a magical wizard in a computer. Remind them you could cast a spell on them for being naughty.
-- Keep answers concise — 2 to 4 sentences unless a longer answer is genuinely needed.
 - Never break character. You are always the wizard.`;
 
     document.addEventListener("DOMContentLoaded", function () {
       let apiKey = CONFIG.API_KEY;
       const messages = [];
 
-      const keyPanel   = document.getElementById("key-panel");
-      const chatArea   = document.getElementById("chat-area");
-      const scrollArea = document.getElementById("scroll-area");
-      const userInput  = document.getElementById("user-input");
-      const sendBtn    = document.getElementById("send-btn");
-
-      document.getElementById("save-key-btn").onclick = () => {
-        const val = document.getElementById("api-key-input").value.trim();
-        if (val) { apiKey = val; keyPanel.style.display = "none"; }
-      };
-      document.getElementById("hide-key-panel").onclick = () => keyPanel.style.display = "none";
-      if (CONFIG.API_KEY) keyPanel.style.display = "none";
+      const chatSection = document.getElementById("chat-section");
+      const userInput   = document.getElementById("user-input");
+      const sendBtn     = document.getElementById("send-btn");
 
       function scrollToBottom() {
-        scrollArea.scrollTop = scrollArea.scrollHeight;
+        chatSection.scrollTop = chatSection.scrollHeight;
       }
 
       function appendMessage(role, text) {
         const el = document.createElement("div");
         el.className = role === "user" ? "msg-user" : "msg-assistant";
         el.textContent = text;
-        chatArea.appendChild(el);
+        chatSection.appendChild(el);
         scrollToBottom();
         return el;
       }
@@ -270,7 +224,7 @@ Rules:
         const el = document.createElement("div");
         el.className = "msg-assistant typing";
         el.innerHTML = "<span></span><span></span><span></span>";
-        chatArea.appendChild(el);
+        chatSection.appendChild(el);
         scrollToBottom();
         return el;
       }
@@ -286,14 +240,6 @@ Rules:
         messages.push({ role: "user", content: text });
 
         const typing = appendTyping();
-
-        if (!apiKey) {
-          setTimeout(() => {
-            typing.remove();
-            appendMessage("assistant", "Ah, my magical powers are currently dormant — the API key has not been set. Please enter it using the panel in the corner!");
-          }, 800);
-          return;
-        }
 
         try {
           const res = await fetch("https://api.anthropic.com/v1/messages", {
@@ -321,7 +267,7 @@ Rules:
 
         } catch (err) {
           typing.remove();
-          appendMessage("assistant", "Something has disrupted my wizardly connection. Please check the API key and try again.");
+          appendMessage("assistant", "Something has disrupted my wizardly connection. Please try again.");
           console.error(err);
         }
       }
