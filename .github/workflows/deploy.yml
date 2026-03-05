@@ -22,6 +22,17 @@ jobs:
         run: |
           sed -i 's|API_KEY: ""|API_KEY: "${{ secrets.ANTHROPIC_API_KEY }}"|' chat.html
 
+      - name: Add cache control headers
+        run: |
+          mkdir -p .github/headers
+          cat > headers.json << 'EOF'
+          {
+            "/**": {
+              "Cache-Control": "no-cache, no-store, must-revalidate"
+            }
+          }
+          EOF
+
       - name: Setup Pages
         uses: actions/configure-pages@v4
 
