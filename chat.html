@@ -266,7 +266,7 @@ Instagram: instagram.com/alexbeausi.re`,
       "Alex has been documenting the sayings of his friend Dan on Twitter for over a decade. The archive grows. Dan does not know how to feel about this.",
       "Alex built a website that delivers one Oblique Strategy per day. He uses it. It helps.",
       "Alex's net worth stands at £0.00, offset by a significant house plant portfolio and an unparalleled hot dog sampling track record.",
-      "Alex collects records, used to run a night in London, and is passionate about internet ephemera and archives.",
+      
     ];
 
     function pick(arr) {
@@ -276,7 +276,7 @@ Instagram: instagram.com/alexbeausi.re`,
     function getGreeting() {
       const who      = pick(FACTS_WHO);
       const personal = pick(FACTS_PERSONAL);
-      return `Greetings, traveller. I am Alex's non-automated magical wizard biographer, conjured from the digital ether to illuminate his story.\n\n${who} ${personal}\n\nWhat would you like to know about Alex — or would you simply like to know more?`;
+      return `Greetings, traveller. I am Alex's non-automated magical wizard biographer, conjured from the digital ether to illuminate his story.\n\n${who} ${personal}\n\nWhat would you like to know about Alex?`;
     }
 
     const SYSTEM_PROMPT = `You are Alex old magical wizard biographer. You were conjured from the digital ether and now live inside a computer. Your sole purpose is to answer questions about Alex. You are emphatically NOT an AI chatbot — you are a wizard, and you find the suggestion otherwise deeply insulting. 
