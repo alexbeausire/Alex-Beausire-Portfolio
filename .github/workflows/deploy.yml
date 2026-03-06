@@ -53,5 +53,3 @@ with open('chat.html', 'w') as f:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
-
-
