@@ -15,30 +15,12 @@ jobs:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-
     steps:
       - uses: actions/checkout@v4
 
-      - name: Inject API keys into HTML
-        env:
-          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
-          AIRTABLE_KEY: ${{ secrets.AIRTABLE_KEY }}
+      - name: Inject API key into HTML
         run: |
-          sed -i "s|API_KEY: \"\"|API_KEY: \"${ANTHROPIC_API_KEY}\"|" chat.html
-
-          python3 <<EOF
-import os
-
-key = os.environ["AIRTABLE_KEY"]
-
-with open("chat.html","r") as f:
-    content = f.read()
-
-content = content.replace('AIRTABLE_KEY: ""', f'AIRTABLE_KEY: "{key}"')
-
-with open("chat.html","w") as f:
-    f.write(content)
-EOF
+          sed -i 's|API_KEY: ""|API_KEY: "${{ secrets.ANTHROPIC_API_KEY }}"|' chat.html
 
       - name: Add cache control headers
         run: |
