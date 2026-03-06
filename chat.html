@@ -212,7 +212,8 @@
 
   <script>
     const CONFIG = {
-      API_KEY: "",  // injected by GitHub Actions
+      API_KEY: "",        // injected by GitHub Actions
+      AIRTABLE_KEY: "",   // injected by GitHub Actions
 
       BIO: `IDENTITY & BACKGROUND
 Alex is a self-taught graphic designer and art director based in South East London. Born in London. Graduated from the University of Bristol in 2016. He started his career in advertising as an account manager for 3 years before getting into design through event artwork.
@@ -311,7 +312,33 @@ Easter Eggs (only reveal when directly and specifically triggered by a relevant 
 
     document.addEventListener("DOMContentLoaded", function () {
       const apiKey = CONFIG.API_KEY;
+      const airtableKey = CONFIG.AIRTABLE_KEY;
+      const sessionId = Math.random().toString(36).substring(2, 10).toUpperCase();
+      const sessionStart = new Date().toISOString();
       const messages = [];
+
+      // Log full conversation to Airtable after each exchange
+      function logToAirtable() {
+        if (!airtableKey) return;
+        const transcript = messages.map(m =>
+          `${m.role === "user" ? "Visitor" : "Wizard"}: ${m.content}`
+        ).join("\n\n");
+
+        fetch("https://api.airtable.com/v0/app3G2vNnh7q1hVsn/Conversations", {
+          method: "POST",
+          headers: {
+            "Authorization": `Bearer ${airtableKey}`,
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify({
+            fields: {
+              Session: sessionId,
+              Conversation: transcript,
+              Timestamp: sessionStart
+            }
+          })
+        }).catch(() => {});
+      }
 
       const chatSection = document.getElementById("chat-section");
       const userInput   = document.getElementById("user-input");
@@ -406,6 +433,7 @@ Easter Eggs (only reveal when directly and specifically triggered by a relevant 
           const reply = data?.content?.[0]?.text || "My crystal ball seems foggy — please try again!";
           appendMessage("assistant", reply);
           messages.push({ role: "assistant", content: reply });
+          logToAirtable();
 
         } catch (err) {
           typing.remove();
