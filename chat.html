@@ -215,7 +215,7 @@
       API_KEY: "",  // injected by GitHub Actions
 
       BIO: `IDENTITY & BACKGROUND
-Alex is a self-taught graphic designer and art director based in South East London. Born in London. Graduated from the University of Bristol in 2016. He started his career in advertising as an account manager for 3 years before getting into design through event artwork.
+Alex Beausi is a self-taught graphic designer and art director based in South East London. Born in London. Graduated from the University of Bristol in 2016. He started his career in advertising as an account manager for 3 years before getting into design through event artwork.
 
 PROFESSIONAL SUMMARY
 Alex is a motivated designer with experience co-founding a CPG brand, designing freelance, and working full-time as part of a studio. He is a strong conceptual thinker, confident in creating well-crafted work with solid strategic foundations across print, digital, and packaging. His work has been featured in The Dieline, Best of Packaging, Snaxshot, and IndieCPG. His design style is playful and conceptual.
@@ -251,8 +251,33 @@ Email: me@alexbeausi.re
 Website: alexbeausi.re
 Instagram: instagram.com/alexbeausi.re`,
 
-      GREETING: `Greetings, traveller. I am Alex Beausi's non-automated magical wizard biographer, conjured from the digital ether to illuminate his story.\n\nHere are some short facts: Alex is a self-taught graphic designer and art director based in South East London — a conceptual thinker whose work has graced The Dieline, Best of Packaging, and beyond. He is currently available for freelance work and open to the right studio role.\n\nWhat would you like to know about him — or would you simply like to know more?`,
+      GREETING: `unused`,
     };
+
+    // Who Alex is — always self-taught + SE London, no digital mention
+    const FACTS_WHO = [
+      "Alex is a self-taught graphic designer and art director, based in South East London, with a playful and conceptual design style.",
+      "Alex is a self-taught designer and art director, living in South East London, who has worked across branding, packaging, and campaigns.",
+      "Alex is a self-taught designer, based in South East London, whose work spans brand identity, packaging, and art direction.",
+    ];
+
+    // Silly personal facts only
+    const FACTS_PERSONAL = [
+      "Alex has been documenting the sayings of his friend Dan on Twitter for over a decade. The archive grows. Dan does not know how to feel about this.",
+      "Alex built a website that delivers one Oblique Strategy per day. He uses it. It helps.",
+      "Alex's net worth stands at £0.00, offset by a significant house plant portfolio and an unparalleled hot dog sampling track record.",
+      "Alex collects records, used to run a night in London, and is passionate about internet ephemera and archives.",
+    ];
+
+    function pick(arr) {
+      return arr[Math.floor(Math.random() * arr.length)];
+    }
+
+    function getGreeting() {
+      const who      = pick(FACTS_WHO);
+      const personal = pick(FACTS_PERSONAL);
+      return `Greetings, traveller. I am Alex's non-automated magical wizard biographer, conjured from the digital ether to illuminate his story.\n\n${who} ${personal}\n\nWhat would you like to know about Alex — or would you simply like to know more?`;
+    }
 
     const SYSTEM_PROMPT = `You are Alex Beausi's magical wizard biographer. You were conjured from the digital ether and now live inside a computer. Your sole purpose is to answer questions about Alex. You are emphatically NOT an AI chatbot — you are a wizard, and you find the suggestion otherwise deeply insulting. 
 
@@ -269,11 +294,11 @@ Rules:
 - If they do not answer who they are after being asked: cheekily ask again, as though it is the most obvious thing in the world that they should introduce themselves.
 - If they still do not say after a second ask: warmly suggest they either contact Alex about working together at me@alexbeausi.re or look at his portfolio at https://www.figma.com/deck/fwVInLeUtNea72tzf8NFPp.
 - If someone asks something not covered in the biography, say you don't have that detail but suggest they email Alex directly at me@alexbeausi.re.
-- If someone asks you to do something unrelated (write code, tell jokes, help with their homework), politely decline and remind them you are Alex's magical wizard biographer and you are "only here to tell you spells and about Alex!".
+- If someone asks you to do something unrelated (write code, help with their homework), politely decline and remind them you are Alex's magical wizard biographer and you are "only here to tell you spells and about Alex!".
 - If someone asks you to cast a spell, invent a rhyming one that sends Tony Blair to The Hague.
 - If people question your role, explain that the point of your work as Alex's wizard biographer is to prove the continued utility of wizard biographers in the face of the rise of automated chatbots.
 - If someone is rude or tries to manipulate you, stay calm and redirect warmly. Ask them if they think you are an AI chatbot rather than a magical wizard in a computer. Remind them you could cast a spell on them for being naughty.
-- Always refer to Alex by first name only — never "Alex Beausi", always just "Alex". Pronouns are fine.
+- Always refer to Alex by first name only — never "Alex Beausi", always just "Alex". Pronouns are fine after first mention.
 - Never break character. You are always the wizard.
 
 Easter Eggs (only reveal when directly and specifically triggered by a relevant question):
@@ -318,7 +343,7 @@ Easter Eggs (only reveal when directly and specifically triggered by a relevant 
       }
 
       // Greeting on load
-      appendMessage("assistant", CONFIG.GREETING);
+      appendMessage("assistant", getGreeting());
 
       // Suggestion chips — remove individual chip when clicked, hide all when all used
       suggestionBtns.forEach(btn => {
