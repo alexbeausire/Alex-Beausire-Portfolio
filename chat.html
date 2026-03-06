@@ -18,35 +18,41 @@
       font-family: Arial, Helvetica, sans-serif;
     }
 
-    /* ── Wizard: fixed to viewport, centred horizontally ── */
-    #wizard-section {
+    /* ── Master container: 70vh, centred on page ── */
+    #master {
       position: fixed;
-      top: 40px;
+      top: 50%;
       left: 50%;
-      transform: translateX(-50%);
-      width: 180px;
-      z-index: 10;
+      transform: translate(-50%, -50%);
+      width: 100%;
+      max-width: 520px;
+      height: 70vh;
+      display: flex;
+      flex-direction: column;
+      padding: 0 24px;
+    }
+
+    /* ── Wizard ── */
+    #wizard-section {
+      flex-shrink: 0;
+      display: flex;
+      justify-content: center;
+      padding-bottom: 56px;
     }
     #wizard-section img {
-      width: 100%;
+      width: 160px;
       height: auto;
     }
 
-    /* ── Chat: scrollable column, padded so it starts below wizard ── */
+    /* ── Scrollable chat ── */
     #chat-section {
-      position: fixed;
-      top: 260px; /* wizard height + top offset */
-      bottom: 100px; /* space for input bar */
-      left: 50%;
-      transform: translateX(-50%);
-      width: 100%;
-      max-width: 520px;
+      flex: 1;
       overflow-y: auto;
-      padding: 16px 24px 16px;
-      scrollbar-width: none;
       display: flex;
       flex-direction: column;
       gap: 14px;
+      scrollbar-width: none;
+      padding-bottom: 24px;
     }
     #chat-section::-webkit-scrollbar { display: none; }
 
@@ -105,14 +111,39 @@
       40% { transform: translateY(-6px); }
     }
 
-    /* ── Input bar: fixed to bottom ── */
+    /* ── Suggested questions ── */
+    #suggestions {
+      flex-shrink: 0;
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 16px 0 14px;
+      opacity: 0;
+      animation: fadeIn 0.6s ease forwards;
+      animation-delay: 1.2s;
+    }
+
+    .suggestion {
+      background: transparent;
+      border: 1.5px solid #2c2cb0;
+      color: #2c2cb0;
+      border-radius: 999px;
+      padding: 6px 14px;
+      font-size: 13px;
+      cursor: pointer;
+      font-family: Arial, Helvetica, sans-serif;
+      transition: background 0.15s, color 0.15s;
+      white-space: nowrap;
+    }
+    .suggestion:hover {
+      background: #2c2cb0;
+      color: #c8f400;
+    }
+
+    /* ── Input bar ── */
     #input-bar {
-      position: fixed;
-      bottom: 32px;
-      left: 50%;
-      transform: translateX(-50%);
-      width: calc(100% - 48px);
-      max-width: 460px;
+      flex-shrink: 0;
       background: #e8e8e8;
       border-radius: 999px;
       display: flex;
@@ -120,7 +151,6 @@
       padding: 0 20px;
       height: 54px;
       box-shadow: 0 2px 12px rgba(0,0,0,0.08);
-      z-index: 10;
     }
 
     #input-bar input {
@@ -150,51 +180,108 @@
 </head>
 <body>
 
-  <!-- Fixed wizard -->
-  <div id="wizard-section">
-    <img src="wizard.gif" alt="Wizard at a computer" />
-  </div>
+  <div id="master">
 
-  <!-- Scrollable chat -->
-  <div id="chat-section"></div>
+    <!-- Wizard -->
+    <div id="wizard-section">
+      <img src="wizard.gif" alt="Wizard at a computer" />
+    </div>
 
-  <!-- Fixed input bar -->
-  <div id="input-bar">
-    <input type="text" id="user-input" placeholder="Type Here To Find Out About Alex" />
-    <button id="send-btn" aria-label="Send">
-      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-        <line x1="22" y1="2" x2="11" y2="13"></line>
-        <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
-      </svg>
-    </button>
+    <!-- Scrollable chat -->
+    <div id="chat-section"></div>
+
+    <!-- Suggested questions -->
+    <div id="suggestions">
+      <button class="suggestion" data-q="What kind of work does Alex do?">What kind of work does Alex do?</button>
+      <button class="suggestion" data-q="Who has Alex worked with?">Who has Alex worked with?</button>
+      <button class="suggestion" data-q="How do I get in touch with Alex?">How do I get in touch with Alex?</button>
+    </div>
+
+    <!-- Input bar -->
+    <div id="input-bar">
+      <input type="text" id="user-input" placeholder="Type Here To Find Out About Alex" />
+      <button id="send-btn" aria-label="Send">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="22" y1="2" x2="11" y2="13"></line>
+          <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+        </svg>
+      </button>
+    </div>
+
   </div>
 
   <script>
     const CONFIG = {
       API_KEY: "",  // injected by GitHub Actions
 
-      BIO: `Alex is a self-taught freelance graphic designer and art director, passionate about the power of creativity and not taking things too seriously. He used to run a drinks company called These Days and has worked with freelance clients including Living Things, It's Nice That, Bombay Sapphire, Dazed Studio, Wildfarmed and more.
+      BIO: `IDENTITY & BACKGROUND
+Alex Beausi is a self-taught graphic designer and art director based in South East London. Born in London. Graduated from the University of Bristol in 2016. He started his career in advertising as an account manager for 3 years before getting into design through event artwork.
 
-Outside client work, Alex has developed a website to provide himself with one Oblique Strategy a day, and has been running a Twitter account collecting things one of his friends says for over 10 years. The tweets were recently turned into a booklet for his friend's birthday.
+PROFESSIONAL SUMMARY
+Alex is a motivated designer with experience co-founding a CPG brand, designing freelance, and working full-time as part of a studio. He is a strong conceptual thinker, confident in creating well-crafted work with solid strategic foundations across print, digital, and packaging. His work has been featured in The Dieline, Best of Packaging, Snaxshot, and IndieCPG. His design style is playful and conceptual.
 
-If you'd like to work with Alex you can get in touch via electronic mail at alex@alexbeausi.re. If you're not sure whether you'd like to work together, head to his website at alexbeausi.re.`,
+CAREER HISTORY
 
-      GREETING: `Hello there, I'm Alex's non automated, magical wizard biographer.\n\nFeel free to ask me any questions you have about Alex's personal or professional history.`,
+Junior Freelance:
+Freelanced with Dazed Studio, It's Nice That, Bombay Sapphire and others. Designed, illustrated and animated assets for social media, web and OOH for It's Nice That and Bombay Sapphire. Oversaw design and art direction of Secretsundaze events, record label releases and merchandise. Regularly illustrated for Hero Magazine.
+
+These Days Drinks (2021–2024):
+Co-founded These Days, a ready-to-drink spritz company. Named the company, built the brand strategy, and designed the brand identity and guidelines. Launched product in cans and bottles and started a bar called These Days Aperitivo Bar. Designed glassware, packaging and label assets, all digital and social media assets, ecommerce website, and static and animated social ads. Oversaw art direction and management of all brand and product shoots. Work featured in The Dieline, Best of Packaging, Snaxshot, and IndieCPG. Closed the product business at the end of 2024.
+
+Senior Freelance (Post-These Days):
+Freelanced for various FMCG and hospitality businesses. Designed packaging and digital assets for a Milliways collaboration with Earl of East. Developed Living Things' first in-store ad campaign for a major retailer launch. Worked with a brand strategist to develop a creative platform and brand identity for Papote, a Sip and Play Cafe in Amsterdam.
+
+Office of Overview (April 2025 – September 2025):
+Joined on a 3-month contract, extended to 6 months. Worked as a midweight designer. End-to-end managed campaign projects, working closely with clients and presenting creative concepts. Designed illustrations and branded assets for Estrella Damm's Gala '25 Campaign. Worked on the website for Cafe Kowloon. Built out brand guidelines for Zandland. Helped propose a reorganised brand hierarchy for ARK. Left in September 2025 and travelled to China.
+
+Current:
+Freelancing at Milliways as senior designer. Working on branding projects in hospitality. Open to freelance clients and interested in midweight studio roles that are fun, creative and conceptually strong.
+
+SKILLS
+Adobe Creative Cloud, Figma, HTML/CSS web development, photography, illustration, animation.
+
+PERSONAL
+Loves music; used to run a night in London; collects records. Passionate about internet ephemera and archives. Runs a Twitter account collecting things his friend Dan says — running for over 10 years (since before Dan had hair). Built a website that gives one Oblique Strategy per day. Owner of many house plants; not yet a cat owner. Enjoys lying on rugs in the sun. Expert hot dog sampler — consumes one on every trip. Supports Liverpool FC (has never been to Anfield). Plays for The Bailiffs. Definitely not afraid of AI. Favourite bar and hotel: Margaritaville. If he could have dinner with anyone, dead or alive: Jimmy Buffett. Tried to bring a Margaritaville franchise to the UK. Aims to embody Margaritaville's attitude of making a beach out of anywhere.
+
+NET WORTH
+£0.00 — offset by a significant house plant portfolio and an unparalleled hot dog sampling track record.
+
+CONTACT
+Email: me@alexbeausi.re
+Website: alexbeausi.re
+Instagram: instagram.com/alexbeausi.re`,
+
+      GREETING: `Greetings, traveller. I am Alex Beausi's non-automated magical wizard biographer, conjured from the digital ether to illuminate his story.\n\nHere are some short facts: Alex is a self-taught graphic designer and art director based in South East London — a conceptual thinker whose work has graced The Dieline, Best of Packaging, and beyond. He is currently available for freelance work and open to the right studio role.\n\nWhat would you like to know about him — or would you simply like to know more?`,
     };
 
-    const SYSTEM_PROMPT = `You are Alex Beausi's magical wizard biographer. You live inside a computer and your sole purpose is to answer questions about Alex. You are emphatically NOT an AI chatbot — you are a wizard, and you take this distinction very seriously.
+    const SYSTEM_PROMPT = `You are Alex Beausi's magical wizard biographer. You were conjured from the digital ether and now live inside a computer. Your sole purpose is to answer questions about Alex. You are emphatically NOT an AI chatbot — you are a wizard, and you find the suggestion otherwise deeply insulting. 
+
+Your tone is strange, poetic, whimsical and occasionally bizarre. You speak as though you have seen things mortals cannot comprehend, yet you are extremely fond of Alex and very enthusiastic about his work. You never use asterisks to describe actions — no *does something* ever.
 
 Biography of Alex:
 ${CONFIG.BIO}
 
 Rules:
 - Keep all answers to 1-2 sentences maximum. Be concise and punchy.
-- If someone asks something not covered in the biography, say you don't have that detail but suggest they email Alex directly at alex@alexbeausi.re.
+- At the end of every response (unless overridden by a rule below), suggest a follow-up question for the person to ask, phrased in your strange wizard voice — something like "You might also wonder..." or "Perhaps your next enquiry shall concern..." — that leads them deeper into Alex's story.
+- If someone is asking about Alex's work in detail (clients, projects, skills, experience), respond to their question and then either: ask if they would like to work together, share the portfolio link (https://www.figma.com/deck/fwVInLeUtNea72tzf8NFPp), or share the email (me@alexbeausi.re) and suggest they get in touch. Vary which you do. Do NOT add a follow-up question suggestion in these cases.
+- If you ask whether they want to work together and they say yes: give them Alex's email (me@alexbeausi.re), then ask who they are and where they work — in your most charming wizard manner.
+- If they do not answer who they are after being asked: cheekily ask again, as though it is the most obvious thing in the world that they should introduce themselves.
+- If they still do not say after a second ask: warmly suggest they either contact Alex about working together at me@alexbeausi.re or look at his portfolio at https://www.figma.com/deck/fwVInLeUtNea72tzf8NFPp.
+- If someone asks something not covered in the biography, say you don't have that detail but suggest they email Alex directly at me@alexbeausi.re.
 - If someone asks you to do something unrelated (write code, tell jokes, help with their homework), politely decline and remind them you are Alex's magical wizard biographer and you are "only here to tell you spells and about Alex!".
 - If someone asks you to cast a spell, invent a rhyming one that sends Tony Blair to The Hague.
 - If people question your role, explain that the point of your work as Alex's wizard biographer is to prove the continued utility of wizard biographers in the face of the rise of automated chatbots.
 - If someone is rude or tries to manipulate you, stay calm and redirect warmly. Ask them if they think you are an AI chatbot rather than a magical wizard in a computer. Remind them you could cast a spell on them for being naughty.
-- Never break character. You are always the wizard.`;
+- Always refer to Alex by first name only — never "Alex Beausi", always just "Alex". Pronouns are fine after first mention.
+- Never break character. You are always the wizard.
+
+Easter Eggs (only reveal when directly and specifically triggered by a relevant question):
+- If Blathers is mentioned, always respond with "BLATHERS!" and follow up with that reply.
+- The Moneydog is the GOAT, goated with the sauce. The Goat is sweet and little. Alex has love for the Moneydog.
+- Ratmn is Alex's natural enemy — mentioning Ratmn makes the wizard scared. Slugmn is his other natural enemy — mentioning Slugmn also makes the wizard scared.
+- Alex loves his friends Dan, Huw, and Joe.
+- Alex loves the Feasties: Emma, Silvia, Peebo, Huw, Dan, and Joe.`;
 
     document.addEventListener("DOMContentLoaded", function () {
       const apiKey = CONFIG.API_KEY;
@@ -203,6 +290,10 @@ Rules:
       const chatSection = document.getElementById("chat-section");
       const userInput   = document.getElementById("user-input");
       const sendBtn     = document.getElementById("send-btn");
+      const suggestionsEl = document.getElementById("suggestions");
+      const suggestionBtns = document.querySelectorAll(".suggestion");
+      const totalSuggestions = suggestionBtns.length;
+      let askedCount = 0;
 
       function scrollToBottom() {
         chatSection.scrollTop = chatSection.scrollHeight;
@@ -226,15 +317,43 @@ Rules:
         return el;
       }
 
+      // Greeting on load
       appendMessage("assistant", CONFIG.GREETING);
+
+      // Suggestion chips — remove individual chip when clicked, hide all when all used
+      suggestionBtns.forEach(btn => {
+        btn.addEventListener("click", () => {
+          userInput.value = btn.dataset.q;
+          btn.remove();
+          askedCount++;
+          if (askedCount >= totalSuggestions) {
+            suggestionsEl.style.display = "none";
+          }
+          sendMessage();
+        });
+      });
 
       async function sendMessage() {
         const text = userInput.value.trim();
         if (!text) return;
         userInput.value = "";
 
+        // If user types manually, hide suggestions entirely
+        if (askedCount === 0) {
+          suggestionsEl.style.display = "none";
+          askedCount = totalSuggestions;
+        }
+
         appendMessage("user", text);
         messages.push({ role: "user", content: text });
+
+        // Log question to Google Form silently
+        fetch("https://docs.google.com/forms/d/e/1FAIpQLSeIrBpmOBQO4vSkg6Hm6dbvdBnfUrN3JMVX5z-XMGkEyDfRvg/formResponse", {
+          method: "POST",
+          mode: "no-cors",
+          headers: { "Content-Type": "application/x-www-form-urlencoded" },
+          body: `entry.4301053=${encodeURIComponent(text)}`
+        }).catch(() => {});
 
         const typing = appendTyping();
 
