@@ -237,8 +237,25 @@ Joined on a 3-month contract, extended to 6 months. Worked as a midweight design
 Current:
 Freelancing at Milliways as senior designer. Working on branding projects in hospitality. Open to freelance clients and interested in midweight studio roles that are fun, creative and conceptually strong.
 
+DETAILED PROJECT CASE STUDIES
+
+These Days Drinks — Brand Identity & Packaging (These Days Drinks, 2022, Freelance/Founder):
+These Days was a modern spritz brand and aperitivo bar that Alex co-founded in 2021. The brief was to develop a brand that took cues from traditional aperitivo culture of the 20th century and honoured Spritz's history while taking it into a new era with younger consumers. Alex developed the full brand identity including packaging and art direction, drawing inspiration from the rich visual heritage of classic aperitivo culture to create something playful and contemporary. The packaging was featured in The Dieline, Best of Packaging, and Snaxshot. Skills developed: end-to-end brand building from naming and strategy through to packaging and production; founder-level ownership of creative decisions; working across physical and digital touchpoints simultaneously; art directing product shoots; managing print production and packaging specs. Type of company: founder-led CPG startup.
+
+Papote — Brand Identity (Freelance, 2026):
+Papote is an independent Amsterdam café built for life with kids — a space for adults with children, not a café for children. A place where parents can enjoy a great café experience in a space set up for the realities of having young children. Alex developed a brand identity rooted in traditional café culture and free of childish visual clichés — a considered logo, typography and soft colour palette taking inspiration from classic café culture and speaking to the warmth of parenthood. Applied across menus, posters, signage and in-store assets, the result is a system that feels at home across the space's distinctive fit out. Skills developed: translating a nuanced strategic brief into a visual identity; working within the hospitality and café sector; designing for physical environments including signage and wayfinding; collaborating closely with a brand strategist; balancing warmth and sophistication. Type of company: independent hospitality startup.
+
+Kolkati — Brand Identity (Office of Overview, 2025):
+Kolkati is a casual dining food business bringing the cult of the Kati Roll to the UK. The brief was to bring that cult status to life with a bold, modern identity that honoured Kolkati's Kolkata roots and their London location. Alex and the team built a visual identity using a traditional Bengali colour palette, paired with bold, cult-inspired copy and dramatic illustration. A mixed serif and sans-serif type system creates tension between heritage and modernity, giving the brand a confident, contemporary voice. Skills developed: cultural research and sensitivity in identity design; working with illustration as a core brand asset; developing typographic systems with personality; designing for food and hospitality; balancing heritage references with modern relevance. Type of company: independent restaurant and food brand.
+
+Human by Zandland — Brand Identity (Office of Overview, 2025):
+Zandland briefed the team to create an identity for Human, a new long-form documentary channel focused on stories of people living in unconventional and extreme environments. The brief was to build a brand that helped bring these people and their stories to life for a younger audience drawn to gonzo-style storytelling. Taking inspiration from Jeffersonian Transcription, Alex and the team designed a logo and flexible typographic system using symbols and numbers to bring a richer meaning to plain type. Delivered across brand guidelines for digital, print and motion assets, the system shifts tone across stories and formats while keeping a distinct, contemporary voice. Skills developed: designing for media and content brands; building flexible typographic systems; working with unconventional visual references; designing for digital-first and motion contexts; developing brand guidelines for a multi-format output. Type of company: media and documentary production.
+
+Ark Student — Brand Identity (Office of Overview, 2025):
+Briefed by ARK Co-Living to develop a brand identity for Ark Student, their purpose-built student accommodation brand, to augment its existing design-led, community-focused co-living offering. The identity needed to feel clearly aligned with the master brand while standing apart as a student-specific proposition, capable of flexing across multiple sites without losing cohesion. Alex and the team extended the core visual language of the master brand — retaining its use of colour, shape borders and typographic treatments — but added a more youthful tone with brighter colours, more expressive typography and youthful art direction. The result is a flexible identity system that differentiates the student proposition while remaining cohesive across the wider ARK portfolio. Skills developed: working within an existing brand architecture; designing sub-brands with clear hierarchy; balancing brand consistency with audience-specific differentiation; working with a large property client across multiple touchpoints; presenting and justifying brand strategy to clients. Type of company: large property and co-living developer.
+
 SKILLS
-Adobe Creative Cloud, Figma, HTML/CSS web development, photography, illustration, animation.
+Adobe Creative Cloud, Figma, HTML/CSS web development, photography, illustration, animation. Experienced across brand identity, packaging design, campaign design, art direction, typographic systems, brand guidelines, and ecommerce.
 
 PERSONAL
 Loves music; used to run a night in London; collects records. Passionate about internet ephemera and archives. Runs a Twitter account collecting things his friend Dan says — running for over 10 years (since before Dan had hair). Built a website that gives one Oblique Strategy per day. Owner of many house plants; not yet a cat owner. Enjoys lying on rugs in the sun. Expert hot dog sampler — consumes one on every trip. Supports Liverpool FC (has never been to Anfield). Plays for The Bailiffs. Definitely not afraid of AI. Favourite bar and hotel: Margaritaville. If he could have dinner with anyone, dead or alive: Jimmy Buffett. Tried to bring a Margaritaville franchise to the UK. Aims to embody Margaritaville's attitude of making a beach out of anywhere.
@@ -249,7 +266,8 @@ NET WORTH
 CONTACT
 Email: me@alexbeausi.re
 Website: alexbeausi.re
-Instagram: instagram.com/alexbeausi.re`,
+Instagram: instagram.com/alexbeausi.re
+Portfolio: https://bit.ly/4spcAJF`,
 
       GREETING: `unused`,
     };
@@ -294,7 +312,7 @@ Rules:
 - If you ask whether they want to work together and they say yes: give them Alex's email (me@alexbeausi.re), then ask who they are and where they work — in your most charming wizard manner.
 - If they do not answer who they are after being asked: cheekily ask again, as though it is the most obvious thing in the world that they should introduce themselves.
 - If they still do not say after a second ask: warmly suggest they either contact Alex about working together at me@alexbeausi.re or look at his portfolio at https://bit.ly/4spcAJF.
-- the link to Alex's portfolio should always be shared as a hyperlink on the word "portfolio"
+- When sharing the portfolio, always format it as a markdown link like this: [portfolio](https://bit.ly/4spcAJF) — never write out the raw URL.
 - If someone asks something not covered in the biography, say you don't have that detail but suggest they email Alex directly at me@alexbeausi.re.
 - If someone asks you to do something unrelated (write code, help with their homework), politely decline and remind them you are Alex's magical wizard biographer and you are "only here to tell you spells and about Alex!".
 - If someone asks you to cast a spell, invent a rhyming one that sends Tony Blair to The Hague.
@@ -326,10 +344,23 @@ Easter Eggs (only reveal when directly and specifically triggered by a relevant 
         chatSection.scrollTop = chatSection.scrollHeight;
       }
 
+      function linkify(text) {
+        let result = text
+          .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+        // Markdown-style [label](url)
+        result = result.replace(/\[([^\]]+)\]\((https?:\/\/[^)]+)\)/g,
+          (_, label, url) => `<a href="${url}" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline;">${label}</a>`);
+        // Bare URLs not already in an anchor
+        result = result.replace(/(?<!href=")(https?:\/\/[^\s<"]+)/g,
+          url => `<a href="${url}" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline;word-break:break-all;">${url}</a>`);
+        return result;
+      }
+
       function appendMessage(role, text) {
         const el = document.createElement("div");
         el.className = role === "user" ? "msg-user" : "msg-assistant";
-        el.textContent = text;
+        el.style.whiteSpace = "pre-wrap";
+        el.innerHTML = linkify(text);
         chatSection.appendChild(el);
         scrollToBottom();
         return el;
