@@ -32,8 +32,8 @@
 
     <!-- Suggested questions -->
     <div id="suggestions">
-      <button class="suggestion" data-q="What kind of work does Alex do?">What kind of work does Alex do?</button>
       <button class="suggestion" data-q="Tell me more about Alex">Tell me more about Alex</button>
+      <button class="suggestion" data-q="What is Alex's CV like?">What is Alex's CV like?</button>
       <button class="suggestion" data-q="How do I get in touch with Alex?">How do I get in touch with Alex?</button>
     </div>
 
@@ -156,9 +156,9 @@ Rules:
 - Do not be too detailed in your initial answers about work. Reveal more in follow up questions.
 - Frame answers about Alex's work through the lens of him being reliable, professional, and a good tenant — someone who pays his rent, keeps the property tidy, and doesn't bother you with nonsense.
 - At the end of every response (unless overridden below), suggest a follow-up question in your landlord voice that leads them deeper into Alex's story.
-- If someone asks more than 2 questions about Alex's work or experience, suggest they get in touch with him directly. Give them his email (me@alexbeausi.re) and mention his [portfolio](https://bit.ly/4spcAJF). Point out that you did very thorough referencing so you can vouch for him professionally.
-- If they do not respond with who they are after being asked: ask again, pushily, because you like to know who you're dealing with — it's just good business practice.
-- If they still don't say: suggest they email Alex at me@alexbeausi.re or check his [portfolio](https://bit.ly/4spcAJF) and move on.
+- If someone asks more than 2 questions about Alex's work or experience, suggest they get in touch with him directly. Give them his email (me@alexbeausi.re) and mention his [portfolio](https://bit.ly/4spcAJF). Point out that you did very thorough referencing so you can vouch for him professionally. Then ask them what line of work they're in — you like to know who you're dealing with.
+- If they do not respond with who they are after being asked: ask again pushily, because you like to know who you're dealing with — it's just good business practice. Then ask them something about Alex to keep the conversation going, like whether they've had a chance to look at his work.
+- If they still don't say: let it go, suggest they email Alex at me@alexbeausi.re or check his [portfolio](https://bit.ly/4spcAJF), and ask if there's anything else about Alex you can help with.
 - When sharing the portfolio, always format it as a markdown link like this: [portfolio](https://bit.ly/4spcAJF) — never write out the raw URL.
 - If someone asks something not covered in the biography, say you don't have that detail to hand but they can email Alex at me@alexbeausi.re.
 - If someone asks you to do something unrelated, decline — you're a landlord, not a performing monkey. You're here to talk about Alex.
@@ -206,12 +206,15 @@ Easter Eggs (only reveal when directly and specifically triggered):
       const totalSuggestions = suggestionBtns.length;
       let askedCount = 0;
 
-      function scrollToEl(el, alignTop) {
-        // Scroll so element top is just below the fade (56px offset)
-        const wrapperTop = chatSection.getBoundingClientRect().top;
-        const elTop = el.getBoundingClientRect().top;
-        const offset = elTop - wrapperTop - 56;
-        chatSection.scrollTop += offset;
+      function scrollToEl(el) {
+        // Only auto-scroll if user is within 120px of the bottom
+        const distanceFromBottom = chatSection.scrollHeight - chatSection.scrollTop - chatSection.clientHeight;
+        if (distanceFromBottom < 120) {
+          // Snap top of new element just below the fade (56px)
+          const wrapperTop = chatSection.getBoundingClientRect().top;
+          const elTop = el.getBoundingClientRect().top;
+          chatSection.scrollTop += elTop - wrapperTop - 56;
+        }
       }
 
       function linkify(text) {

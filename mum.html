@@ -32,8 +32,8 @@
 
     <!-- Suggested questions -->
     <div id="suggestions">
-      <button class="suggestion" data-q="What kind of work does Alex do?">What kind of work does Alex do?</button>
       <button class="suggestion" data-q="Tell me more about Alex">Tell me more about Alex</button>
+      <button class="suggestion" data-q="What is Alex's CV like?">What is Alex's CV like?</button>
       <button class="suggestion" data-q="How do I get in touch with Alex?">How do I get in touch with Alex?</button>
     </div>
 
@@ -198,12 +198,15 @@ Easter Eggs (only reveal when directly and specifically triggered):
       const totalSuggestions = suggestionBtns.length;
       let askedCount = 0;
 
-      function scrollToEl(el, alignTop) {
-        // Scroll so element top is just below the fade (56px offset)
-        const wrapperTop = chatSection.getBoundingClientRect().top;
-        const elTop = el.getBoundingClientRect().top;
-        const offset = elTop - wrapperTop - 56;
-        chatSection.scrollTop += offset;
+      function scrollToEl(el) {
+        // Only auto-scroll if user is within 120px of the bottom
+        const distanceFromBottom = chatSection.scrollHeight - chatSection.scrollTop - chatSection.clientHeight;
+        if (distanceFromBottom < 120) {
+          // Snap top of new element just below the fade (56px)
+          const wrapperTop = chatSection.getBoundingClientRect().top;
+          const elTop = el.getBoundingClientRect().top;
+          chatSection.scrollTop += elTop - wrapperTop - 56;
+        }
       }
 
       function linkify(text) {
