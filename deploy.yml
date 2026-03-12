@@ -1,0 +1,57 @@
+name: Deploy with API Key
+
+on:
+  push:
+    branches: [master]
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Inject API key into HTML
+        run: |
+          for file in chat.html mum.html landlord.html; do
+            sed -i 's|API_KEY: ""|API_KEY: "${{ secrets.ANTHROPIC_API_KEY }}"|' $file
+          done
+          python3 -c "
+import re, sys
+key = '${{ secrets.AIRTABLE_KEY }}'
+with open('chat.html', 'r') as f:
+    content = f.read()
+content = content.replace('AIRTABLE_KEY: \"\"', f'AIRTABLE_KEY: \"{key}\"')
+with open('chat.html', 'w') as f:
+    f.write(content)
+"
+
+      - name: Add cache control headers
+        run: |
+          mkdir -p .github/headers
+          cat > headers.json << 'EOF'
+          {
+            "/**": {
+              "Cache-Control": "no-cache, no-store, must-revalidate"
+            }
+          }
+          EOF
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: .
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
