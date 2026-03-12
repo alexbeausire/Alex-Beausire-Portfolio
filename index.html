@@ -40,7 +40,8 @@
             </div>
         </div>
 
-        <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+        <script>
+          document.addEventListener("DOMContentLoaded", function () {
             const images = [
                 "images/Portfolio2024 TD Base.jpg",
                 "images/Pitch Portfolio3.jpg",
@@ -122,4 +123,18 @@
             let currentIndex = 0;
 
             // Function to update the slideshow image
-     
+                 function updateSlideshow() {
+                slideshowElement.src = images[currentIndex];
+                currentIndex = (currentIndex + 1) % images.length;
+            }
+
+            // Initial image load
+            updateSlideshow();
+
+            // Start the slideshow
+            setInterval(updateSlideshow, 200);
+          }); // end DOMContentLoaded
+        </script>
+
+    </body>
+</html>
