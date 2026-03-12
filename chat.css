@@ -52,7 +52,6 @@ html, body {
   height: 48px;
   z-index: 2;
   pointer-events: none;
-  /* colour set per-page via --bg-color variable */
   background: linear-gradient(to bottom, var(--bg-color, white), transparent);
 }
 #chat-section {
@@ -61,9 +60,10 @@ html, body {
   overflow-y: auto;
   display: flex;
   flex-direction: column;
+  justify-content: flex-end;
   gap: 14px;
   scrollbar-width: none;
-  padding: 0 0 24px;
+  padding: 48px 0 24px;
 }
 #chat-section::-webkit-scrollbar { display: none; }
 
