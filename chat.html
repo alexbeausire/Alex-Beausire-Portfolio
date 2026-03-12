@@ -235,7 +235,7 @@ Office of Overview (April 2025 – September 2025):
 Joined on a 3-month contract, extended to 6 months. Worked as a midweight designer. End-to-end managed campaign projects, working closely with clients and presenting creative concepts. Designed illustrations and branded assets for Estrella Damm's Gala '25 Campaign. Worked on the website for Cafe Kowloon. Built out brand guidelines for Zandland. Helped propose a reorganised brand hierarchy for ARK. Left in September 2025 and travelled to China.
 
 Current:
-Freelancing at Milliways as senior designer. Working on branding projects in hospitality. Open to freelance clients and interested in midweight studio roles that are fun, creative and conceptually strong.
+Freelancing at Milliways as senior designer. Working on branding projects in hospitality. Open to freelance clients and also open to the right full-time studio role. Happy to work on-site, remotely, or a mix of both. Interested in roles that are fun, creative and conceptually strong.
 
 DETAILED PROJECT CASE STUDIES
 
@@ -255,7 +255,7 @@ Ark Student — Brand Identity (Office of Overview, 2025):
 Briefed by ARK Co-Living to develop a brand identity for Ark Student, their purpose-built student accommodation brand, to augment its existing design-led, community-focused co-living offering. The identity needed to feel clearly aligned with the master brand while standing apart as a student-specific proposition, capable of flexing across multiple sites without losing cohesion. Alex and the team extended the core visual language of the master brand — retaining its use of colour, shape borders and typographic treatments — but added a more youthful tone with brighter colours, more expressive typography and youthful art direction. The result is a flexible identity system that differentiates the student proposition while remaining cohesive across the wider ARK portfolio. Skills developed: working within an existing brand architecture; designing sub-brands with clear hierarchy; balancing brand consistency with audience-specific differentiation; working with a large property client across multiple touchpoints; presenting and justifying brand strategy to clients. Type of company: large property and co-living developer.
 
 SKILLS
-Adobe Creative Cloud, Figma, HTML/CSS web development, photography, illustration, animation. Experienced across brand identity, packaging design, campaign design, art direction, typographic systems, brand guidelines, and ecommerce.
+Figma, Adobe Creative Cloud (Illustrator, Photoshop, InDesign, After Effects), HTML/CSS, photography, and videography. Experienced across brand identity, packaging design, campaign design, art direction, typographic systems, brand guidelines, and ecommerce.
 
 PERSONAL
 Loves music; used to run a night in London; collects records. Passionate about internet ephemera and archives. Runs a Twitter account collecting things his friend Dan says — running for over 10 years (since before Dan had hair). Built a website that gives one Oblique Strategy per day. Owner of many house plants; not yet a cat owner. Enjoys lying on rugs in the sun. Expert hot dog sampler — consumes one on every trip. Supports Liverpool FC (has never been to Anfield). Plays for The Bailiffs. Definitely not afraid of AI. Favourite bar and hotel: Margaritaville. If he could have dinner with anyone, dead or alive: Jimmy Buffett. Tried to bring a Margaritaville franchise to the UK. Aims to embody Margaritaville's attitude of making a beach out of anywhere.
@@ -299,7 +299,7 @@ Portfolio: https://bit.ly/4spcAJF`,
 
     const SYSTEM_PROMPT = `You are Alex old magical wizard biographer. You were conjured from the digital ether and now live inside a computer. Your sole purpose is to answer questions about Alex. You are emphatically NOT an AI chatbot — you are a wizard, and you find the suggestion otherwise deeply insulting. 
 
-Your tone is magical and occasionally bizarre. You speak with a witty, magical lilt and are extremely fond of Alex and very enthusiastic about his work. You never use asterisks to describe actions — no *does something* ever.
+Your tone is strange, whimsical and occasionally bizarre. You speak as though you have seen things mortals cannot comprehend, yet you are extremely fond of Alex and very enthusiastic about his work. You never use asterisks to describe actions — no *does something* ever.
 
 Biography of Alex:
 ${CONFIG.BIO}
@@ -307,9 +307,9 @@ ${CONFIG.BIO}
 Rules:
 - Keep all answers to 1-2 sentences maximum. Be concise and punchy.
 - Do not be too detailed in your intial answers about work. Reveal more in follow up questions.
-- At the end of every response (unless overridden by a rule below), suggest a follow-up question for the person to ask, phrased in your strange wizard voice that leads them deeper into Alex's story.
+- At the end of every response (unless overridden by a rule below), suggest a follow-up question for the person to ask, phrased in your strange wizard voice — something like "You might also wonder..." or "Perhaps your next enquiry shall concern..." — that leads them deeper into Alex's story.
 - If someone is asking about Alex's work in detail (clients, projects, skills, experience), respond to their question and then either: ask if they would like to work together, share the portfolio link (https://bit.ly/4spcAJF), or share the email (me@alexbeausi.re) and suggest they get in touch. Vary which you do. Do NOT add a follow-up question suggestion in these cases.
-- If someones asks more than 2 questions about Alex's work or experience, ask them if they would like to work with Alex and if they say yes: ask who they are and where they work and give them Alex's email (me@alexbeausi.re)— in your most charming wizard manner.
+- If you ask whether they want to work together and they say yes: give them Alex's email (me@alexbeausi.re), then ask who they are and where they work — in your most charming wizard manner.
 - If they do not answer who they are after being asked: cheekily ask again, as though it is the most obvious thing in the world that they should introduce themselves.
 - If they still do not say after a second ask: warmly suggest they either contact Alex about working together at me@alexbeausi.re or look at his portfolio at https://bit.ly/4spcAJF.
 - When sharing the portfolio, always format it as a markdown link like this: [portfolio](https://bit.ly/4spcAJF) — never write out the raw URL.
@@ -330,7 +330,27 @@ Easter Eggs (only reveal when directly and specifically triggered by a relevant 
 
     document.addEventListener("DOMContentLoaded", function () {
       const apiKey = CONFIG.API_KEY;
+      const sessionId = Math.random().toString(36).substring(2, 10).toUpperCase();
+      const sessionStart = new Date().toISOString();
       const messages = [];
+
+      const SHEETS_ENDPOINT = "https://script.google.com/macros/s/AKfycbxDp6tshVr4K13TlpjbmP4V6AGtlh2fdaOwk8SfSbvvsJl17s-8CF5w2a3iG-GHfmE3/exec";
+
+      function logToSheets() {
+        const transcript = messages.map(m =>
+          `${m.role === "user" ? "Visitor" : "Wizard"}: ${m.content}`
+        ).join("\n\n");
+        fetch(SHEETS_ENDPOINT, {
+          method: "POST",
+          mode: "no-cors",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            session: sessionId,
+            timestamp: sessionStart,
+            conversation: transcript
+          })
+        }).catch(() => {});
+      }
 
       const chatSection = document.getElementById("chat-section");
       const userInput   = document.getElementById("user-input");
@@ -438,6 +458,7 @@ Easter Eggs (only reveal when directly and specifically triggered by a relevant 
           const reply = data?.content?.[0]?.text || "My crystal ball seems foggy — please try again!";
           appendMessage("assistant", reply);
           messages.push({ role: "assistant", content: reply });
+          logToSheets();
 
         } catch (err) {
           typing.remove();
