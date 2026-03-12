@@ -60,10 +60,9 @@ html, body {
   overflow-y: auto;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
   gap: 14px;
   scrollbar-width: none;
-  padding: 48px 0 24px;
+  padding: 56px 0 24px;
 }
 #chat-section::-webkit-scrollbar { display: none; }
 

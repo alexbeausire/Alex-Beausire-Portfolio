@@ -206,8 +206,12 @@ Easter Eggs (only reveal when directly and specifically triggered):
       const totalSuggestions = suggestionBtns.length;
       let askedCount = 0;
 
-      function scrollToBottom() {
-        chatSection.scrollTop = chatSection.scrollHeight;
+      function scrollToEl(el, alignTop) {
+        // Scroll so element top is just below the fade (56px offset)
+        const wrapperTop = chatSection.getBoundingClientRect().top;
+        const elTop = el.getBoundingClientRect().top;
+        const offset = elTop - wrapperTop - 56;
+        chatSection.scrollTop += offset;
       }
 
       function linkify(text) {
@@ -228,7 +232,7 @@ Easter Eggs (only reveal when directly and specifically triggered):
         el.style.whiteSpace = "pre-wrap";
         el.innerHTML = linkify(text);
         chatSection.appendChild(el);
-        scrollToBottom();
+        scrollToEl(el);
         return el;
       }
 
@@ -237,7 +241,7 @@ Easter Eggs (only reveal when directly and specifically triggered):
         el.className = "msg-assistant typing";
         el.innerHTML = "<span></span><span></span><span></span>";
         chatSection.appendChild(el);
-        scrollToBottom();
+        scrollToEl(el);
         return el;
       }
 
