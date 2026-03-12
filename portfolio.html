@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Alex Beausire | Portfolio</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link href="portfolio.css" rel="stylesheet" type="text/css">
+  <link rel='icon' href='images/favicon.ico' type='images/favicon.ico'/>
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+    }
+    nav.navbar {
+      z-index: 10;
+    }
+    #pres-wrap {
+      position: fixed;
+      top: 51px; /* below navbar */
+      left: 0;
+      right: 0;
+      bottom: 0;
+    }
+    #pres-wrap iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+      display: block;
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar navbar-default fixed-top">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="index.html"><img src="images/gif.gif"></a>
+      </div>
+      <div class="collapse navbar-collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="mailto:me@alexbeausi.re"><u>me@alexbeausi.re</u><br/>say hi!</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div id="pres-wrap">
+    <iframe src="https://embed.figma.com/slides/fwVInLeUtNea72tzf8NFPp/Alex-Beausire-%7C-Portfolio?node-id=1-177&embed-host=share" allowfullscreen></iframe>
+  </div>
+
+</body>
+</html>
