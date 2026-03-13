@@ -37,8 +37,22 @@
   
 
   <div id="pres-wrap">
-    <iframe src="https://embed.figma.com/slides/fwVInLeUtNea72tzf8NFPp/Alex-Beausire-%7C-Portfolio?node-id=1-177&embed-host=share" allowfullscreen></iframe>
+    <iframe id="figma-frame" src="https://embed.figma.com/slides/fwVInLeUtNea72tzf8NFPp/Alex-Beausire-%7C-Portfolio?node-id=1-177&embed-host=share" allowfullscreen></iframe>
   </div>
+
+  <script>
+    const frame = document.getElementById('figma-frame');
+    // Focus iframe on load so arrow keys work immediately
+    frame.addEventListener('load', () => frame.focus());
+    // Re-focus if user clicks anywhere on the page
+    document.addEventListener('click', () => frame.focus());
+    // Also forward arrow key events from the parent page into the iframe
+    document.addEventListener('keydown', (e) => {
+      if (['ArrowLeft','ArrowRight','ArrowUp','ArrowDown'].includes(e.key)) {
+        frame.focus();
+      }
+    });
+  </script>
 
 </body>
 </html>
