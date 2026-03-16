@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Alex Beausire | Portfolio</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link href="portfolio.css" rel="stylesheet" type="text/css">
+  <link rel='icon' href='images/favicon.ico' type='images/favicon.ico'/>
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background: #000;
+    }
+    #pres-wrap {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+    }
+    #pres-wrap iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+      display: block;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="pres-wrap">
+    <iframe src="https://embed.figma.com/deck/fwVInLeUtNea72tzf8NFPp/Alex-Beausire-%7C-Portfolio?node-id=1-177&viewport=-3649%2C-3226%2C0.8&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&embed-host=share" allowfullscreen></iframe>
+  </div>
+
+  <script>
+    window.addEventListener('message', function(e) {
+      console.log('origin:', e.origin);
+      console.log('data:', JSON.stringify(e.data));
+    });
+  </script>
+
+</body>
+</html>
