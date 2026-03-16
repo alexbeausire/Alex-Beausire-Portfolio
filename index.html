@@ -11,7 +11,24 @@
         <script src="https://code.jquery.com/jquery-latest.js" type="text/javascript"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
         <script src="https://designedbyaturtle.com/demos/horizontal-scrolling/jquery.mousewheel.min.js"></script>
-    </head>
+      <script>
+    (function() {
+      const ENDPOINT = "https://script.google.com/macros/s/AKfycbw9Edzp2uXH99xXlLwtAjZf4QG1asTwFfZjkS4V8H86n9dWZFAk8PPRRFuEPuGQgNLj/exec";
+      const sessionId = Math.random().toString(36).substring(2, 10).toUpperCase();
+      const startTime = Date.now();
+      const page = window.location.pathname.split("/").pop() || "index.html";
+      fetch(ENDPOINT, {
+        method: "POST", mode: "no-cors",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ type: "visit", session: sessionId, page: page, timestamp: new Date().toISOString(), duration: "" })
+      }).catch(() => {});
+      window.addEventListener("beforeunload", function() {
+        const duration = Math.round((Date.now() - startTime) / 1000);
+        navigator.sendBeacon(ENDPOINT, JSON.stringify({ type: "visit", session: sessionId, page: page, timestamp: new Date().toISOString(), duration: duration }));
+      });
+    })();
+  </script>
+</head>
 
     <body>
 
@@ -22,7 +39,7 @@
             </div>
             <div class="collapse navbar-collapse">
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="/cdn-cgi/l/email-protection#90fdf5d0f1fcf5e8f2f5f1e5e3f9bee2f5"><u><span class="__cf_email__" data-cfemail="ea878faa8b868f92888f8b9f9983c4988f">[email&#160;protected]</span></u><br/>say hi!</a></li>
+                    <li id="email-nav-item"><script>document.getElementById('email-nav-item').innerHTML='<a href="mailto:me@alexbeausi.re"><u>me@alexbeausi.re</u><br/>say hi!</a>';</script></li>
                 </ul>
             </div>
         </div>
@@ -32,7 +49,7 @@
             <div class="col-md-6 col1">
                 <p>I'm Alex, a freelance graphic designer/ art director. If you want to know more about me chat to my <a href="https://alexbeausi.re/mum.html"><u>mum</u></a>, <a href="https://alexbeausi.re/landlord.html"><u>landlord</u></a> or <a href="https://alexbeausi.re/chat.html"><u>wizard biographer</u></a></p>
                 <p>While you're here take a look at my <a href="https://alexbeausi.re/portfolio.html"><u>portfolio</u></a> or have a look at what's going on in my <a href="https://alexbeausi.re/webcam.html"><u>studio</u></a></p>
-                <p>If you'd like to work with me send an electronic mail to <a href="/cdn-cgi/l/email-protection#b1dcd4f1d0ddd4c9d3d4d0c4c2d89fc3d4"><u><span class="__cf_email__" data-cfemail="167b7356777a736e74737763657f386473">[email&#160;protected]</span></u></a></p>
+                <p>If you'd like to work with me send an electronic mail to <span id="email-body"></span><script>document.getElementById('email-body').innerHTML='<a href="mailto:me@alexbeausi.re"><u>me@alexbeausi.re</u></a>';</script></p>
                 <p></p>
             </div>
             <div class="col-md-6 col2">
