@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Alex Beausire | Dashboard</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #111;
+      color: #eee;
+      min-height: 100vh;
+      padding: 40px 24px;
+    }
+
+    h1 {
+      font-size: 20px;
+      font-weight: bold;
+      margin-bottom: 32px;
+      color: #c8f400;
+      letter-spacing: 0.02em;
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 16px;
+      margin-bottom: 40px;
+    }
+
+    .stat-card {
+      background: #1c1c1c;
+      border-radius: 12px;
+      padding: 24px 20px;
+    }
+
+    .stat-card .label {
+      font-size: 12px;
+      color: #888;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 10px;
+    }
+
+    .stat-card .value {
+      font-size: 36px;
+      font-weight: bold;
+      color: #c8f400;
+    }
+
+    .stat-card .sub {
+      font-size: 13px;
+      color: #666;
+      margin-top: 4px;
+    }
+
+    h2 {
+      font-size: 14px;
+      color: #888;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 14px;
+    }
+
+    .page-bars {
+      margin-bottom: 40px;
+    }
+
+    .bar-row {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 10px;
+    }
+
+    .bar-label {
+      width: 130px;
+      font-size: 13px;
+      color: #ccc;
+      flex-shrink: 0;
+    }
+
+    .bar-track {
+      flex: 1;
+      height: 8px;
+      background: #2a2a2a;
+      border-radius: 99px;
+      overflow: hidden;
+    }
+
+    .bar-fill {
+      height: 100%;
+      background: #c8f400;
+      border-radius: 99px;
+      transition: width 0.6s ease;
+    }
+
+    .bar-count {
+      font-size: 13px;
+      color: #666;
+      width: 32px;
+      text-align: right;
+      flex-shrink: 0;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13px;
+    }
+
+    th {
+      text-align: left;
+      color: #555;
+      font-weight: normal;
+      padding: 0 12px 10px 0;
+      border-bottom: 1px solid #222;
+      text-transform: uppercase;
+      font-size: 11px;
+      letter-spacing: 0.06em;
+    }
+
+    td {
+      padding: 10px 12px 10px 0;
+      border-bottom: 1px solid #1a1a1a;
+      color: #bbb;
+    }
+
+    td.page-cell {
+      color: #c8f400;
+      font-weight: bold;
+    }
+
+    .loading {
+      color: #555;
+      font-size: 14px;
+      margin-top: 60px;
+      text-align: center;
+    }
+
+    .refresh-btn {
+      background: #1c1c1c;
+      border: 1px solid #333;
+      color: #888;
+      padding: 8px 16px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 13px;
+      font-family: Arial, Helvetica, sans-serif;
+      margin-bottom: 32px;
+      transition: color 0.15s;
+    }
+    .refresh-btn:hover { color: #c8f400; }
+
+    .error { color: #ff6b6b; font-size: 14px; margin-top: 40px; }
+  </style>
+</head>
+<body>
+
+  <h1>alexbeausi.re — dashboard</h1>
+  <button class="refresh-btn" onclick="load()">↻ Refresh</button>
+
+  <div id="content"><p class="loading">Loading...</p></div>
+
+  <script>
+    const ENDPOINT = "https://script.google.com/macros/s/AKfycbwxHVi2DanO8jzYMbVamm1_odIE71EbCc2p2zo1pCcrs97zKJAIWodmm_L4A-sm1Eu0/exec";
+
+    function formatDuration(s) {
+      if (!s || s === "") return "—";
+      const secs = Number(s);
+      if (isNaN(secs) || secs <= 0) return "—";
+      if (secs < 60) return secs + "s";
+      const m = Math.floor(secs / 60);
+      const r = secs % 60;
+      return r > 0 ? `${m}m ${r}s` : `${m}m`;
+    }
+
+    function formatTime(ts) {
+      if (!ts) return "—";
+      const d = new Date(ts);
+      if (isNaN(d)) return ts;
+      return d.toLocaleDateString("en-GB", { day: "numeric", month: "short" })
+        + " " + d.toLocaleTimeString("en-GB", { hour: "2-digit", minute: "2-digit" });
+    }
+
+    async function load() {
+      document.getElementById("content").innerHTML = '<p class="loading">Loading...</p>';
+      try {
+        const res = await fetch(ENDPOINT + "?action=stats");
+        const data = await res.json();
+        render(data);
+      } catch(err) {
+        document.getElementById("content").innerHTML =
+          `<p class="error">Could not load data. Check the Apps Script is deployed correctly.<br><small>${err}</small></p>`;
+      }
+    }
+
+    function render(data) {
+      const { totalVisits, pageCounts, avgDuration, visits } = data;
+      const maxCount = Math.max(...Object.values(pageCounts || {}), 1);
+
+      const bars = Object.entries(pageCounts || {})
+        .sort((a, b) => b[1] - a[1])
+        .map(([page, count]) => `
+          <div class="bar-row">
+            <span class="bar-label">${page}</span>
+            <div class="bar-track">
+              <div class="bar-fill" style="width:${Math.round((count / maxCount) * 100)}%"></div>
+            </div>
+            <span class="bar-count">${count}</span>
+          </div>`).join("");
+
+      const rows = (visits || []).map(v => `
+        <tr>
+          <td class="page-cell">${v.page || "—"}</td>
+          <td>${formatTime(v.timestamp)}</td>
+          <td>${formatDuration(v.duration)}</td>
+        </tr>`).join("");
+
+      document.getElementById("content").innerHTML = `
+        <div class="stats-grid">
+          <div class="stat-card">
+            <div class="label">Total visits</div>
+            <div class="value">${totalVisits}</div>
+          </div>
+          <div class="stat-card">
+            <div class="label">Avg. time on page</div>
+            <div class="value">${formatDuration(avgDuration)}</div>
+          </div>
+          <div class="stat-card">
+            <div class="label">Pages tracked</div>
+            <div class="value">${Object.keys(pageCounts || {}).length}</div>
+          </div>
+        </div>
+
+        <h2>Visits by page</h2>
+        <div class="page-bars">${bars || "<p style='color:#555;font-size:13px'>No data yet.</p>"}</div>
+
+        <h2>Recent visits</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Page</th>
+              <th>Time</th>
+              <th>Duration</th>
+            </tr>
+          </thead>
+          <tbody>${rows || "<tr><td colspan='3' style='color:#555'>No visits yet.</td></tr>"}</tbody>
+        </table>
+      `;
+    }
+
+    load();
+  </script>
+
+</body>
+</html>
