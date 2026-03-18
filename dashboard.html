@@ -3,257 +3,738 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Alex Beausire | Dashboard</title>
+  <title>alexbeausi.re — dashboard</title>
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
+    @import url('https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300&family=DM+Sans:wght@300;400;500&display=swap');
 
-    body {
-      font-family: Arial, Helvetica, sans-serif;
-      background: #111;
-      color: #eee;
+    :root {
+      --bg: #0e0e0e;
+      --surface: #161616;
+      --border: #2a2a2a;
+      --accent: #c8f400;
+      --accent2: #2c2cb0;
+      --text: #e8e8e8;
+      --muted: #666;
+      --red: #ff4444;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html, body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'DM Sans', sans-serif;
       min-height: 100vh;
-      padding: 40px 24px;
     }
 
-    h1 {
-      font-size: 20px;
-      font-weight: bold;
-      margin-bottom: 32px;
-      color: #c8f400;
-      letter-spacing: 0.02em;
-    }
-
-    .stats-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    /* ── Auth overlay ── */
+    #auth-screen {
+      position: fixed; inset: 0;
+      background: var(--bg);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
       gap: 16px;
-      margin-bottom: 40px;
+      z-index: 100;
     }
-
-    .stat-card {
-      background: #1c1c1c;
-      border-radius: 12px;
-      padding: 24px 20px;
-    }
-
-    .stat-card .label {
-      font-size: 12px;
-      color: #888;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      margin-bottom: 10px;
-    }
-
-    .stat-card .value {
-      font-size: 36px;
-      font-weight: bold;
-      color: #c8f400;
-    }
-
-    .stat-card .sub {
+    #auth-screen h1 {
+      font-family: 'DM Mono', monospace;
       font-size: 13px;
-      color: #666;
-      margin-top: 4px;
-    }
-
-    h2 {
-      font-size: 14px;
-      color: #888;
+      letter-spacing: 0.1em;
+      color: var(--muted);
       text-transform: uppercase;
-      letter-spacing: 0.08em;
-      margin-bottom: 14px;
+    }
+    #auth-screen input {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      color: var(--text);
+      font-family: 'DM Mono', monospace;
+      font-size: 14px;
+      padding: 10px 16px;
+      border-radius: 4px;
+      outline: none;
+      width: 220px;
+      text-align: center;
+      letter-spacing: 0.15em;
+    }
+    #auth-screen input:focus { border-color: var(--accent); }
+    #auth-error {
+      font-family: 'DM Mono', monospace;
+      font-size: 11px;
+      color: var(--red);
+      display: none;
     }
 
-    .page-bars {
-      margin-bottom: 40px;
-    }
+    /* ── Layout ── */
+    #app { display: block; }
 
-    .bar-row {
+    header {
+      border-bottom: 1px solid var(--border);
+      padding: 20px 32px;
       display: flex;
       align-items: center;
-      gap: 12px;
-      margin-bottom: 10px;
+      justify-content: space-between;
+    }
+    header h1 {
+      font-family: 'DM Mono', monospace;
+      font-size: 12px;
+      letter-spacing: 0.12em;
+      color: var(--muted);
+      text-transform: uppercase;
+    }
+    #last-updated {
+      font-family: 'DM Mono', monospace;
+      font-size: 11px;
+      color: var(--muted);
+    }
+    #refresh-btn {
+      background: none;
+      border: 1px solid var(--border);
+      color: var(--muted);
+      font-family: 'DM Mono', monospace;
+      font-size: 11px;
+      padding: 5px 12px;
+      border-radius: 3px;
+      cursor: pointer;
+      transition: all 0.15s;
+    }
+    #refresh-btn:hover { border-color: var(--accent); color: var(--accent); }
+
+    main {
+      padding: 32px;
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
     }
 
-    .bar-label {
-      width: 130px;
-      font-size: 13px;
-      color: #ccc;
-      flex-shrink: 0;
+    /* ── Section labels ── */
+    .section-label {
+      font-family: 'DM Mono', monospace;
+      font-size: 10px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 16px;
     }
 
-    .bar-track {
-      flex: 1;
-      height: 8px;
-      background: #2a2a2a;
-      border-radius: 99px;
+    /* ── Stat cards ── */
+    .stat-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 1px;
+      background: var(--border);
+      border: 1px solid var(--border);
+      border-radius: 6px;
       overflow: hidden;
     }
-
-    .bar-fill {
-      height: 100%;
-      background: #c8f400;
-      border-radius: 99px;
-      transition: width 0.6s ease;
+    .stat-card {
+      background: var(--surface);
+      padding: 24px 20px;
+    }
+    .stat-card .label {
+      font-family: 'DM Mono', monospace;
+      font-size: 10px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 10px;
+    }
+    .stat-card .value {
+      font-family: 'DM Mono', monospace;
+      font-size: 32px;
+      font-weight: 500;
+      color: var(--accent);
+      line-height: 1;
+    }
+    .stat-card .sub {
+      font-family: 'DM Mono', monospace;
+      font-size: 11px;
+      color: var(--muted);
+      margin-top: 6px;
     }
 
-    .bar-count {
+    /* ── Page split ── */
+    .page-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+    }
+    @media (max-width: 700px) { .page-grid { grid-template-columns: 1fr; } }
+
+    .page-block {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      overflow: hidden;
+    }
+    .page-block-header {
+      padding: 14px 20px;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .page-block-header .page-name {
+      font-family: 'DM Mono', monospace;
+      font-size: 12px;
+      color: var(--accent);
+    }
+    .page-block-header .page-count {
+      font-family: 'DM Mono', monospace;
+      font-size: 11px;
+      color: var(--muted);
+    }
+    .page-block-inner {
+      padding: 16px 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .page-stat-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .page-stat-row .k {
+      font-family: 'DM Mono', monospace;
+      font-size: 10px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+    .page-stat-row .v {
+      font-family: 'DM Mono', monospace;
       font-size: 13px;
-      color: #666;
-      width: 32px;
-      text-align: right;
-      flex-shrink: 0;
+      color: var(--text);
+    }
+
+    /* ── Session table ── */
+    .table-wrap {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      overflow: hidden;
+    }
+    .table-header {
+      padding: 14px 20px;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .table-header span {
+      font-family: 'DM Mono', monospace;
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    /* Tab controls */
+    .tabs {
+      display: flex;
+      gap: 2px;
+    }
+    .tab-btn {
+      background: none;
+      border: 1px solid var(--border);
+      color: var(--muted);
+      font-family: 'DM Mono', monospace;
+      font-size: 10px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 5px 10px;
+      border-radius: 3px;
+      cursor: pointer;
+      transition: all 0.15s;
+    }
+    .tab-btn.active, .tab-btn:hover {
+      border-color: var(--accent);
+      color: var(--accent);
     }
 
     table {
       width: 100%;
       border-collapse: collapse;
-      font-size: 13px;
+      font-family: 'DM Mono', monospace;
+      font-size: 12px;
     }
-
-    th {
+    thead th {
+      padding: 10px 20px;
       text-align: left;
-      color: #555;
-      font-weight: normal;
-      padding: 0 12px 10px 0;
-      border-bottom: 1px solid #222;
+      font-size: 10px;
+      letter-spacing: 0.12em;
       text-transform: uppercase;
-      font-size: 11px;
-      letter-spacing: 0.06em;
+      color: var(--muted);
+      border-bottom: 1px solid var(--border);
+      font-weight: 400;
     }
-
-    td {
-      padding: 10px 12px 10px 0;
-      border-bottom: 1px solid #1a1a1a;
-      color: #bbb;
+    tbody tr {
+      border-bottom: 1px solid var(--border);
+      transition: background 0.1s;
     }
-
-    td.page-cell {
-      color: #c8f400;
-      font-weight: bold;
+    tbody tr:last-child { border-bottom: none; }
+    tbody tr:hover { background: rgba(200,244,0,0.03); }
+    tbody td {
+      padding: 10px 20px;
+      color: var(--text);
+      vertical-align: top;
     }
+    .pill {
+      display: inline-block;
+      padding: 2px 8px;
+      border-radius: 999px;
+      font-size: 10px;
+      letter-spacing: 0.05em;
+    }
+    .pill-mobile { background: rgba(44,44,176,0.3); color: #8888ff; }
+    .pill-desktop { background: rgba(200,244,0,0.12); color: var(--accent); }
 
+    /* ── Conversations ── */
+    .conv-list {
+      display: flex;
+      flex-direction: column;
+    }
+    .conv-row {
+      border-bottom: 1px solid var(--border);
+      padding: 16px 20px;
+      cursor: pointer;
+      transition: background 0.1s;
+    }
+    .conv-row:last-child { border-bottom: none; }
+    .conv-row:hover { background: rgba(200,244,0,0.03); }
+    .conv-meta {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 6px;
+    }
+    .conv-meta .conv-source {
+      font-family: 'DM Mono', monospace;
+      font-size: 10px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--accent);
+    }
+    .conv-meta .conv-time {
+      font-family: 'DM Mono', monospace;
+      font-size: 10px;
+      color: var(--muted);
+    }
+    .conv-preview {
+      font-size: 13px;
+      color: var(--muted);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .conv-full {
+      display: none;
+      margin-top: 12px;
+      font-family: 'DM Mono', monospace;
+      font-size: 12px;
+      line-height: 1.7;
+      color: var(--text);
+      white-space: pre-wrap;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: 14px 16px;
+    }
+    .conv-row.open .conv-full { display: block; }
+    .conv-row.open .conv-preview { display: none; }
+
+    /* ── Loading / empty states ── */
     .loading {
-      color: #555;
-      font-size: 14px;
-      margin-top: 60px;
+      font-family: 'DM Mono', monospace;
+      font-size: 12px;
+      color: var(--muted);
+      padding: 32px 20px;
       text-align: center;
     }
 
-    .refresh-btn {
-      background: #1c1c1c;
-      border: 1px solid #333;
-      color: #888;
-      padding: 8px 16px;
-      border-radius: 8px;
-      cursor: pointer;
-      font-size: 13px;
-      font-family: Arial, Helvetica, sans-serif;
-      margin-bottom: 32px;
-      transition: color 0.15s;
+    /* ── Location bar chart ── */
+    .loc-list {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      padding: 20px;
     }
-    .refresh-btn:hover { color: #c8f400; }
-
-    .error { color: #ff6b6b; font-size: 14px; margin-top: 40px; }
+    .loc-row {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .loc-name {
+      font-family: 'DM Mono', monospace;
+      font-size: 11px;
+      color: var(--text);
+      width: 140px;
+      flex-shrink: 0;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .loc-bar-wrap {
+      flex: 1;
+      height: 6px;
+      background: var(--border);
+      border-radius: 999px;
+      overflow: hidden;
+    }
+    .loc-bar {
+      height: 100%;
+      background: var(--accent);
+      border-radius: 999px;
+      transition: width 0.6s ease;
+    }
+    .loc-count {
+      font-family: 'DM Mono', monospace;
+      font-size: 11px;
+      color: var(--muted);
+      width: 24px;
+      text-align: right;
+      flex-shrink: 0;
+    }
   </style>
 </head>
 <body>
 
-  <h1>alexbeausi.re — dashboard</h1>
-  <button class="refresh-btn" onclick="load()">↻ Refresh</button>
+<div id="app">
+  <header>
+    <h1>alexbeausi.re / dashboard</h1>
+    <div style="display:flex;align-items:center;gap:16px;">
+      <span id="last-updated"></span>
+      <button id="refresh-btn">↻ refresh</button>
+    </div>
+  </header>
 
-  <div id="content"><p class="loading">Loading...</p></div>
+  <main>
 
-  <script>
-    const ENDPOINT = "https://script.google.com/macros/s/AKfycbwxHVi2DanO8jzYMbVamm1_odIE71EbCc2p2zo1pCcrs97zKJAIWodmm_L4A-sm1Eu0/exec";
+    <!-- Top stats -->
+    <section>
+      <div class="section-label">Overview</div>
+      <div class="stat-grid">
+        <div class="stat-card">
+          <div class="label">Total sessions</div>
+          <div class="value" id="stat-total">—</div>
+        </div>
+        <div class="stat-card">
+          <div class="label">index.html</div>
+          <div class="value" id="stat-index">—</div>
+          <div class="sub" id="stat-index-avg">avg — s</div>
+        </div>
+        <div class="stat-card">
+          <div class="label">portfolio.html</div>
+          <div class="value" id="stat-portfolio">—</div>
+          <div class="sub" id="stat-portfolio-avg">avg — s</div>
+        </div>
+        <div class="stat-card">
+          <div class="label">Conversations</div>
+          <div class="value" id="stat-convos">—</div>
+          <div class="sub">across all chat pages</div>
+        </div>
+        <div class="stat-card">
+          <div class="label">Mobile sessions</div>
+          <div class="value" id="stat-mobile">—</div>
+        </div>
+      </div>
+    </section>
 
-    function formatDuration(s) {
-      if (!s || s === "") return "—";
-      const secs = Number(s);
-      if (isNaN(secs) || secs <= 0) return "—";
-      if (secs < 60) return secs + "s";
-      const m = Math.floor(secs / 60);
-      const r = secs % 60;
-      return r > 0 ? `${m}m ${r}s` : `${m}m`;
-    }
+    <!-- Page breakdown -->
+    <section>
+      <div class="section-label">By page</div>
+      <div class="page-grid" id="page-grid">
+        <div class="loading">loading...</div>
+      </div>
+    </section>
 
-    function formatTime(ts) {
-      if (!ts) return "—";
-      const d = new Date(ts);
-      if (isNaN(d)) return ts;
-      return d.toLocaleDateString("en-GB", { day: "numeric", month: "short" })
-        + " " + d.toLocaleTimeString("en-GB", { hour: "2-digit", minute: "2-digit" });
-    }
+    <!-- Locations -->
+    <section>
+      <div class="section-label">Locations</div>
+      <div class="table-wrap">
+        <div class="loc-list" id="loc-list">
+          <div class="loading">loading...</div>
+        </div>
+      </div>
+    </section>
 
-    async function load() {
-      document.getElementById("content").innerHTML = '<p class="loading">Loading...</p>';
-      try {
-        const res = await fetch(ENDPOINT + "?action=stats");
-        const data = await res.json();
-        render(data);
-      } catch(err) {
-        document.getElementById("content").innerHTML =
-          `<p class="error">Could not load data. Check the Apps Script is deployed correctly.<br><small>${err}</small></p>`;
-      }
-    }
-
-    function render(data) {
-      const { totalVisits, pageCounts, avgDuration, visits } = data;
-      const maxCount = Math.max(...Object.values(pageCounts || {}), 1);
-
-      const bars = Object.entries(pageCounts || {})
-        .sort((a, b) => b[1] - a[1])
-        .map(([page, count]) => `
-          <div class="bar-row">
-            <span class="bar-label">${page}</span>
-            <div class="bar-track">
-              <div class="bar-fill" style="width:${Math.round((count / maxCount) * 100)}%"></div>
-            </div>
-            <span class="bar-count">${count}</span>
-          </div>`).join("");
-
-      const rows = (visits || []).map(v => `
-        <tr>
-          <td class="page-cell">${v.page || "—"}</td>
-          <td>${formatTime(v.timestamp)}</td>
-          <td>${formatDuration(v.duration)}</td>
-        </tr>`).join("");
-
-      document.getElementById("content").innerHTML = `
-        <div class="stats-grid">
-          <div class="stat-card">
-            <div class="label">Total visits</div>
-            <div class="value">${totalVisits}</div>
-          </div>
-          <div class="stat-card">
-            <div class="label">Avg. time on page</div>
-            <div class="value">${formatDuration(avgDuration)}</div>
-          </div>
-          <div class="stat-card">
-            <div class="label">Pages tracked</div>
-            <div class="value">${Object.keys(pageCounts || {}).length}</div>
+    <!-- Session log -->
+    <section>
+      <div class="section-label">Session log</div>
+      <div class="table-wrap">
+        <div class="table-header">
+          <span>Recent sessions</span>
+          <div class="tabs">
+            <button class="tab-btn active" data-filter="all">All</button>
+            <button class="tab-btn" data-filter="index.html">Index</button>
+            <button class="tab-btn" data-filter="portfolio.html">Portfolio</button>
           </div>
         </div>
+        <div id="session-table-wrap">
+          <div class="loading">loading...</div>
+        </div>
+      </div>
+    </section>
 
-        <h2>Visits by page</h2>
-        <div class="page-bars">${bars || "<p style='color:#555;font-size:13px'>No data yet.</p>"}</div>
+    <!-- Conversations -->
+    <section>
+      <div class="section-label">Conversations</div>
+      <div class="table-wrap">
+        <div class="table-header">
+          <span>All chat logs</span>
+          <div class="tabs">
+            <button class="tab-btn active" data-conv-filter="all">All</button>
+            <button class="tab-btn" data-conv-filter="wizard">Wizard</button>
+            <button class="tab-btn" data-conv-filter="mum">Mum</button>
+            <button class="tab-btn" data-conv-filter="landlord">Landlord</button>
+          </div>
+        </div>
+        <div class="conv-list" id="conv-list">
+          <div class="loading">loading...</div>
+        </div>
+      </div>
+    </section>
 
-        <h2>Recent visits</h2>
-        <table>
-          <thead>
-            <tr>
-              <th>Page</th>
-              <th>Time</th>
-              <th>Duration</th>
-            </tr>
-          </thead>
-          <tbody>${rows || "<tr><td colspan='3' style='color:#555'>No visits yet.</td></tr>"}</tbody>
-        </table>
+  </main>
+</div>
+
+<script>
+  const ENDPOINT = "https://script.google.com/macros/s/AKfycbwqKOmbh-X7GrF8wDKqU7Om9Ybj-dDeOj2WXBIvKgxgPL2eijhBCs5rhWYGJO9Jn-9S/exec";
+
+  // ── Data ──
+  let allVisits = [];
+  let allConvos = [];
+  let activeFilter = 'all';
+  let activeConvFilter = 'all';
+
+  async function loadData() {
+    try {
+      const [statsRes, convRes] = await Promise.all([
+        fetch(`${ENDPOINT}?action=stats`),
+        fetch(`${ENDPOINT}?action=conversations`)
+      ]);
+      const stats = await statsRes.json();
+      const convData = await convRes.json();
+
+      allVisits = stats.visits || [];
+      allConvos = convData.conversations || [];
+
+      renderStats(stats);
+      renderPageBreakdown(stats);
+      renderLocations(allVisits);
+      renderSessionTable(allVisits, activeFilter);
+      renderConversations(allConvos, activeConvFilter);
+
+      document.getElementById('last-updated').textContent =
+        'updated ' + new Date().toLocaleTimeString('en-GB', { hour: '2-digit', minute: '2-digit' });
+
+    } catch(err) {
+      console.error(err);
+    }
+  }
+
+  document.getElementById('refresh-btn').addEventListener('click', loadData);
+  loadData();
+
+  // ── Stats ──
+  function renderStats(stats) {
+    document.getElementById('stat-total').textContent = stats.totalVisits || 0;
+
+    const indexVisits = (stats.visits || []).filter(v => v.page === 'index.html');
+    const portVisits  = (stats.visits || []).filter(v => v.page === 'portfolio.html');
+    const mobileCount = (stats.visits || []).filter(v => v.device === 'mobile').length;
+
+    document.getElementById('stat-index').textContent = indexVisits.length;
+    document.getElementById('stat-portfolio').textContent = portVisits.length;
+    document.getElementById('stat-mobile').textContent = mobileCount;
+
+    const avgDur = arr => {
+      const d = arr.map(v => Number(v.duration)).filter(d => d > 0);
+      return d.length ? Math.round(d.reduce((a,b) => a+b,0)/d.length) : null;
+    };
+
+    const iAvg = avgDur(indexVisits);
+    const pAvg = avgDur(portVisits);
+    document.getElementById('stat-index-avg').textContent = iAvg ? `avg ${formatDuration(iAvg)}` : 'no duration data yet';
+    document.getElementById('stat-portfolio-avg').textContent = pAvg ? `avg ${formatDuration(pAvg)}` : 'no duration data yet';
+    document.getElementById('stat-convos').textContent = allConvos.length || 0;
+  }
+
+  // ── Page breakdown ──
+  function renderPageBreakdown(stats) {
+    const pages = ['index.html', 'portfolio.html', 'chat.html', 'mum.html', 'landlord.html'];
+    const visits = stats.visits || [];
+    const el = document.getElementById('page-grid');
+    el.innerHTML = '';
+
+    pages.forEach(page => {
+      const pvs = visits.filter(v => v.page === page);
+      if (!pvs.length) return;
+      const durs = pvs.map(v => Number(v.duration)).filter(d => d > 0);
+      const avg = durs.length ? Math.round(durs.reduce((a,b)=>a+b,0)/durs.length) : null;
+      const mobile = pvs.filter(v => v.device === 'mobile').length;
+
+      const block = document.createElement('div');
+      block.className = 'page-block';
+      block.innerHTML = `
+        <div class="page-block-header">
+          <span class="page-name">${page}</span>
+          <span class="page-count">${pvs.length} session${pvs.length !== 1 ? 's' : ''}</span>
+        </div>
+        <div class="page-block-inner">
+          <div class="page-stat-row">
+            <span class="k">Avg duration</span>
+            <span class="v">${avg ? formatDuration(avg) : '—'}</span>
+          </div>
+          <div class="page-stat-row">
+            <span class="k">Mobile</span>
+            <span class="v">${mobile} / ${pvs.length}</span>
+          </div>
+        </div>
       `;
+      el.appendChild(block);
+    });
+
+    if (!el.children.length) {
+      el.innerHTML = '<div class="loading">no page data yet</div>';
+    }
+  }
+
+  // ── Locations ──
+  function renderLocations(visits) {
+    const locMap = {};
+    visits.forEach(v => {
+      const loc = v.location || 'Unknown';
+      locMap[loc] = (locMap[loc] || 0) + 1;
+    });
+    const sorted = Object.entries(locMap).sort((a,b) => b[1]-a[1]).slice(0, 12);
+    const max = sorted[0]?.[1] || 1;
+    const el = document.getElementById('loc-list');
+    if (!sorted.length) { el.innerHTML = '<div class="loading">no location data yet</div>'; return; }
+    el.innerHTML = sorted.map(([loc, count]) => `
+      <div class="loc-row">
+        <span class="loc-name">${loc}</span>
+        <div class="loc-bar-wrap">
+          <div class="loc-bar" style="width:${(count/max*100).toFixed(1)}%"></div>
+        </div>
+        <span class="loc-count">${count}</span>
+      </div>
+    `).join('');
+  }
+
+  // ── Session table ──
+  function renderSessionTable(visits, filter) {
+    const filtered = filter === 'all' ? visits : visits.filter(v => v.page === filter);
+    const el = document.getElementById('session-table-wrap');
+
+    if (!filtered.length) {
+      el.innerHTML = '<div class="loading">no sessions yet</div>';
+      return;
     }
 
-    load();
-  </script>
+    el.innerHTML = `
+      <table>
+        <thead>
+          <tr>
+            <th>Session</th>
+            <th>Page</th>
+            <th>Time</th>
+            <th>Duration</th>
+            <th>Location</th>
+            <th>Device</th>
+          </tr>
+        </thead>
+        <tbody>
+          ${filtered.slice(0, 50).map(v => `
+            <tr>
+              <td style="color:var(--muted)">${v.session}</td>
+              <td>${v.page || '—'}</td>
+              <td>${formatTime(v.timestamp)}</td>
+              <td>${formatDuration(v.duration)}</td>
+              <td>${v.location || '—'}</td>
+              <td>${v.device
+                ? `<span class="pill ${v.device === 'mobile' ? 'pill-mobile' : 'pill-desktop'}">${v.device}</span>`
+                : '—'}</td>
+            </tr>
+          `).join('')}
+        </tbody>
+      </table>
+    `;
+  }
+
+  // Tab filter — sessions
+  document.querySelectorAll('[data-filter]').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('[data-filter]').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      activeFilter = btn.dataset.filter;
+      renderSessionTable(allVisits, activeFilter);
+    });
+  });
+
+  // ── Conversations ──
+  function renderConversations(convos, filter) {
+    const filtered = filter === 'all' ? convos : convos.filter(c => c.source === filter);
+    const el = document.getElementById('conv-list');
+
+    if (!filtered.length) {
+      el.innerHTML = '<div class="loading">no conversations yet</div>';
+      return;
+    }
+
+    el.innerHTML = '';
+    filtered.forEach(c => {
+      const row = document.createElement('div');
+      row.className = 'conv-row';
+      const preview = (c.conversation || '').split('\n')[0].slice(0, 120);
+      row.innerHTML = `
+        <div class="conv-meta">
+          <span class="conv-source">${c.source || 'chat'}</span>
+          <span class="conv-time">${formatTime(c.timestamp)}</span>
+        </div>
+        <div class="conv-preview">${preview || '(no messages)'}</div>
+        <div class="conv-full">${escHtml(c.conversation || '')}</div>
+      `;
+      row.addEventListener('click', () => row.classList.toggle('open'));
+      el.appendChild(row);
+    });
+  }
+
+  // Tab filter — convos
+  document.querySelectorAll('[data-conv-filter]').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('[data-conv-filter]').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      activeConvFilter = btn.dataset.convFilter;
+      renderConversations(allConvos, activeConvFilter);
+    });
+  });
+
+  // ── Helpers ──
+  function formatDuration(s) {
+    if (!s && s !== 0) return '—';
+    const secs = Number(s);
+    if (!secs) return '—';
+    if (secs < 60) return `${secs}s`;
+    const m = Math.floor(secs / 60);
+    const rem = secs % 60;
+    return rem > 0 ? `${m}m ${rem}s` : `${m}m`;
+  }
+
+  function formatTime(ts) {
+    if (!ts) return '—';
+    const d = new Date(ts);
+    if (isNaN(d)) return ts;
+    return d.toLocaleDateString('en-GB', { day: 'numeric', month: 'short' })
+      + ' ' + d.toLocaleTimeString('en-GB', { hour: '2-digit', minute: '2-digit' });
+  }
+
+  function escHtml(str) {
+    return str.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+  }
+</script>
 
 </body>
 </html>
