@@ -7,6 +7,38 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <link href="portfolio.css" rel="stylesheet" type="text/css">
   <link rel='icon' href='images/favicon.ico' type='images/favicon.ico'/>
+  <script>
+    (function() {
+      const ENDPOINT = "https://script.google.com/macros/s/AKfycbwqKOmbh-X7GrF8wDKqU7Om9Ybj-dDeOj2WXBIvKgxgPL2eijhBCs5rhWYGJO9Jn-9S/exec";
+      const sessionId = Math.random().toString(36).substring(2, 10).toUpperCase();
+      const startTime = Date.now();
+      const page = "portfolio.html";
+      const device = /Mobi|Android|iPhone|iPad/i.test(navigator.userAgent) ? "mobile" : "desktop";
+
+      fetch("https://ipapi.co/json/")
+        .then(r => r.json())
+        .then(geo => {
+          const location = [geo.city, geo.country_name].filter(Boolean).join(", ");
+          fetch(ENDPOINT, {
+            method: "POST", mode: "no-cors",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ type: "visit", session: sessionId, page, device, location, timestamp: new Date().toISOString(), duration: "" })
+          }).catch(() => {});
+        })
+        .catch(() => {
+          fetch(ENDPOINT, {
+            method: "POST", mode: "no-cors",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ type: "visit", session: sessionId, page, device, location: "", timestamp: new Date().toISOString(), duration: "" })
+          }).catch(() => {});
+        });
+
+      window.addEventListener("beforeunload", function() {
+        const duration = Math.round((Date.now() - startTime) / 1000);
+        navigator.sendBeacon(ENDPOINT, JSON.stringify({ type: "visit", session: sessionId, page, device, location: "", timestamp: new Date().toISOString(), duration }));
+      });
+    })();
+  </script>
   <style>
     html, body {
       height: 100%;
