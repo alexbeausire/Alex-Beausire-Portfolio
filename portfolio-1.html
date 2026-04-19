@@ -7,6 +7,12 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <link href="portfolio.css" rel="stylesheet" type="text/css">
   <link rel='icon' href='images/favicon.ico' type='images/favicon.ico'/>
+
+  <!-- Preconnect so Figma DNS/TLS is already resolved when the user clicks -->
+  <link rel="preconnect" href="https://embed.figma.com">
+  <link rel="preconnect" href="https://www.figma.com">
+  <link rel="preconnect" href="https://figma-alpha-api.s3.us-west-2.amazonaws.com" crossorigin>
+
   <style>
     html, body {
       height: 100%;
@@ -15,28 +21,181 @@
       overflow: hidden;
       background: #000;
     }
+
     #pres-wrap {
       position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
+      inset: 0;
     }
+
+    /* ── The iframe – hidden until loaded ── */
     #pres-wrap iframe {
       width: 100%;
       height: 100%;
       border: none;
       display: block;
+      opacity: 0;
+      transition: opacity 0.5s ease;
     }
+    #pres-wrap iframe.ready {
+      opacity: 1;
+    }
+
+    /* ── Click-to-load overlay ── */
+    #poster {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background: #000;
+      cursor: pointer;
+      z-index: 10;
+      transition: opacity 0.4s ease;
+    }
+    #poster.hidden {
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    /* Optional: swap src below for a real screenshot of your deck */
+    #poster-img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.35;
+      /* Remove this rule if you add a real poster image */
+      display: none;
+    }
+
+    #poster-content {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+      text-align: center;
+    }
+
+    #poster-label {
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.4);
+    }
+
+    #poster-name {
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      font-size: clamp(28px, 5vw, 56px);
+      font-weight: 300;
+      letter-spacing: -0.01em;
+      color: #fff;
+      line-height: 1.1;
+    }
+
+    #play-btn {
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      border: 1.5px solid rgba(255,255,255,0.3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 8px;
+      transition: border-color 0.2s, transform 0.2s;
+    }
+    #poster:hover #play-btn {
+      border-color: rgba(255,255,255,0.8);
+      transform: scale(1.08);
+    }
+    #play-btn svg {
+      margin-left: 4px; /* optical centre for triangle */
+    }
+
+    /* ── Loading spinner (shown after click, before iframe is ready) ── */
+    #loader {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 5;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s ease;
+    }
+    #loader.visible {
+      opacity: 1;
+    }
+    .spinner {
+      width: 36px;
+      height: 36px;
+      border: 2px solid rgba(255,255,255,0.15);
+      border-top-color: rgba(255,255,255,0.7);
+      border-radius: 50%;
+      animation: spin 0.8s linear infinite;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
   </style>
 </head>
 <body>
 
   <div id="pres-wrap">
-    <iframe src="https://embed.figma.com/deck/fwVInLeUtNea72tzf8NFPp/Alex-Beausire-%7C-Portfolio?node-id=1-177&viewport=-3649%2C-3226%2C0.8&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&embed-host=share" allowfullscreen></iframe>
+
+    <!-- 1. Poster overlay — visible on page load, hidden after click -->
+    <div id="poster">
+      <!-- Optional: replace with <img id="poster-img" src="images/portfolio-cover.jpg"> and set display:block -->
+      <img id="poster-img" alt="">
+      <div id="poster-content">
+        <span id="poster-label">Portfolio</span>
+        <span id="poster-name">Alex Beausire</span>
+        <div id="play-btn">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+            <polygon points="4,2 14,8 4,14" fill="white" opacity="0.9"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+
+    <!-- 2. Spinner — shown between click and iframe ready -->
+    <div id="loader">
+      <div class="spinner"></div>
+    </div>
+
+    <!-- 3. The iframe — src is empty until user clicks -->
+    <iframe
+      id="figma-frame"
+      data-src="https://embed.figma.com/deck/fwVInLeUtNea72tzf8NFPp/Alex-Beausire-%7C-Portfolio?node-id=1-177&viewport=-3649%2C-3226%2C0.8&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&embed-host=share"
+      allowfullscreen>
+    </iframe>
+
   </div>
 
   <script>
+    const poster  = document.getElementById('poster');
+    const loader  = document.getElementById('loader');
+    const frame   = document.getElementById('figma-frame');
+
+    poster.addEventListener('click', function () {
+      // Hide poster
+      poster.classList.add('hidden');
+      // Show spinner
+      loader.classList.add('visible');
+      // Now inject the src — Figma starts loading here, not on page load
+      frame.src = frame.dataset.src;
+    });
+
+    // Once Figma's iframe fires load, hide spinner and reveal iframe
+    frame.addEventListener('load', function () {
+      loader.classList.remove('visible');
+      frame.classList.add('ready');
+    });
+
+    // Optional: debug postMessages from Figma
     window.addEventListener('message', function(e) {
       console.log('origin:', e.origin);
       console.log('data:', JSON.stringify(e.data));
