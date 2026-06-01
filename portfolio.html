@@ -58,7 +58,6 @@
       pointer-events: none;
     }
 
-    /* Optional: swap src below for a real screenshot of your deck */
     #poster-img {
       position: absolute;
       inset: 0;
@@ -66,7 +65,6 @@
       height: 100%;
       object-fit: cover;
       opacity: 0.35;
-      /* Remove this rule if you add a real poster image */
       display: none;
     }
 
@@ -113,7 +111,7 @@
       transform: scale(1.08);
     }
     #play-btn svg {
-      margin-left: 4px; /* optical centre for triangle */
+      margin-left: 4px;
     }
 
     /* ── Loading spinner (shown after click, before iframe is ready) ── */
@@ -149,6 +147,7 @@
       const PAGE = "portfolio.html";
       const DEVICE = /Mobi|Android|iPhone|iPad/i.test(navigator.userAgent) ? "mobile" : "desktop";
       const PAGE_START = Date.now();
+      const REF = new URLSearchParams(window.location.search).get('ref') || '';
 
       fetch("https://ipapi.co/json/")
         .then(r => r.json())
@@ -157,20 +156,20 @@
           fetch(ENDPOINT, {
             method: "POST", mode: "no-cors",
             headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({ type: "visit", session: SESSION_ID, page: PAGE, device: DEVICE, location, timestamp: SESSION_START, duration: "" })
+            body: JSON.stringify({ type: "visit", session: SESSION_ID, page: PAGE, device: DEVICE, location, timestamp: SESSION_START, duration: "", ref: REF })
           }).catch(() => {});
         })
         .catch(() => {
           fetch(ENDPOINT, {
             method: "POST", mode: "no-cors",
             headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({ type: "visit", session: SESSION_ID, page: PAGE, device: DEVICE, location: "", timestamp: SESSION_START, duration: "" })
+            body: JSON.stringify({ type: "visit", session: SESSION_ID, page: PAGE, device: DEVICE, location: "", timestamp: SESSION_START, duration: "", ref: REF })
           }).catch(() => {});
         });
 
       window.addEventListener("beforeunload", function() {
         const duration = Math.round((Date.now() - PAGE_START) / 1000);
-        navigator.sendBeacon(ENDPOINT, JSON.stringify({ type: "visit", session: SESSION_ID, page: PAGE, device: DEVICE, location: "", timestamp: SESSION_START, duration }));
+        navigator.sendBeacon(ENDPOINT, JSON.stringify({ type: "visit", session: SESSION_ID, page: PAGE, device: DEVICE, location: "", timestamp: SESSION_START, duration, ref: REF }));
       });
     })();
   </script>
@@ -181,7 +180,6 @@
 
     <!-- 1. Poster overlay — visible on page load, hidden after click -->
     <div id="poster">
-      <!-- Optional: replace with <img id="poster-img" src="images/portfolio-cover.jpg"> and set display:block -->
       <img id="poster-img" alt="">
       <div id="poster-content">
         <span id="poster-label">Portfolio</span>
@@ -214,21 +212,16 @@
     const frame   = document.getElementById('figma-frame');
 
     poster.addEventListener('click', function () {
-      // Hide poster
       poster.classList.add('hidden');
-      // Show spinner
       loader.classList.add('visible');
-      // Now inject the src — Figma starts loading here, not on page load
       frame.src = frame.dataset.src;
     });
 
-    // Once Figma's iframe fires load, hide spinner and reveal iframe
     frame.addEventListener('load', function () {
       loader.classList.remove('visible');
       frame.classList.add('ready');
     });
 
-    // Optional: debug postMessages from Figma
     window.addEventListener('message', function(e) {
       console.log('origin:', e.origin);
       console.log('data:', JSON.stringify(e.data));

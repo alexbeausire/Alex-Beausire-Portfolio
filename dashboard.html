@@ -290,6 +290,11 @@
     }
     .pill-mobile { background: rgba(44,44,176,0.3); color: #8888ff; }
     .pill-desktop { background: rgba(200,244,0,0.12); color: var(--accent); }
+    .pill-ref {
+      background: rgba(200,244,0,0.08);
+      color: var(--accent);
+      border: 1px solid rgba(200,244,0,0.2);
+    }
 
     /* ── Conversations ── */
     .conv-list {
@@ -397,6 +402,58 @@
       text-align: right;
       flex-shrink: 0;
     }
+
+    /* ── Ref breakdown ── */
+    .ref-list {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      padding: 20px;
+    }
+    .ref-row {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .ref-name {
+      font-family: 'DM Mono', monospace;
+      font-size: 11px;
+      color: var(--accent);
+      width: 160px;
+      flex-shrink: 0;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .ref-bar-wrap {
+      flex: 1;
+      height: 6px;
+      background: var(--border);
+      border-radius: 999px;
+      overflow: hidden;
+    }
+    .ref-bar {
+      height: 100%;
+      background: var(--accent);
+      border-radius: 999px;
+      transition: width 0.6s ease;
+    }
+    .ref-count {
+      font-family: 'DM Mono', monospace;
+      font-size: 11px;
+      color: var(--muted);
+      width: 24px;
+      text-align: right;
+      flex-shrink: 0;
+    }
+    .ref-avg {
+      font-family: 'DM Mono', monospace;
+      font-size: 11px;
+      color: var(--muted);
+      width: 60px;
+      text-align: right;
+      flex-shrink: 0;
+    }
   </style>
 </head>
 <body>
@@ -447,6 +504,16 @@
       <div class="section-label">By page</div>
       <div class="page-grid" id="page-grid">
         <div class="loading">loading...</div>
+      </div>
+    </section>
+
+    <!-- Portfolio tracking links -->
+    <section>
+      <div class="section-label">Portfolio — tracking links</div>
+      <div class="table-wrap">
+        <div class="loc-list" id="ref-list">
+          <div class="loading">loading...</div>
+        </div>
       </div>
     </section>
 
@@ -523,6 +590,7 @@
 
       renderStats(stats);
       renderPageBreakdown(stats);
+      renderRefs(allVisits);
       renderLocations(allVisits);
       renderSessionTable(allVisits, activeFilter);
       renderConversations(allConvos, activeConvFilter);
@@ -602,6 +670,46 @@
     }
   }
 
+  // ── Ref breakdown (portfolio only) ──
+  function renderRefs(visits) {
+    const el = document.getElementById('ref-list');
+    const portVisits = visits.filter(v => v.page === 'portfolio.html');
+    const tagged = portVisits.filter(v => v.ref && v.ref !== '');
+
+    if (!tagged.length) {
+      el.innerHTML = '<div class="loading">no tracking link visits yet — share alexbeausi.re/portfolio.html?ref=studioname</div>';
+      return;
+    }
+
+    const refMap = {};
+    const refDurs = {};
+    tagged.forEach(v => {
+      const r = v.ref;
+      refMap[r] = (refMap[r] || 0) + 1;
+      if (!refDurs[r]) refDurs[r] = [];
+      const d = Number(v.duration);
+      if (d > 0) refDurs[r].push(d);
+    });
+
+    const sorted = Object.entries(refMap).sort((a,b) => b[1]-a[1]);
+    const max = sorted[0]?.[1] || 1;
+
+    el.innerHTML = sorted.map(([ref, count]) => {
+      const durs = refDurs[ref] || [];
+      const avg = durs.length ? Math.round(durs.reduce((a,b)=>a+b,0)/durs.length) : null;
+      return `
+        <div class="loc-row">
+          <span class="loc-name" style="color:var(--accent);width:180px;">${ref}</span>
+          <div class="loc-bar-wrap">
+            <div class="loc-bar" style="width:${(count/max*100).toFixed(1)}%"></div>
+          </div>
+          <span class="loc-count">${count}</span>
+          <span style="font-family:'DM Mono',monospace;font-size:11px;color:var(--muted);width:70px;text-align:right;flex-shrink:0;">${avg ? formatDuration(avg) : '—'}</span>
+        </div>
+      `;
+    }).join('');
+  }
+
   // ── Locations ──
   function renderLocations(visits) {
     const locMap = {};
@@ -644,6 +752,7 @@
             <th>Duration</th>
             <th>Location</th>
             <th>Device</th>
+            <th>Ref</th>
           </tr>
         </thead>
         <tbody>
@@ -657,6 +766,7 @@
               <td>${v.device
                 ? `<span class="pill ${v.device === 'mobile' ? 'pill-mobile' : 'pill-desktop'}">${v.device}</span>`
                 : '—'}</td>
+              <td>${v.ref ? `<span class="pill pill-ref">${v.ref}</span>` : '<span style="color:var(--muted)">—</span>'}</td>
             </tr>
           `).join('')}
         </tbody>
