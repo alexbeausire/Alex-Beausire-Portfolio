@@ -334,21 +334,53 @@
       overflow: hidden;
       text-overflow: ellipsis;
     }
-    .conv-full {
-      display: none;
+    .conv-row.open .conv-preview { display: none; }
+
+    /* ── Conversation message bubbles ── */
+    .conv-messages {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
       margin-top: 12px;
-      font-family: 'DM Mono', monospace;
-      font-size: 12px;
-      line-height: 1.7;
-      color: var(--text);
-      white-space: pre-wrap;
       background: var(--bg);
       border: 1px solid var(--border);
       border-radius: 4px;
       padding: 14px 16px;
     }
-    .conv-row.open .conv-full { display: block; }
-    .conv-row.open .conv-preview { display: none; }
+    .conv-msg {
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+    }
+    .conv-msg-label {
+      font-family: 'DM Mono', monospace;
+      font-size: 9px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+    .conv-msg.visitor .conv-msg-label { color: var(--accent2); opacity: 0.8; }
+    .conv-msg.bot .conv-msg-label { color: var(--accent); opacity: 0.7; }
+    .conv-msg-text {
+      font-family: 'DM Mono', monospace;
+      font-size: 12px;
+      line-height: 1.65;
+      color: var(--text);
+      white-space: pre-wrap;
+      word-break: break-word;
+      padding: 8px 10px;
+      border-radius: 4px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+    }
+    .conv-msg.visitor .conv-msg-text {
+      border-color: rgba(44,44,176,0.3);
+      background: rgba(44,44,176,0.08);
+    }
+    .conv-msg.bot .conv-msg-text {
+      border-color: rgba(200,244,0,0.12);
+      background: rgba(200,244,0,0.04);
+    }
 
     /* ── Loading / empty states ── */
     .loading {
@@ -785,8 +817,49 @@
   });
 
   // ── Conversations ──
+
+  // Bot speaker names per source
+  const BOT_NAMES = { wizard: 'Wizard', mum: 'Mum', landlord: 'Barry' };
+
+  // Infer source from conversation text if field is missing
+  function inferSource(c) {
+    if (c.source && c.source.trim()) return c.source.trim();
+    const text = c.conversation || '';
+    if (/^Barry:/m.test(text)) return 'landlord';
+    if (/^Mum:/m.test(text)) return 'mum';
+    if (/^Wizard:/m.test(text)) return 'wizard';
+    return 'chat';
+  }
+
+  // Parse "Speaker: text\n\nSpeaker: text" into [{role, text}]
+  function parseConversation(raw, botName) {
+    if (!raw || !raw.trim()) return [];
+    const messages = [];
+    // Split on double-newline boundaries between turns
+    const blocks = raw.split(/\n\n(?=(?:Visitor|${botName}):)/);
+    // Fallback: split on any line starting with a known speaker
+    const lines = raw.split('\n');
+    let current = null;
+    for (const line of lines) {
+      const visitorMatch = line.match(/^Visitor:\s*(.*)/);
+      const botMatch = line.match(new RegExp(`^${botName}:\\s*(.*)`));
+      if (visitorMatch) {
+        if (current) messages.push(current);
+        current = { role: 'visitor', text: visitorMatch[1] };
+      } else if (botMatch) {
+        if (current) messages.push(current);
+        current = { role: 'bot', text: botMatch[1] };
+      } else if (current) {
+        current.text += '\n' + line;
+      }
+    }
+    if (current) messages.push(current);
+    return messages;
+  }
+
   function renderConversations(convos, filter) {
-    const filtered = filter === 'all' ? convos : convos.filter(c => c.source === filter);
+    const withSource = convos.map(c => ({ ...c, _source: inferSource(c) }));
+    const filtered = filter === 'all' ? withSource : withSource.filter(c => c._source === filter);
     const el = document.getElementById('conv-list');
 
     if (!filtered.length) {
@@ -796,18 +869,41 @@
 
     el.innerHTML = '';
     filtered.forEach(c => {
+      const source = c._source;
+      const botName = BOT_NAMES[source] || 'Bot';
+      const messages = parseConversation(c.conversation || '', botName);
+
+      // Preview: first visitor message
+      const firstMsg = messages.find(m => m.role === 'visitor');
+      const preview = firstMsg
+        ? firstMsg.text.slice(0, 120)
+        : (c.conversation || '').slice(0, 120) || '(no messages)';
+
       const row = document.createElement('div');
       row.className = 'conv-row';
-      const preview = (c.conversation || '').split('\n')[0].slice(0, 120);
+
+      // Build message bubbles HTML
+      const bubblesHtml = messages.length
+        ? messages.map(m => `
+            <div class="conv-msg ${m.role === 'visitor' ? 'visitor' : 'bot'}">
+              <span class="conv-msg-label">${m.role === 'visitor' ? 'Visitor' : botName}</span>
+              <div class="conv-msg-text">${escHtml(m.text.trim())}</div>
+            </div>
+          `).join('')
+        : `<div style="font-family:'DM Mono',monospace;font-size:12px;color:var(--muted);padding:8px 0;">(no messages recorded)</div>`;
+
       row.innerHTML = `
         <div class="conv-meta">
-          <span class="conv-source">${c.source || 'chat'}</span>
+          <span class="conv-source">${source}</span>
           <span class="conv-time">${formatTime(c.timestamp)}</span>
         </div>
-        <div class="conv-preview">${preview || '(no messages)'}</div>
-        <div class="conv-full">${escHtml(c.conversation || '')}</div>
+        <div class="conv-preview">${escHtml(preview)}</div>
+        <div class="conv-messages" style="display:none">${bubblesHtml}</div>
       `;
-      row.addEventListener('click', () => row.classList.toggle('open'));
+      row.addEventListener('click', () => {
+        const isOpen = row.classList.toggle('open');
+        row.querySelector('.conv-messages').style.display = isOpen ? 'flex' : 'none';
+      });
       el.appendChild(row);
     });
   }
