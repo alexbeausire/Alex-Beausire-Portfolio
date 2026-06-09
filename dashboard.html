@@ -702,14 +702,14 @@
     }
   }
 
-  // ── Ref breakdown (portfolio only) ──
+  // ── Ref breakdown (portfolio pages) ──
   function renderRefs(visits) {
     const el = document.getElementById('ref-list');
-    const portVisits = visits.filter(v => v.page === 'portfolio.html');
+    const portVisits = visits.filter(v => v.page === 'portfolio.html' || v.page === 'portfolio-IH.html');
     const tagged = portVisits.filter(v => v.ref && v.ref !== '');
 
     if (!tagged.length) {
-      el.innerHTML = '<div class="loading">no tracking link visits yet — share alexbeausi.re/portfolio.html?ref=studioname</div>';
+      el.innerHTML = '<div class="loading">no tracking link visits yet — share alexbeausi.re/portfolio.html?ref=studioname or alexbeausi.re/portfolio-IH.html?ref=studioname</div>';
       return;
     }
 
