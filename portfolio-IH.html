@@ -3,127 +3,227 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Alex Beausire — Portfolio</title>
+  <title>Alex Beausire | Portfolio — In-House</title>
+
+  <!-- Preconnect so Figma DNS/TLS is already resolved when the user clicks -->
+  <link rel="preconnect" href="https://embed.figma.com">
+  <link rel="preconnect" href="https://www.figma.com">
+  <link rel="preconnect" href="https://figma-alpha-api.s3.us-west-2.amazonaws.com" crossorigin>
+
   <style>
-    * {
+    html, body {
+      height: 100%;
       margin: 0;
       padding: 0;
-      box-sizing: border-box;
+      overflow: hidden;
+      background: #000;
     }
-    html, body {
+
+    #pres-wrap {
+      position: fixed;
+      inset: 0;
+    }
+
+    /* ── The iframe – hidden until loaded ── */
+    #pres-wrap iframe {
       width: 100%;
       height: 100%;
-      background: #ffffff;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      border: none;
+      display: block;
+      opacity: 0;
+      transition: opacity 0.5s ease;
     }
-    body {
+    #pres-wrap iframe.ready {
+      opacity: 1;
+    }
+
+    /* ── Click-to-load overlay ── */
+    #poster {
+      position: absolute;
+      inset: 0;
       display: flex;
       flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background: #000;
+      cursor: pointer;
+      z-index: 10;
+      transition: opacity 0.4s ease;
     }
-    .portfolio-container {
-      flex: 1;
+    #poster.hidden {
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    #poster-img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.35;
+      display: none;
+    }
+
+    #poster-content {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+      text-align: center;
+    }
+
+    #poster-label {
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.4);
+    }
+
+    #poster-name {
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      font-size: clamp(28px, 5vw, 56px);
+      font-weight: 300;
+      letter-spacing: -0.01em;
+      color: #fff;
+      line-height: 1.1;
+    }
+
+    #play-btn {
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      border: 1.5px solid rgba(255,255,255,0.3);
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: 20px;
-      overflow: auto;
+      margin-top: 8px;
+      transition: border-color 0.2s, transform 0.2s;
     }
-    .portfolio-wrapper {
-      width: 100%;
-      max-width: 900px;
+    #poster:hover #play-btn {
+      border-color: rgba(255,255,255,0.8);
+      transform: scale(1.08);
     }
-    iframe {
-      width: 100%;
-      height: 550px;
-      border: 1px solid rgba(0, 0, 0, 0.1);
-      border-radius: 8px;
-      display: block;
+    #play-btn svg {
+      margin-left: 4px;
     }
-    @media (max-width: 768px) {
-      iframe {
-        height: 400px;
-      }
+
+    /* ── Loading spinner (shown after click, before iframe is ready) ── */
+    #loader {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 5;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s ease;
     }
+    #loader.visible {
+      opacity: 1;
+    }
+    .spinner {
+      width: 36px;
+      height: 36px;
+      border: 2px solid rgba(255,255,255,0.15);
+      border-top-color: rgba(255,255,255,0.7);
+      border-radius: 50%;
+      animation: spin 0.8s linear infinite;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
   </style>
+  <script>
+    (function() {
+      const ENDPOINT = "https://script.google.com/macros/s/AKfycbwqKOmbh-X7GrF8wDKqU7Om9Ybj-dDeOj2WXBIvKgxgPL2eijhBCs5rhWYGJO9Jn-9S/exec";
+      const SESSION_ID = Math.random().toString(36).substring(2, 10).toUpperCase();
+      const SESSION_START = new Date().toISOString();
+      const PAGE = "portfolio-IH.html";
+      const DEVICE = /Mobi|Android|iPhone|iPad/i.test(navigator.userAgent) ? "mobile" : "desktop";
+      const PAGE_START = Date.now();
+      const REF = new URLSearchParams(window.location.search).get('ref') || '';
+
+      fetch("https://ipapi.co/json/")
+        .then(r => r.json())
+        .then(geo => {
+          const location = [geo.city, geo.country_name].filter(Boolean).join(", ");
+          fetch(ENDPOINT, {
+            method: "POST", mode: "no-cors",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ type: "visit", session: SESSION_ID, page: PAGE, device: DEVICE, location, timestamp: SESSION_START, duration: "", ref: REF })
+          }).catch(() => {});
+        })
+        .catch(() => {
+          fetch(ENDPOINT, {
+            method: "POST", mode: "no-cors",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ type: "visit", session: SESSION_ID, page: PAGE, device: DEVICE, location: "", timestamp: SESSION_START, duration: "", ref: REF })
+          }).catch(() => {});
+        });
+
+      window.addEventListener("beforeunload", function() {
+        const duration = Math.round((Date.now() - PAGE_START) / 1000);
+        navigator.sendBeacon(ENDPOINT, JSON.stringify({ type: "visit", session: SESSION_ID, page: PAGE, device: DEVICE, location: "", timestamp: SESSION_START, duration, ref: REF }));
+      });
+    })();
+  </script>
 </head>
 <body>
-  <div class="portfolio-container">
-    <div class="portfolio-wrapper">
-      <iframe 
-        src="https://embed.figma.com/slides/7rvC8K4hn17vVN9oxyZJ1A/Alex-Beausire-%7C-Portfolio-In-House?node-id=1-177&embed-host=share" 
-        allowfullscreen>
-      </iframe>
+
+  <div id="pres-wrap">
+
+    <!-- 1. Poster overlay — visible on page load, hidden after click -->
+    <div id="poster">
+      <img id="poster-img" alt="">
+      <div id="poster-content">
+        <span id="poster-label">Portfolio — In-House</span>
+        <span id="poster-name">Alex Beausire</span>
+        <div id="play-btn">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+            <polygon points="4,2 14,8 4,14" fill="white" opacity="0.9"/>
+          </svg>
+        </div>
+      </div>
     </div>
+
+    <!-- 2. Spinner — shown between click and iframe ready -->
+    <div id="loader">
+      <div class="spinner"></div>
+    </div>
+
+    <!-- 3. The iframe — src is empty until user clicks -->
+    <iframe
+      id="figma-frame"
+      data-src="https://embed.figma.com/slides/7rvC8K4hn17vVN9oxyZJ1A/Alex-Beausire-%7C-Portfolio-In-House?node-id=2062-140&embed-host=share"
+      allowfullscreen>
+    </iframe>
+
   </div>
 
   <script>
-    // Analytics tracking configuration
-    const SESSION_ID = Math.random().toString(36).substring(2, 10).toUpperCase();
-    const SESSION_START = new Date().toISOString();
-    const SHEETS_ENDPOINT = "https://script.google.com/macros/s/AKfycbwqKOmbh-X7GrF8wDKqU7Om9Ybj-dDeOj2WXBIvKgxgPL2eijhBCs5rhWYGJO9Jn-9S/exec";
-    const PAGE = "portfolio-IH.html";
-    const SOURCE = "portfolio-IH";
-    const PAGE_START = Date.now();
-    const DEVICE = /Mobi|Android|iPhone|iPad/i.test(navigator.userAgent) ? "mobile" : "desktop";
+    const poster  = document.getElementById('poster');
+    const loader  = document.getElementById('loader');
+    const frame   = document.getElementById('figma-frame');
 
-    // Extract ?ref= parameter if present
-    const urlParams = new URLSearchParams(window.location.search);
-    const REF = urlParams.get("ref") || "";
+    poster.addEventListener('click', function () {
+      poster.classList.add('hidden');
+      loader.classList.add('visible');
+      frame.src = frame.dataset.src;
+    });
 
-    // Visit ping with location on load
-    fetch("https://ipapi.co/json/")
-      .then(r => r.json())
-      .then(geo => {
-        const location = [geo.city, geo.country_name].filter(Boolean).join(", ");
-        fetch(SHEETS_ENDPOINT, {
-          method: "POST", mode: "no-cors",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ 
-            type: "visit", 
-            session: SESSION_ID, 
-            page: PAGE, 
-            device: DEVICE, 
-            location, 
-            timestamp: SESSION_START, 
-            duration: "",
-            ref: REF
-          })
-        }).catch(() => {});
-      })
-      .catch(() => {
-        fetch(SHEETS_ENDPOINT, {
-          method: "POST", mode: "no-cors",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ 
-            type: "visit", 
-            session: SESSION_ID, 
-            page: PAGE, 
-            device: DEVICE, 
-            location: "", 
-            timestamp: SESSION_START, 
-            duration: "",
-            ref: REF
-          })
-        }).catch(() => {});
-      });
+    frame.addEventListener('load', function () {
+      loader.classList.remove('visible');
+      frame.classList.add('ready');
+    });
 
-    // Send duration on page unload
-    window.addEventListener("beforeunload", function() {
-      const duration = Math.round((Date.now() - PAGE_START) / 1000);
-      navigator.sendBeacon(
-        SHEETS_ENDPOINT, 
-        JSON.stringify({ 
-          type: "visit", 
-          session: SESSION_ID, 
-          page: PAGE, 
-          device: DEVICE, 
-          location: "", 
-          timestamp: SESSION_START, 
-          duration,
-          ref: REF
-        })
-      );
+    window.addEventListener('message', function(e) {
+      console.log('origin:', e.origin);
+      console.log('data:', JSON.stringify(e.data));
     });
   </script>
+
 </body>
 </html>
