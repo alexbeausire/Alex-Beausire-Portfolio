@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Alex Beausire — Portfolio</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    html, body {
+      width: 100%;
+      height: 100%;
+      background: #ffffff;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    }
+    body {
+      display: flex;
+      flex-direction: column;
+    }
+    .portfolio-container {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      overflow: auto;
+    }
+    .portfolio-wrapper {
+      width: 100%;
+      max-width: 900px;
+    }
+    iframe {
+      width: 100%;
+      height: 550px;
+      border: 1px solid rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+      display: block;
+    }
+    @media (max-width: 768px) {
+      iframe {
+        height: 400px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="portfolio-container">
+    <div class="portfolio-wrapper">
+      <iframe 
+        src="https://embed.figma.com/slides/7rvC8K4hn17vVN9oxyZJ1A/Alex-Beausire-%7C-Portfolio-In-House?node-id=1-177&embed-host=share" 
+        allowfullscreen>
+      </iframe>
+    </div>
+  </div>
+
+  <script>
+    // Analytics tracking configuration
+    const SESSION_ID = Math.random().toString(36).substring(2, 10).toUpperCase();
+    const SESSION_START = new Date().toISOString();
+    const SHEETS_ENDPOINT = "https://script.google.com/macros/s/AKfycbwqKOmbh-X7GrF8wDKqU7Om9Ybj-dDeOj2WXBIvKgxgPL2eijhBCs5rhWYGJO9Jn-9S/exec";
+    const PAGE = "portfolio-IH.html";
+    const SOURCE = "portfolio-IH";
+    const PAGE_START = Date.now();
+    const DEVICE = /Mobi|Android|iPhone|iPad/i.test(navigator.userAgent) ? "mobile" : "desktop";
+
+    // Extract ?ref= parameter if present
+    const urlParams = new URLSearchParams(window.location.search);
+    const REF = urlParams.get("ref") || "";
+
+    // Visit ping with location on load
+    fetch("https://ipapi.co/json/")
+      .then(r => r.json())
+      .then(geo => {
+        const location = [geo.city, geo.country_name].filter(Boolean).join(", ");
+        fetch(SHEETS_ENDPOINT, {
+          method: "POST", mode: "no-cors",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ 
+            type: "visit", 
+            session: SESSION_ID, 
+            page: PAGE, 
+            device: DEVICE, 
+            location, 
+            timestamp: SESSION_START, 
+            duration: "",
+            ref: REF
+          })
+        }).catch(() => {});
+      })
+      .catch(() => {
+        fetch(SHEETS_ENDPOINT, {
+          method: "POST", mode: "no-cors",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ 
+            type: "visit", 
+            session: SESSION_ID, 
+            page: PAGE, 
+            device: DEVICE, 
+            location: "", 
+            timestamp: SESSION_START, 
+            duration: "",
+            ref: REF
+          })
+        }).catch(() => {});
+      });
+
+    // Send duration on page unload
+    window.addEventListener("beforeunload", function() {
+      const duration = Math.round((Date.now() - PAGE_START) / 1000);
+      navigator.sendBeacon(
+        SHEETS_ENDPOINT, 
+        JSON.stringify({ 
+          type: "visit", 
+          session: SESSION_ID, 
+          page: PAGE, 
+          device: DEVICE, 
+          location: "", 
+          timestamp: SESSION_START, 
+          duration,
+          ref: REF
+        })
+      );
+    });
+  </script>
+</body>
+</html>
