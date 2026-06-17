@@ -314,14 +314,12 @@ Easter Eggs (only reveal when directly and specifically triggered):
         const typing = appendTyping();
 
         try {
-          const res = await fetch("https://alex-chat-proxy.cold-fire-86b5.workers.dev", {
+          const res = await fetch("https://alexfolio-chat-proxy.cold-fire-86b5.workers.dev", {
             method: "POST",
             headers: {
               "Content-Type": "application/json"
             },
             body: JSON.stringify({
-              model: "claude-sonnet-4-20250514",
-              max_tokens: 1024,
               system: SYSTEM_PROMPT,
               messages: messages
             })
@@ -329,6 +327,12 @@ Easter Eggs (only reveal when directly and specifically triggered):
 
           const data = await res.json();
           typing.remove();
+
+          if (!res.ok) {
+            appendMessage("assistant", `API Error: ${data.error || 'Unknown error'}`);
+            console.error("API error:", data.error);
+            return;
+          }
 
           const reply = data?.content?.[0]?.text || "My crystal ball seems foggy — please try again!";
           appendMessage("assistant", reply);
