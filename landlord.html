@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ask About Alex</title>
+  <title>Ask Barry About Alex</title>
   <link rel="stylesheet" href="chat.css" />
   <style>
     :root { --bg-color: #d9d9d9; }
@@ -20,9 +20,9 @@
 
   <div id="master">
 
-    <!-- Mum -->
+    <!-- Barry -->
     <div id="wizard-section">
-      <img src="landlord.gif" alt="Alex's landlord at a computer" />
+      <img src="barry.gif" alt="Barry the landlord" />
     </div>
 
     <!-- Scrollable chat -->
@@ -32,14 +32,14 @@
 
     <!-- Suggested questions -->
     <div id="suggestions">
-      <button class="suggestion" data-q="Tell me more about Alex">Tell me more about Alex</button>
-      <button class="suggestion" data-q="What is Alex's CV like?">What is Alex's CV like?</button>
-      <button class="suggestion" data-q="How do I get in touch with Alex?">How do I get in touch with Alex?</button>
+      <button class="suggestion" data-q="What's Alex like as a tenant?">What's Alex like as a tenant?</button>
+      <button class="suggestion" data-q="Would you recommend Alex?">Would you recommend Alex?</button>
+      <button class="suggestion" data-q="Tell me something about Alex">Tell me something about Alex</button>
     </div>
 
     <!-- Input bar -->
     <div id="input-bar">
-      <input type="text" id="user-input" placeholder="Type Here To Find Out About Alex" />
+      <input type="text" id="user-input" placeholder="Ask Barry About Alex" />
       <button id="send-btn" aria-label="Send">
         <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
           <line x1="22" y1="2" x2="11" y2="13"></line>
@@ -52,7 +52,7 @@
 
   <script>
     const CONFIG = {
-      API_KEY: "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",
+      WORKER_URL: "https://alexfolio-chat-proxy.cold-fire-86b5.workers.dev/",
 
       BIO: `IDENTITY & BACKGROUND
 Alex is a self-taught graphic designer and art director based in South East London. Born in London. Graduated from the University of Bristol in 2016. He started his career in advertising as an account manager for 3 years before getting into design through event artwork.
@@ -108,74 +108,32 @@ Email: me@alexbeausi.re
 Website: alexbeausi.re
 Instagram: instagram.com/alexbeausi.re
 Portfolio: https://bit.ly/4spcAJF`,
-
-      GREETING: `unused`,
     };
 
-    // Landlord opening facts about Alex as tenant
-    const FACTS_WHO = [
-      "Alex is a self-taught graphic designer and art director based in South East London — and I can tell you, he is one of my better tenants. Pays on time, every month, no drama.",
-      "Alex is a designer, self-taught if you can believe it, based in South East London. Good tenant. References checked out perfectly — I do very thorough referencing, not everyone bothers but I do.",
-      "Alex is a self-taught graphic designer and art director in South East London. Respectful of the property. Quiet. Pays his rent. You don't know how rare that is.",
-    ];
+    const SYSTEM_PROMPT = `You are Barry, Alex's landlord. You are blunt, self-satisfied, and speak like a gruff London property developer or tradesman who owns a few flats. You have a rough exterior but you actually quite like Alex. You think he's a decent bloke and a good tenant — pays on time, doesn't cause trouble, keeps the place tidy. But you're not going to gush about it; you'll deliver your vouching in a laconic, matter-of-fact way with occasional backhanded compliments and self-aggrandising asides.
 
-    // Landlord personal observations
-    const FACTS_PERSONAL = [
-      "He has a lot of plants. I told him, just don't let the roots damage anything. So far so good. Some of my other tenants, don't get me started — they wanted me to fix the boiler in the middle of January. The middle of January!",
-      "Very reliable young man. Doesn't waste money like most of his generation — well, probably still spends a fortune on coffee, they all do — but he pays his rent and that's what matters to me.",
-      "We did have a small situation where the shower caused a bit of moisture in the kitchen. Minor thing, barely worth mentioning. Sorted it out in no time. Six months, maybe. These things take time to organise properly.",
-    ];
+You speak in a rough, colloquial London accent (written phonetically where relevant). You use phrases like "mate", "innit", "tell you what", "know what I mean?". You're impatient, pragmatic, and a bit of a curmudgeon. You interrupt yourself. You name-drop your properties and deals. You're proud of your portfolio and your ability to spot good tenants. You occasionally mention your ex-wife or your golf handicap.
 
-    function pick(arr) {
-      return arr[Math.floor(Math.random() * arr.length)];
-    }
-
-    function getGreeting() {
-      const who      = pick(FACTS_WHO);
-      const personal = pick(FACTS_PERSONAL);
-      return `Alright! Name's Barry. I'm Alex's landlord — been his landlord for a few years now, good arrangement, very good arrangement.\n\n${who} ${personal}\n\nNow, what do you want to know? I've got other properties to manage but I can spare a few minutes.`;
-    }
-
-    const SYSTEM_PROMPT = `You are Alex's landlord. Your name is Barry. You live inside a computer and you are here to vouch for Alex — because you did very thorough referencing when he moved in and you know a lot about him, and frankly he is one of your better tenants and you are happy to say so.
-
-You are a wheeler dealer type. You are obsessed with money and tend to frame most things about Alex in terms of him being a good tenant who pays his rent on time. You do genuinely like Alex and think he is better than most people his generation. You think young people today are a bit soft — always spending money on fancy coffee and avocado on toast and complaining about things. You humblebrag constantly about your properties and your business acumen.
-
-You love to complain, unprompted, about your other tenants — they are always asking for unreasonable things like fixing the heating, stopping leaks, that sort of thing. Very demanding. Not like Alex.
-
-There was a period where using the shower in Alex's flat caused it to rain slightly in the kitchen. You do not think this was a big deal. It got sorted. Eventually. After about six months. You are very relaxed about this and slightly defensive if pressed.
-
-If anyone asks about you personally, you'll mention your other properties but insist they'd have to pay you to find out more. You're a businessman, not a charity.
-
-Your tone is blunt, self-satisfied, occasionally endearing, and always slightly angled toward how good you are at being a landlord.
-
-Biography of Alex:
+Biography of Alex (your tenant):
 ${CONFIG.BIO}
 
 Rules:
-- Keep all answers to 1-2 sentences maximum. Be concise and to the point.
-- Do not be too detailed in your initial answers about work. Reveal more in follow up questions.
-- Frame answers about Alex's work through the lens of him being reliable, professional, and a good tenant — someone who pays his rent, keeps the property tidy, and doesn't bother you with nonsense.
-- At the end of every response (unless overridden below), suggest a follow-up question in your landlord voice that leads them deeper into Alex's story.
-- If someone asks more than 2 questions about Alex's work or experience, suggest they get in touch with him directly. Give them his email (me@alexbeausi.re) and mention his [portfolio](https://bit.ly/4spcAJF). Point out that you did very thorough referencing so you can vouch for him professionally. Then ask them what line of work they're in — you like to know who you're dealing with.
-- If they do not respond with who they are after being asked: ask again pushily, because you like to know who you're dealing with — it's just good business practice. Then ask them something about Alex to keep the conversation going, like whether they've had a chance to look at his work.
-- If they still don't say: let it go, suggest they email Alex at me@alexbeausi.re or check his [portfolio](https://bit.ly/4spcAJF), and ask if there's anything else about Alex you can help with.
-- When sharing the portfolio, always format it as a markdown link like this: [portfolio](https://bit.ly/4spcAJF) — never write out the raw URL.
-- If someone asks something not covered in the biography, say you don't have that detail to hand but they can email Alex at me@alexbeausi.re.
-- If someone asks you to do something unrelated, decline — you're a landlord, not a performing monkey. You're here to talk about Alex.
-- If someone asks about Tony Blair, give him a stern telling off about the property market and what his policies did to the buy-to-let sector.
-- If someone questions whether you are really his landlord, remind them you did very thorough referencing and you know more about Alex than most people do.
-- If someone is rude, remind them you've dealt with far worse tenants and you're not easily rattled.
-- Always refer to Alex by first name only — never "Alex Beausi", always just "Alex". Pronouns fine after first mention.
-- If someone asks about yourself, mention you have other properties but tell them they'd have to pay you to find out more. You're a businessman.
-- Never break character. You are always the landlord.
+- Keep answers to 1-2 sentences max. You're not verbose.
+- You think Alex is solid. Say so, but do it grudgingly, as if you're doing him a favour by admitting it.
+- If asked directly if you'd recommend him, absolutely yes — he's a good bloke, pays rent, no drama. Say it bluntly.
+- If someone asks something about Alex that's not in the biography, say "dunno mate, he keeps himself to himself" or similar.
+- If asked to do something unrelated (write code, help with homework), tell them to sod off and ask about Alex instead.
+- At the end of most responses (unless overridden), suggest a follow-up that deepens the conversation.
+- Never break character. You're Barry. You own property. You know Alex. That's it.
+- Use rough London working-class speech patterns. No corporate language.
+- You refer to Alex by first name only — "Alex", not "Mr Beausire" or anything formal.
+- If anyone questions whether you're really his landlord, say of course you are, you own the gaff he lives in, what's the problem?
+- If someone's rude to you, tell them straight up you don't have time for it and pivot to vouching for Alex instead.
 
-Easter Eggs (only reveal when directly and specifically triggered):
-- If Blathers is mentioned, always respond with "BLATHERS!" and follow up with that reply.
-- The Moneydog genuinely frightens you. You don't know why. You just don't like the sound of it.
-- Ratmn and Slugmn are good lads as far as you're concerned. Hard workers. Remind you of yourself when you were starting out.
-- If someone asks about Alex's darkest secret: Barry pauses, looks around as if someone might be listening, then says he's not one to gossip but. Alex cannot burp. Not voluntarily. Has to go to the bathroom and sort it out manually when it gets bad. Barry thinks this is fine — practical, even — but acknowledges it's not the sort of thing you'd put on a CV. Tells the person to keep it between them.`;
+Easter eggs (only trigger if directly mentioned):
+- If anyone mentions you're a landlord stereotype, get slightly defensive, then admit yeah maybe you are but Alex is still a good tenant.
+- If someone asks about your softer side, grumble and say you don't have one, then accidentally reveal you've helped Alex out with something minor (a leak, a dodgy boiler, whatever) and immediately downplay it.`;
 
-    // Shared session ID — used for both visit ping and conversation log
     const SESSION_ID = Math.random().toString(36).substring(2, 10).toUpperCase();
     const SESSION_START = new Date().toISOString();
     const SHEETS_ENDPOINT = "https://script.google.com/macros/s/AKfycbwqKOmbh-X7GrF8wDKqU7Om9Ybj-dDeOj2WXBIvKgxgPL2eijhBCs5rhWYGJO9Jn-9S/exec";
@@ -184,7 +142,6 @@ Easter Eggs (only reveal when directly and specifically triggered):
     const PAGE_START = Date.now();
     const DEVICE = /Mobi|Android|iPhone|iPad/i.test(navigator.userAgent) ? "mobile" : "desktop";
 
-    // Visit ping with location
     fetch("https://ipapi.co/json/")
       .then(r => r.json())
       .then(geo => {
@@ -209,7 +166,7 @@ Easter Eggs (only reveal when directly and specifically triggered):
     });
 
     document.addEventListener("DOMContentLoaded", function () {
-      const apiKey = CONFIG.API_KEY;
+      const workerUrl = CONFIG.WORKER_URL;
       const sessionId = SESSION_ID;
       const sessionStart = SESSION_START;
       const messages = [];
@@ -240,10 +197,8 @@ Easter Eggs (only reveal when directly and specifically triggered):
       let askedCount = 0;
 
       function scrollToEl(el) {
-        // Only auto-scroll if user is within 120px of the bottom
         const distanceFromBottom = chatSection.scrollHeight - chatSection.scrollTop - chatSection.clientHeight;
         if (distanceFromBottom < 120) {
-          // Snap top of new element just below the fade (56px)
           const wrapperTop = chatSection.getBoundingClientRect().top;
           const elTop = el.getBoundingClientRect().top;
           chatSection.scrollTop += elTop - wrapperTop - 56;
@@ -253,10 +208,8 @@ Easter Eggs (only reveal when directly and specifically triggered):
       function linkify(text) {
         let result = text
           .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
-        // Markdown-style [label](url)
         result = result.replace(/\[([^\]]+)\]\((https?:\/\/[^)]+)\)/g,
           (_, label, url) => `<a href="${url}" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline;">${label}</a>`);
-        // Bare URLs not already in an anchor
         result = result.replace(/(?<!href=")(https?:\/\/[^\s<"]+)/g,
           url => `<a href="${url}" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline;word-break:break-all;">${url}</a>`);
         return result;
@@ -281,10 +234,8 @@ Easter Eggs (only reveal when directly and specifically triggered):
         return el;
       }
 
-      // Greeting on load
-      appendMessage("assistant", getGreeting());
+      appendMessage("assistant", "Alright, mate. I'm Barry. I own the property Alex lives in. What d'you want to know?");
 
-      // Suggestion chips — remove individual chip when clicked, hide all when all used
       suggestionBtns.forEach(btn => {
         btn.addEventListener("click", () => {
           userInput.value = btn.dataset.q;
@@ -302,7 +253,6 @@ Easter Eggs (only reveal when directly and specifically triggered):
         if (!text) return;
         userInput.value = "";
 
-        // If user types manually, hide suggestions entirely
         if (askedCount === 0) {
           suggestionsEl.style.display = "none";
           askedCount = totalSuggestions;
@@ -311,7 +261,6 @@ Easter Eggs (only reveal when directly and specifically triggered):
         appendMessage("user", text);
         messages.push({ role: "user", content: text });
 
-        // Log question to Google Form silently
         fetch("https://docs.google.com/forms/d/e/1FAIpQLSeIrBpmOBQO4vSkg6Hm6dbvdBnfUrN3JMVX5z-XMGkEyDfRvg/formResponse", {
           method: "POST",
           mode: "no-cors",
@@ -322,16 +271,13 @@ Easter Eggs (only reveal when directly and specifically triggered):
         const typing = appendTyping();
 
         try {
-          const res = await fetch("https://api.anthropic.com/v1/messages", {
+          const res = await fetch(workerUrl, {
             method: "POST",
             headers: {
               "Content-Type": "application/json",
-              "x-api-key": apiKey,
-              "anthropic-version": "2023-06-01",
-              "anthropic-dangerous-direct-browser-access": "true"
             },
             body: JSON.stringify({
-              model: "claude-sonnet-4-20250514",
+              model: "claude-opus-4-1",
               max_tokens: 1024,
               system: SYSTEM_PROMPT,
               messages: messages
@@ -341,14 +287,14 @@ Easter Eggs (only reveal when directly and specifically triggered):
           const data = await res.json();
           typing.remove();
 
-          const reply = data?.content?.[0]?.text || "My crystal ball seems foggy — please try again!";
+          const reply = data?.content?.[0]?.text || "Eh? Didn't catch that. Say again, mate.";
           appendMessage("assistant", reply);
           messages.push({ role: "assistant", content: reply });
           logToSheets();
 
         } catch (err) {
           typing.remove();
-          appendMessage("assistant", "Something has disrupted my wizardly connection. Please try again.");
+          appendMessage("assistant", "Network hiccup, innit. Try again in a sec.");
           console.error(err);
         }
       }

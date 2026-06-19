@@ -52,7 +52,7 @@
 
   <script>
     const CONFIG = {
-      API_KEY: "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",
+      WORKER_URL: "https://alexfolio-chat-proxy.cold-fire-86b5.workers.dev/",
 
       BIO: `IDENTITY & BACKGROUND
 Alex is a self-taught graphic designer and art director based in South East London. Born in London. Graduated from the University of Bristol in 2016. He started his career in advertising as an account manager for 3 years before getting into design through event artwork.
@@ -201,7 +201,7 @@ Easter Eggs (only reveal when directly and specifically triggered):
     });
 
     document.addEventListener("DOMContentLoaded", function () {
-      const apiKey = CONFIG.API_KEY;
+      const workerUrl = CONFIG.WORKER_URL;
       const sessionId = SESSION_ID;
       const sessionStart = SESSION_START;
       const messages = [];
@@ -232,10 +232,8 @@ Easter Eggs (only reveal when directly and specifically triggered):
       let askedCount = 0;
 
       function scrollToEl(el) {
-        // Only auto-scroll if user is within 120px of the bottom
         const distanceFromBottom = chatSection.scrollHeight - chatSection.scrollTop - chatSection.clientHeight;
         if (distanceFromBottom < 120) {
-          // Snap top of new element just below the fade (56px)
           const wrapperTop = chatSection.getBoundingClientRect().top;
           const elTop = el.getBoundingClientRect().top;
           chatSection.scrollTop += elTop - wrapperTop - 56;
@@ -245,10 +243,8 @@ Easter Eggs (only reveal when directly and specifically triggered):
       function linkify(text) {
         let result = text
           .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
-        // Markdown-style [label](url)
         result = result.replace(/\[([^\]]+)\]\((https?:\/\/[^)]+)\)/g,
           (_, label, url) => `<a href="${url}" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline;">${label}</a>`);
-        // Bare URLs not already in an anchor
         result = result.replace(/(?<!href=")(https?:\/\/[^\s<"]+)/g,
           url => `<a href="${url}" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline;word-break:break-all;">${url}</a>`);
         return result;
@@ -273,10 +269,8 @@ Easter Eggs (only reveal when directly and specifically triggered):
         return el;
       }
 
-      // Greeting on load
       appendMessage("assistant", getGreeting());
 
-      // Suggestion chips — remove individual chip when clicked, hide all when all used
       suggestionBtns.forEach(btn => {
         btn.addEventListener("click", () => {
           userInput.value = btn.dataset.q;
@@ -294,7 +288,6 @@ Easter Eggs (only reveal when directly and specifically triggered):
         if (!text) return;
         userInput.value = "";
 
-        // If user types manually, hide suggestions entirely
         if (askedCount === 0) {
           suggestionsEl.style.display = "none";
           askedCount = totalSuggestions;
@@ -303,7 +296,6 @@ Easter Eggs (only reveal when directly and specifically triggered):
         appendMessage("user", text);
         messages.push({ role: "user", content: text });
 
-        // Log question to Google Form silently
         fetch("https://docs.google.com/forms/d/e/1FAIpQLSeIrBpmOBQO4vSkg6Hm6dbvdBnfUrN3JMVX5z-XMGkEyDfRvg/formResponse", {
           method: "POST",
           mode: "no-cors",
@@ -314,16 +306,13 @@ Easter Eggs (only reveal when directly and specifically triggered):
         const typing = appendTyping();
 
         try {
-          const res = await fetch("https://api.anthropic.com/v1/messages", {
+          const res = await fetch(workerUrl, {
             method: "POST",
             headers: {
               "Content-Type": "application/json",
-              "x-api-key": apiKey,
-              "anthropic-version": "2023-06-01",
-              "anthropic-dangerous-direct-browser-access": "true"
             },
             body: JSON.stringify({
-              model: "claude-sonnet-4-20250514",
+              model: "claude-opus-4-1",
               max_tokens: 1024,
               system: SYSTEM_PROMPT,
               messages: messages
