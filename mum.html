@@ -319,7 +319,7 @@ Easter Eggs (only reveal when directly and specifically triggered):
             })
           });
 
-          const data = await res.json();
+          if (!res.ok) { throw new Error(`HTTP ${res.status}: ${res.statusText}`); } const data = await res.json();
           typing.remove();
 
           const reply = data?.content?.[0]?.text || "My crystal ball seems foggy — please try again!";

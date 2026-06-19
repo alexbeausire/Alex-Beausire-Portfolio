@@ -326,7 +326,7 @@ Easter Eggs (only reveal when directly and specifically triggered by a relevant 
             })
           });
 
-          const data = await res.json();
+          if (!res.ok) { throw new Error(`HTTP ${res.status}: ${res.statusText}`); } const data = await res.json();
           typing.remove();
 
           if (!res.ok) {

@@ -284,7 +284,7 @@ Easter eggs (only trigger if directly mentioned):
             })
           });
 
-          const data = await res.json();
+          if (!res.ok) { throw new Error(`HTTP ${res.status}: ${res.statusText}`); } const data = await res.json();
           typing.remove();
 
           const reply = data?.content?.[0]?.text || "Eh? Didn't catch that. Say again, mate.";
