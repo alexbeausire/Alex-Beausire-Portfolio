@@ -52,7 +52,7 @@
 
   <script>
     const CONFIG = {
-      API_KEY: "",  // injected by GitHub Actions
+      WORKER_URL: "https://alexfolio-chat-proxy.cold-fire-86b5.workers.dev/",
 
       BIO: `IDENTITY & BACKGROUND
 Alex is a self-taught graphic designer and art director based in South East London. Born in London. Graduated from the University of Bristol in 2016. He started his career in advertising as an account manager for 3 years before getting into design through event artwork.
@@ -201,7 +201,7 @@ Easter Eggs (only reveal when directly and specifically triggered):
     });
 
     document.addEventListener("DOMContentLoaded", function () {
-      const apiKey = CONFIG.API_KEY;
+      const workerUrl = CONFIG.WORKER_URL;
       const sessionId = SESSION_ID;
       const sessionStart = SESSION_START;
       const messages = [];
@@ -314,12 +314,14 @@ Easter Eggs (only reveal when directly and specifically triggered):
         const typing = appendTyping();
 
         try {
-          const res = await fetch("https://alexfolio-chat-proxy.cold-fire-86b5.workers.dev", {
+          const res = await fetch(workerUrl, {
             method: "POST",
             headers: {
-              "Content-Type": "application/json"
+              "Content-Type": "application/json",
             },
             body: JSON.stringify({
+              model: "claude-sonnet-4-20250514",
+              max_tokens: 1024,
               system: SYSTEM_PROMPT,
               messages: messages
             })
@@ -327,12 +329,6 @@ Easter Eggs (only reveal when directly and specifically triggered):
 
           const data = await res.json();
           typing.remove();
-
-          if (!res.ok) {
-            appendMessage("assistant", `API Error: ${data.error || 'Unknown error'}`);
-            console.error("API error:", data.error);
-            return;
-          }
 
           const reply = data?.content?.[0]?.text || "My crystal ball seems foggy — please try again!";
           appendMessage("assistant", reply);
