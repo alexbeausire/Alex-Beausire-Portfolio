@@ -52,7 +52,7 @@
 
   <script>
     const CONFIG = {
-      WORKER_URL: "https://alexfolio-chat-proxy.cold-fire-86b5.workers.dev/",
+      API_KEY: "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",
 
       BIO: `IDENTITY & BACKGROUND
 Alex is a self-taught graphic designer and art director based in South East London. Born in London. Graduated from the University of Bristol in 2016. He started his career in advertising as an account manager for 3 years before getting into design through event artwork.
@@ -209,7 +209,7 @@ Easter Eggs (only reveal when directly and specifically triggered):
     });
 
     document.addEventListener("DOMContentLoaded", function () {
-      const workerUrl = CONFIG.WORKER_URL;
+      const apiKey = CONFIG.API_KEY;
       const sessionId = SESSION_ID;
       const sessionStart = SESSION_START;
       const messages = [];
@@ -322,10 +322,13 @@ Easter Eggs (only reveal when directly and specifically triggered):
         const typing = appendTyping();
 
         try {
-          const res = await fetch(workerUrl, {
+          const res = await fetch("https://api.anthropic.com/v1/messages", {
             method: "POST",
             headers: {
               "Content-Type": "application/json",
+              "x-api-key": apiKey,
+              "anthropic-version": "2023-06-01",
+              "anthropic-dangerous-direct-browser-access": "true"
             },
             body: JSON.stringify({
               model: "claude-sonnet-4-20250514",
