@@ -52,7 +52,7 @@
 
   <script>
     const CONFIG = {
-      API_KEY: "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",
+      API_KEY: "",  // injected by GitHub Actions
 
       BIO: `IDENTITY & BACKGROUND
 Alex is a self-taught graphic designer and art director based in South East London. Born in London. Graduated from the University of Bristol in 2016. He started his career in advertising as an account manager for 3 years before getting into design through event artwork.
@@ -202,7 +202,7 @@ Easter Eggs (only reveal when directly and specifically triggered by a relevant 
     });
 
     document.addEventListener("DOMContentLoaded", function () {
-      const apiKey = CONFIG.API_KEY;
+      const workerUrl = CONFIG.WORKER_URL;
       const sessionId = SESSION_ID;
       const sessionStart = SESSION_START;
       const messages = [];
